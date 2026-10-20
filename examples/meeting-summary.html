@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meeting summary · Practical AI Workflows</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidenav">
+  <div class="navbar">
+    <a class="brand" href="../index.html"><span class="mark">FIELD GUIDE</span><span class="name">Practical AI Workflows</span></a>
+    <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  </div>
+  <nav class="navlinks" id="navlinks" data-open="true" aria-label="Site">
+<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/project-memory.html"><span class="num">05</span><span>Threads and memory</span></a></li><li><a href="../core/project-workflow.html"><span class="num">06</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">07</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">08</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">09</span><span>Going deeper</span></a></li></ol></div>
+<div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/when-not-to-use.html"><span>When not to use AI</span><span class="tag">soon</span></a></li><li><a href="../topics/teaching.html"><span>AI for teaching</span><span class="tag">soon</span></a></li><li><a href="../topics/research.html"><span>Research use cases</span><span class="tag">soon</span></a></li></ul></div>
+<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html" aria-current="page"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research group database</span></a></li><li><a href="../examples/exercise-tracker.html"><span>Exercise tracker</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/newsletter-digest.html"><span>Newsletter digest</span></a></li></ul></div>
+<div class="navgroup"><h2>Residents</h2><ul><li><a href="https://claude.ai/artifact/Q6PUc5QvV6muvLbgsadrvh"><span>Resident AI elective</span><span class="tag" aria-hidden="true">&#8599;</span></a></li></ul></div>
+  </nav>
+</aside>
+<main>
+<header class="page-head"><div class="head-inner"><div class="head-text">
+<p class="eyebrow">Worked example &middot; Giving context</p>
+<h1>Meeting summary</h1>
+<p class="lede">A transcript plus the material around it becomes a meeting record in a format you reuse.</p>
+</div><div class="head-mark" aria-hidden="true"><svg class="bigicon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></div></div></header>
+<article class="page">
+<div class="draft"><p><span class="draft-label">Draft</span>The prompt and output below are illustrative, with fictional details. Replace them with a trimmed real excerpt.</p></div>
+
+<div class="case">
+  <dl>
+    <dt>Goal</dt><dd>A useful record of a recurring meeting: decisions, action items with owners, and open questions.</dd>
+    <dt>Tools</dt><dd>Teams or Otter for recording, then KUMC Copilot (internal meetings are confidential).</dd>
+    <dt>Context added</dt><dd>Exported transcript, agenda, slides, and last meeting's notes.</dd>
+    <dt>Became</dt><dd>A reusable skill once the format stopped changing.</dd>
+  </dl>
+
+  <div class="exchange">
+    <div class="who"><span>Key prompt</span><button class="copy-btn" type="button" data-copy="ms-prompt">Copy</button></div>
+    <div class="body"><pre id="ms-prompt">Attached: the transcript, agenda, and slides from today's education committee meeting, plus last month's notes.
+Write the summary in my usual format: decisions first, then action items as a table (task, owner, due date), then open questions. Under one page. Flag anything on the agenda that was not discussed.</pre></div>
+  </div>
+
+  <div class="exchange">
+    <div class="who"><span>Output excerpt</span><span>trimmed</span></div>
+    <div class="body">
+      <p><strong>Decisions:</strong> Simulation sessions move to the second Thursday starting next block.</p>
+      <p><strong>Not discussed:</strong> Agenda item 4 (conference travel budget).</p>
+    </div>
+  </div>
+
+  <div class="exchange">
+    <div class="who"><span>What I changed</span></div>
+    <div class="body"><pre>Two action items have no owner. Mark them "owner needed" rather than guessing. Drop the attendance list.</pre></div>
+  </div>
+</div>
+
+<h2>What the surrounding material changes</h2>
+<div class="compare">
+  <div class="side">
+    <div class="label">Transcript only</div>
+    <div class="prompt">Summarize this transcript in my usual format.</div>
+    <div class="result"><p>Decisions and action items, but no way to know what was skipped, and items already settled last month reappear as new.</p><span class="verdict">Plausible, incomplete.</span></div>
+  </div>
+  <div class="side strong">
+    <div class="label">Transcript + agenda + last notes</div>
+    <div class="prompt">Same request, with the agenda and last month's notes attached.</div>
+    <div class="result"><p>Flags the agenda item that was never discussed and separates new decisions from ones carried over.</p><span class="verdict">A record you can trust.</span></div>
+  </div>
+</div>
+<figure class="shot" role="img" aria-label="Placeholder for a screenshot">
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="9" cy="10" r="2"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
+  <strong>Screenshot placeholder</strong>
+  <span>A real summary from a past meeting, with names removed.</span>
+</figure>
+
+<h2>Takeaway</h2>
+<p>The surrounding material does more than the transcript alone: the agenda tells the model what was supposed to happen, and last month's notes tell it what was already decided. Once the same instructions repeated every month, they became a skill.</p>
+<nav class="pager" aria-label="Page"><a class="next" href="../examples/research-workshop.html"><span class="dir">Next</span><span>Research group database</span></a></nav>
+<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.2</footer>
+</article>
+</main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

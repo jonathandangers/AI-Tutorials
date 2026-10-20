@@ -1,0 +1,96 @@
+<p class="eyebrow">Module 04</p>
+<h1>Treat the first output as something to react to.</h1>
+<p class="lede">A polished answer is not the same as a correct one. This module covers how to push output from good-looking to trustworthy, and two failure modes to watch for.</p>
+
+<div class="pocket">
+  <p class="eyebrow">Pocket card</p>
+  <ul>
+    <li>Look closely, give specific feedback, repeat until you trust it.</li>
+    <li>Models tend to agree with you. Ask for the case against.</li>
+    <li>Models can invent references and facts. Open the source for anything that matters.</li>
+  </ul>
+</div>
+
+<h2>The loop</h2>
+<ol class="steps">
+  <li><strong>Look closely.</strong> Does it actually answer the question? Is anything missing, wrong, generic, or out of character?</li>
+  <li><strong>Give specific feedback.</strong> "Shorter." "Less formal." "You missed this constraint." "That conclusion does not follow." "Keep A, remove B, reorganize C."</li>
+  <li><strong>Repeat.</strong> Continue until you have something you actually trust, not merely something that looks polished.</li>
+  <li><strong>Change perspective when stuck.</strong> Take a break, open a fresh thread from your saved project state, or ask another model to critique the work.</li>
+</ol>
+
+<figure class="dg">
+<div class="scroll">
+<svg viewBox="0 0 720 240" role="img" aria-label="The iteration loop: look closely, give specific feedback, the model revises, and you look again until you trust it. When stuck, change perspective with a fresh thread or another model.">
+  <defs>
+    <marker id="it-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
+    <marker id="it-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah-warm"/></marker>
+  </defs>
+  <path class="ln-warm" d="M615 70 C615 22 115 22 115 68" marker-end="url(#it-w)"/>
+  <text class="t-lab" x="365" y="52" text-anchor="middle">look again</text>
+
+  <rect class="box" x="40" y="70" width="150" height="48" rx="6"/>
+  <text class="t" x="115" y="99" text-anchor="middle">Look closely</text>
+  <rect class="box" x="280" y="70" width="170" height="48" rx="6"/>
+  <text class="t" x="365" y="99" text-anchor="middle">Specific feedback</text>
+  <rect class="box" x="540" y="70" width="150" height="48" rx="6"/>
+  <text class="t" x="615" y="99" text-anchor="middle">Revised output</text>
+
+  <line class="ln" x1="190" y1="94" x2="278" y2="94" marker-end="url(#it-a)"/>
+  <text class="t-lab" x="234" y="86" text-anchor="middle">find gaps</text>
+  <line class="ln" x1="450" y1="94" x2="538" y2="94" marker-end="url(#it-a)"/>
+  <text class="t-lab" x="494" y="86" text-anchor="middle">model revises</text>
+
+  <line class="ln" x1="115" y1="118" x2="115" y2="168" marker-end="url(#it-a)"/>
+  <text class="t-lab" x="124" y="148">trust it</text>
+  <rect class="box-home" x="40" y="170" width="150" height="46" rx="6"/>
+  <text class="t" x="115" y="198" text-anchor="middle">Done</text>
+
+  <line class="ln" x1="365" y1="118" x2="365" y2="168" marker-end="url(#it-a)"/>
+  <text class="t-lab" x="374" y="148">stuck</text>
+  <rect class="box-ice" x="265" y="170" width="200" height="46" rx="6"/>
+  <text class="t" x="365" y="190" text-anchor="middle">Change perspective</text>
+  <text class="t-sm" x="365" y="207" text-anchor="middle">fresh thread · another model</text>
+
+  <path class="ln" d="M465 193 H615 V120" marker-end="url(#it-a)"/>
+  <text class="t-lab" x="540" y="186" text-anchor="middle">new angle</text>
+</svg>
+</div>
+<figcaption>The loop ends when you trust the output, not when it looks finished. Getting stuck is a reason to change perspective, not to accept what you have.</figcaption>
+</figure>
+
+<p class="pull">Continue until you have something you actually trust, not merely something that looks polished.</p>
+
+<h2>Models tend to agree with you <span class="badge new">New</span></h2>
+<p>LLMs are trained to be helpful, and that pulls them toward telling you what you seem to want to hear. Pitch a weak idea with enthusiasm and you will often get enthusiasm back. Push back on a correct answer and the model may cave.</p>
+<ul>
+  <li><strong>Ask for the opposing case.</strong> "Argue against this plan as a skeptical program director would."</li>
+  <li><strong>Hide your preference.</strong> "Here are two options. Which is stronger and why?" works better than "I like option A. Is it good?"</li>
+  <li><strong>Notice too-easy agreement.</strong> If the model reversed itself the moment you objected, ask it what changed. A real reason is fine; no reason is a warning.</li>
+  <li><strong>Use a second model as a reviewer.</strong> A model that did not produce the work has less to defend.</li>
+</ul>
+
+<section class="band warm">
+<h2>Models can make things up <span class="badge new">New</span></h2>
+<p>A model answering from its training can produce a reference, statistic, dose, or quote that looks right and does not exist. The most common version in medicine is the invented citation: real-sounding authors, a plausible journal, a year, and no such paper.</p>
+<ul>
+  <li><strong>Every reference gets opened.</strong> Search the title in PubMed. If you cannot find it, treat it as fabricated.</li>
+  <li><strong>Prefer tools that retrieve.</strong> A model searching PubMed or a document you supplied can still misread it, but it starts from something real.</li>
+  <li><strong>Check that the summary matches the source.</strong> A real paper can still be summarized wrong. Read the abstract or the relevant section yourself.</li>
+  <li><strong>Raise your bar with the stakes.</strong> A brainstorm can tolerate errors. Anything clinical, published, or sent under your name cannot.</li>
+</ul>
+<div class="draft"><p><span class="draft-label">Draft</span>Add one real side-by-side: a fabricated reference next to the real paper it resembles.</p></div>
+</section>
+
+<h2>Know where an answer came from</h2>
+<p>An answer can come from the model's learned knowledge, from material you supplied, or from a tool that retrieves a live source such as PubMed, a website, or a connected drive. Those are not equivalent. For important work, ask what source was actually used, open the underlying material when needed, and verify that the model's summary or interpretation matches it.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th scope="col">Where the answer came from</th><th scope="col">How much to trust it</th><th scope="col">What to check</th></tr></thead>
+  <tbody>
+    <tr><td>The model's learned knowledge</td><td>Good for concepts and drafts; unreliable for specific facts</td><td>Any number, name, date, or reference</td></tr>
+    <tr><td>Material you supplied</td><td>Grounded, but can be misread</td><td>That the summary matches the document</td></tr>
+    <tr><td>A retrieval tool (search, PubMed, connected drive)</td><td>Grounded in a live source</td><td>That it found the right source and read it correctly</td></tr>
+  </tbody>
+</table>
+</div>

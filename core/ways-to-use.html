@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ways to use an LLM · Practical AI Workflows</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidenav">
+  <div class="navbar">
+    <a class="brand" href="../index.html"><span class="mark">FIELD GUIDE</span><span class="name">Practical AI Workflows</span></a>
+    <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  </div>
+  <nav class="navlinks" id="navlinks" data-open="true" aria-label="Site">
+<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html" aria-current="page"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/project-memory.html"><span class="num">05</span><span>Threads and memory</span></a></li><li><a href="../core/project-workflow.html"><span class="num">06</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">07</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">08</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">09</span><span>Going deeper</span></a></li></ol></div>
+<div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/when-not-to-use.html"><span>When not to use AI</span><span class="tag">soon</span></a></li><li><a href="../topics/teaching.html"><span>AI for teaching</span><span class="tag">soon</span></a></li><li><a href="../topics/research.html"><span>Research use cases</span><span class="tag">soon</span></a></li></ul></div>
+<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research group database</span></a></li><li><a href="../examples/exercise-tracker.html"><span>Exercise tracker</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/newsletter-digest.html"><span>Newsletter digest</span></a></li></ul></div>
+<div class="navgroup"><h2>Residents</h2><ul><li><a href="https://claude.ai/artifact/Q6PUc5QvV6muvLbgsadrvh"><span>Resident AI elective</span><span class="tag" aria-hidden="true">&#8599;</span></a></li></ul></div>
+  </nav>
+</aside>
+<main>
+<header class="page-head"><div class="head-inner"><div class="head-text">
+<p class="eyebrow">Module 02</p>
+<h1>Conversation is only the interface.</h1>
+<p class="lede">An LLM can play several different roles in your work. The chat box is how you direct it, not the limit of what it does.</p>
+</div><div class="head-mark" aria-hidden="true"><span class="bignum">02</span></div></div></header>
+<article class="page">
+<div class="pocket">
+  <p class="eyebrow">Pocket card</p>
+  <ul>
+    <li>Six roles: thinking partner, tutor, organizer, writer, research assistant, builder.</li>
+    <li>Brain-dump first, organize second. Skip the polished prompt.</li>
+    <li>Ask for the output you actually need: a table, a deck, a file, a database.</li>
+  </ul>
+</div>
+
+<h2>Six ways to use an LLM</h2>
+<ul class="roles">
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h11v7H8l-3 3v-3H3z"/><path d="M17 9h4v7h-2v3l-3-3h-5v-2"/></svg><h3>Thinking and strategy partner</h3><p>Brainstorm, pressure-test an idea, compare approaches, find blind spots, or simply bounce ideas off someone very capable whenever you need to.</p></li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1z"/><path d="M12 6v14"/></svg><h3>Tutor and guide</h3><p>Ask it to teach you something you do not know yet, or guide you through a task while you do it. Ask follow-up questions until the fuzzy parts make sense.</p></li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h6M4 10h4M3 14h5M5 18h3"/><path d="M11 12h3"/><path d="M13 10l2 2-2 2"/><path d="M17 7h4M17 12h4M17 17h4"/></svg><h3>Organizer for messy thinking</h3><p>Brain-dump by typing or voice. Let the LLM turn it into an outline, plan, email, table, or organized set of thoughts. Then react and revise.</p></li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-5L16 4l4 4L9 19z"/><path d="M14 6l4 4"/></svg><h3>Writer and editor</h3><p>Draft, shorten, restructure, rewrite, or adapt something for a particular audience. You provide the judgment about what is worth saying and whether it sounds right.</p></li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/><path d="M8 10.5h5"/></svg><h3>Research and analysis assistant</h3><p>Search connected sources, synthesize information, compare options, extract data, critique reasoning, or help you work through evidence.</p></li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/><rect x="8" y="3" width="8" height="8" rx="1"/></svg><h3>Builder and operator</h3><p>Create files, databases, presentations, sites, simple apps, or workflows, and, with the right tools, interact with the systems where your work lives.</p></li>
+</ul>
+
+<section class="band warm">
+<h2>Brain-dump first. Organize second.</h2>
+<p>One of the highest-value habits. You do not need to spend ten minutes turning your thoughts into a polished prompt. Type or dictate the messy version. Ask the LLM to organize it. Then react: "keep this," "move that," "this is too formal," "I forgot something." The LLM does the friction-heavy work of writing and reorganizing while you supply the ideas and judgment.</p>
+</section>
+
+<h2>You can make much more than a chat response.</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th scope="col">Kind</th><th scope="col">Examples</th></tr></thead>
+  <tbody>
+    <tr><td>Writing</td><td>emails, outlines, reports, summaries</td></tr>
+    <tr><td>Documents</td><td>Word docs, PDFs, reference guides</td></tr>
+    <tr><td>Data</td><td>tables, CSV files, spreadsheets, charts</td></tr>
+    <tr><td>Presentations</td><td>slides, teaching materials, speaker notes</td></tr>
+    <tr><td>Visuals</td><td>images, diagrams, graphics</td></tr>
+    <tr><td>Things you can use</td><td>databases, websites, small apps, workflows</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="pull">Conversation can be how you control the work without conversation being the final product.</p>
+<nav class="pager" aria-label="Page"><a class="prev" href="../core/start-here.html"><span class="dir">Previous</span><span>Start here</span></a><a class="next" href="../core/context.html"><span class="dir">Next</span><span>Giving context</span></a></nav>
+<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.2</footer>
+</article>
+</main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

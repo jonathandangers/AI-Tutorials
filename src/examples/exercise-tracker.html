@@ -1,0 +1,32 @@
+<p class="eyebrow">Worked example &middot; Connectors</p>
+<h1>Exercise tracker</h1>
+<p class="lede">Build the tracker around the questions you want to ask, then let conversation be the interface.</p>
+<div class="draft"><p><span class="draft-label">Draft</span>Numbers below are illustrative.</p></div>
+
+<div class="case">
+  <dl>
+    <dt>Goal</dt><dd>Log workouts in seconds and answer questions about training over time.</dd>
+    <dt>Tools</dt><dd>A custom database plus an LLM connected to it.</dd>
+    <dt>Logging</dt><dd>Dictate the workout right after finishing.</dd>
+    <dt>Questions</dt><dd>"How many runs did I do in May?" "Upper-body sessions this month versus last?" "When did I first mention knee pain?"</dd>
+  </dl>
+
+  <div class="exchange">
+    <div class="who"><span>Logging, dictated</span></div>
+    <div class="body"><pre>Three miles including warmup, average heart rate 141, knee felt fine.</pre></div>
+  </div>
+
+  <div class="exchange">
+    <div class="who"><span>Later question</span><button class="copy-btn" type="button" data-copy="ex-prompt">Copy</button></div>
+    <div class="body"><pre id="ex-prompt">How many upper-body sessions did I do this month compared with last month? List the dates.</pre></div>
+  </div>
+</div>
+
+<figure class="shot" role="img" aria-label="Placeholder for a screenshot">
+  {{icon:image}}
+  <strong>Screenshot placeholder</strong>
+  <span>The tracker database, or a dictated entry next to the answer to a later question.</span>
+</figure>
+
+<h2>Takeaway</h2>
+<p>The database structure is yours. Once it exists, both logging and asking happen in plain language, so you actually keep it up.</p>

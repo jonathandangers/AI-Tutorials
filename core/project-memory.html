@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Threads, memory, and project homes · Practical AI Workflows</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidenav">
+  <div class="navbar">
+    <a class="brand" href="../index.html"><span class="mark">FIELD GUIDE</span><span class="name">Practical AI Workflows</span></a>
+    <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  </div>
+  <nav class="navlinks" id="navlinks" data-open="true" aria-label="Site">
+<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/project-memory.html" aria-current="page"><span class="num">05</span><span>Threads and memory</span></a></li><li><a href="../core/project-workflow.html"><span class="num">06</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">07</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">08</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">09</span><span>Going deeper</span></a></li></ol></div>
+<div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/when-not-to-use.html"><span>When not to use AI</span><span class="tag">soon</span></a></li><li><a href="../topics/teaching.html"><span>AI for teaching</span><span class="tag">soon</span></a></li><li><a href="../topics/research.html"><span>Research use cases</span><span class="tag">soon</span></a></li></ul></div>
+<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research group database</span></a></li><li><a href="../examples/exercise-tracker.html"><span>Exercise tracker</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/newsletter-digest.html"><span>Newsletter digest</span></a></li></ul></div>
+<div class="navgroup"><h2>Residents</h2><ul><li><a href="https://claude.ai/artifact/Q6PUc5QvV6muvLbgsadrvh"><span>Resident AI elective</span><span class="tag" aria-hidden="true">&#8599;</span></a></li></ul></div>
+  </nav>
+</aside>
+<main>
+<header class="page-head"><div class="head-inner"><div class="head-text">
+<p class="eyebrow">Module 05</p>
+<h1>Do not let an important project live only inside a chat.</h1>
+<p class="lede">A longer conversation is not always a better one. Keep threads short and focused, and keep the state of a project somewhere you control.</p>
+</div><div class="head-mark" aria-hidden="true"><span class="bignum">05</span></div></div></header>
+<article class="page">
+<div class="pocket">
+  <p class="eyebrow">Pocket card</p>
+  <ul>
+    <li>New topic: new thread. Very long thread: save what you trust and start fresh.</li>
+    <li>Platform memory helps, but it is not your project record.</li>
+    <li>Keep an external project home. Use a platform project, with instructions and skills, as the working space that points to it.</li>
+  </ul>
+</div>
+
+<p class="pull">A longer conversation is not always a better one.</p>
+
+<h2>What the context window does</h2>
+<p>The model works from the information available in the current context. As a thread gets longer, more material has to be processed. That uses more of your available usage, and very long threads can become noisier: older details or instructions may be harder to distinguish from newer ones.</p>
+
+<h2>When to start a new thread</h2>
+<p>Start a new thread when you change topics. For a long-running piece of work, start fresh when the existing conversation has become unwieldy.</p>
+<p>Before you leave a thread, export what you approved to the project home: the finished output and an updated current-state document. The next thread starts from those, so nothing depends on the old conversation.</p>
+<div class="note"><p><strong>Simple rule:</strong> new topic &rarr; new thread. Very long thread &rarr; export approved state, then start fresh. Important project state &rarr; save it outside the thread.</p></div>
+
+<h2>Four layers of memory</h2>
+<figure class="dg">
+<div class="scroll">
+<svg viewBox="0 0 700 290" role="img" aria-label="Four layers of memory, from least to most durable: current thread, platform memory, platform project, and external project home. Approved work moves from the thread down to the external home.">
+  <defs>
+    <marker id="mem-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
+    <marker id="mem-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah-warm"/></marker>
+  </defs>
+  <line class="ln" x1="70" y1="28" x2="70" y2="262" marker-end="url(#mem-a)"/>
+  <text class="t-lab" x="52" y="147" text-anchor="middle" transform="rotate(-90 52 147)">more durable</text>
+  <rect class="box-thread" x="110" y="20" width="540" height="56" rx="6"/>
+  <text class="t" x="130" y="44">Current thread</text>
+  <text class="t-lab" x="632" y="44" text-anchor="end">lasts one conversation</text>
+  <text class="t-sm" x="130" y="63">The task in front of you. It can become long and messy.</text>
+  <rect class="box-soft" x="110" y="86" width="540" height="56" rx="6"/>
+  <text class="t" x="130" y="110">Platform memory</text>
+  <text class="t-lab" x="632" y="110" text-anchor="end">lasts across chats</text>
+  <text class="t-sm" x="130" y="129">Preferences and continuity. Not a dependable project record.</text>
+  <rect class="box-ice" x="110" y="152" width="540" height="56" rx="6"/>
+  <text class="t" x="130" y="176">Platform project</text>
+  <text class="t-lab" x="632" y="176" text-anchor="end">lasts inside one platform</text>
+  <text class="t-sm" x="130" y="195">Shared instructions, files, and skills for every new thread.</text>
+  <rect class="box-home" x="110" y="218" width="540" height="56" rx="6"/>
+  <text class="t" x="130" y="242">External project home</text>
+  <text class="t-lab" x="632" y="242" text-anchor="end">lasts as long as you keep it</text>
+  <text class="t-sm" x="130" y="261">The durable record: brief, current state, decisions, approved outputs.</text>
+  <path class="ln-warm" d="M652 48 C688 48 688 246 654 246" marker-end="url(#mem-w)"/>
+  <text class="t-lab" x="690" y="147" text-anchor="middle" transform="rotate(90 690 147)">export approved work</text>
+</svg>
+</div>
+<figcaption>Each layer down lasts longer. The thread is disposable because anything worth keeping is exported to the external home, which you control.</figcaption>
+</figure>
+
+<section class="band warm">
+<h2>Why the external home matters</h2>
+<p>A project home survives a long thread, gives you a clean place to restart, lets you hand the work to another model or person, and keeps the trusted outputs separate from all of the exploratory conversation that produced them.</p>
+<p>The platform project and the external home work together. The project's instructions tell the model what the work is and where the current state lives. The home holds what you have approved. Starting a new thread then takes seconds.</p>
+<p>See <a href="../core/project-workflow.html">Larger projects</a> for the step-by-step version.</p>
+</section>
+<nav class="pager" aria-label="Page"><a class="prev" href="../core/iteration.html"><span class="dir">Previous</span><span>Iterate and verify</span></a><a class="next" href="../core/project-workflow.html"><span class="dir">Next</span><span>Larger projects</span></a></nav>
+<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.2</footer>
+</article>
+</main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

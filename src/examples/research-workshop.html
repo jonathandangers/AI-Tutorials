@@ -1,0 +1,43 @@
+<p class="eyebrow">Worked example &middot; Connectors</p>
+<h1>Research group database</h1>
+<p class="lede">A Notion database, built with an LLM's help, that holds the state of every research group so meeting prep takes a question instead of an hour.</p>
+<div class="draft"><p><span class="draft-label">Draft</span>Groups, names, and projects below are fictional so no real group's work is shown. Replace with an anonymized real excerpt if you prefer.</p></div>
+
+<div class="case">
+  <dl>
+    <dt>Goal</dt><dd>Keep 8–14 research groups' status, blockers, and next steps current without re-reading old emails before each meeting.</dd>
+    <dt>Tools</dt><dd>Notion database plus an LLM with the Notion connector.</dd>
+    <dt>Updates</dt><dd>Paste an email, upload a transcript, or dictate a quick note after a meeting.</dd>
+    <dt>Questions</dt><dd>"When did I last meet with this group?" or "Write a prep brief for Thursday."</dd>
+  </dl>
+
+  <div class="exchange">
+    <div class="who"><span>Key prompt</span><button class="copy-btn" type="button" data-copy="rw-prompt">Copy</button></div>
+    <div class="body"><pre id="rw-prompt">Write a prep brief for my meeting with the Group C team tomorrow. Use their database page: last meeting date, current status, open blockers, and what they committed to last time. Five bullets at most, then two questions I should ask.</pre></div>
+  </div>
+
+  <div class="exchange">
+    <div class="who"><span>Output excerpt</span><span>trimmed, fictional</span></div>
+    <div class="body">
+      <p><strong>Last met:</strong> six weeks ago. <strong>Status:</strong> data collection.</p>
+      <p><strong>Committed last time:</strong> finish chart-review form; send IRB amendment.</p>
+      <p><strong>Ask:</strong> Did the IRB amendment go out? Who is doing the second chart review?</p>
+    </div>
+  </div>
+
+  <details>
+    <summary>How the database was built</summary>
+    <div class="inner">
+      <p>I described the questions I wanted to be able to ask, and the LLM proposed fields that would answer them: group, members, stage, last meeting, blockers, next step, and links. I adjusted the fields, it built the database through the connector, and I loaded existing groups by pasting old notes.</p>
+    </div>
+  </details>
+</div>
+
+<figure class="shot" role="img" aria-label="Placeholder for a screenshot">
+  {{icon:image}}
+  <strong>Screenshot placeholder</strong>
+  <span>The Notion database view, with group names and members blurred.</span>
+</figure>
+
+<h2>Takeaway</h2>
+<p>Design the database around the questions you will ask, not around what feels tidy. Conversation then becomes the way you read and update it.</p>

@@ -1,0 +1,26 @@
+<p class="eyebrow">Worked example &middot; Scheduled tasks</p>
+<h1>Newsletter digest</h1>
+<p class="lede">The AI newsletters that reach my inbox, consolidated into a twice-weekly digest.</p>
+
+<div class="case">
+  <dl>
+    <dt>Goal</dt><dd>Stay current without reading a dozen overlapping newsletters.</dd>
+    <dt>Tools</dt><dd>An LLM with mail access, running on a schedule.</dd>
+    <dt>Does</dt><dd>Removes redundancy and filters out topics I do not care about.</dd>
+    <dt>Delivers</dt><dd>One short digest, twice a week.</dd>
+  </dl>
+
+  <div class="exchange">
+    <div class="who"><span>Scheduled instruction</span><button class="copy-btn" type="button" data-copy="nd-prompt">Copy</button></div>
+    <div class="body"><pre id="nd-prompt">Twice a week: read the AI newsletters that arrived since the last digest. Merge stories that appear in more than one. Skip funding news and consumer gadgets. Keep anything about healthcare, education, or tools I could use this week. One line per story with the source link.</pre></div>
+  </div>
+</div>
+
+<figure class="shot" role="img" aria-label="Placeholder for a screenshot">
+  {{icon:image}}
+  <strong>Screenshot placeholder</strong>
+  <span>One digest, showing merged stories and their source links.</span>
+</figure>
+
+<h2>Takeaway</h2>
+<p>A good first automation: low stakes, reports back to you, and easy to tune by editing one instruction.</p>

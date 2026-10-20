@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A workflow for larger projects · Practical AI Workflows</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidenav">
+  <div class="navbar">
+    <a class="brand" href="../index.html"><span class="mark">FIELD GUIDE</span><span class="name">Practical AI Workflows</span></a>
+    <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  </div>
+  <nav class="navlinks" id="navlinks" data-open="true" aria-label="Site">
+<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/project-memory.html"><span class="num">05</span><span>Threads and memory</span></a></li><li><a href="../core/project-workflow.html" aria-current="page"><span class="num">06</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">07</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">08</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">09</span><span>Going deeper</span></a></li></ol></div>
+<div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/when-not-to-use.html"><span>When not to use AI</span><span class="tag">soon</span></a></li><li><a href="../topics/teaching.html"><span>AI for teaching</span><span class="tag">soon</span></a></li><li><a href="../topics/research.html"><span>Research use cases</span><span class="tag">soon</span></a></li></ul></div>
+<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research group database</span></a></li><li><a href="../examples/exercise-tracker.html"><span>Exercise tracker</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/newsletter-digest.html"><span>Newsletter digest</span></a></li></ul></div>
+<div class="navgroup"><h2>Residents</h2><ul><li><a href="https://claude.ai/artifact/Q6PUc5QvV6muvLbgsadrvh"><span>Resident AI elective</span><span class="tag" aria-hidden="true">&#8599;</span></a></li></ul></div>
+  </nav>
+</aside>
+<main>
+<header class="page-head"><div class="head-inner"><div class="head-text">
+<p class="eyebrow">Module 06</p>
+<h1>Plan the work, finish a stage, save what you trust, then continue.</h1>
+<p class="lede">For anything bigger than one sitting: a grant section, a curriculum, a database, a lecture series. Each step below says what to do, what to ask, what to save, and how you know you are done.</p>
+</div><div class="head-mark" aria-hidden="true"><span class="bignum">06</span></div></div></header>
+<article class="page">
+<div class="pocket">
+  <p class="eyebrow">Pocket card</p>
+  <ul>
+    <li>The project home holds the truth. Threads are disposable.</li>
+    <li>One stage per thread. Approve it, export it, then move on.</li>
+    <li>Repeated instructions become project instructions or a skill.</li>
+  </ul>
+</div>
+
+<figure class="dg">
+<div class="scroll">
+<svg viewBox="0 0 760 390" role="img" aria-label="The six-step workflow. Steps one to three create the project home and save the brief and plan into it. Each stage is worked in its own disposable thread that reads state from the home and exports approved output back to it. The final review reads everything in the home.">
+  <defs>
+    <marker id="wf-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
+    <marker id="wf-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah-warm"/></marker>
+  </defs>
+  <rect class="box" x="40" y="30" width="150" height="50" rx="6"/>
+  <text class="t-num" x="56" y="60">1</text>
+  <text class="t" x="74" y="60">Create home</text>
+  <rect class="box" x="230" y="30" width="150" height="50" rx="6"/>
+  <text class="t-num" x="246" y="60">2</text>
+  <text class="t" x="264" y="60">Describe</text>
+  <rect class="box" x="420" y="30" width="150" height="50" rx="6"/>
+  <text class="t-num" x="436" y="60">3</text>
+  <text class="t" x="454" y="60">Plan</text>
+  <line class="ln" x1="190" y1="55" x2="228" y2="55" marker-end="url(#wf-a)"/>
+  <line class="ln" x1="380" y1="55" x2="418" y2="55" marker-end="url(#wf-a)"/>
+  <line class="ln-warm" x1="115" y1="80" x2="115" y2="168" marker-end="url(#wf-w)"/>
+  <text class="t-lab" x="124" y="128">creates</text>
+  <line class="ln-warm" x1="305" y1="80" x2="305" y2="168" marker-end="url(#wf-w)"/>
+  <text class="t-lab" x="314" y="128">saves brief</text>
+  <line class="ln-warm" x1="495" y1="80" x2="495" y2="168" marker-end="url(#wf-w)"/>
+  <text class="t-lab" x="504" y="128">saves plan</text>
+  <rect class="box-home" x="40" y="170" width="530" height="60" rx="6"/>
+  <text class="t" x="60" y="196">Project home</text>
+  <text class="t-sm" x="60" y="215">brief · current state · decisions · approved outputs</text>
+  <rect class="box" x="600" y="170" width="130" height="60" rx="6"/>
+  <text class="t-num" x="614" y="196">6</text>
+  <text class="t" x="630" y="196">Review</text>
+  <text class="t-sm" x="614" y="215">the whole product</text>
+  <line class="ln" x1="570" y1="200" x2="598" y2="200" marker-end="url(#wf-a)"/>
+  <text class="t-lab" x="586" y="160" text-anchor="middle">reads all</text>
+  <rect class="box-thread" x="40" y="300" width="150" height="50" rx="6"/>
+  <text class="t-num" x="56" y="330">4</text>
+  <text class="t" x="74" y="330">Stage 1 thread</text>
+  <line class="ln" x1="87" y1="230" x2="87" y2="298" marker-end="url(#wf-a)"/>
+  <line class="ln-warm" x1="143" y1="300" x2="143" y2="232" marker-end="url(#wf-w)"/>
+  <text class="t-lab" x="79" y="270" text-anchor="end">reads state</text>
+  <text class="t-lab" x="151" y="270">exports approved</text>
+  <rect class="box-thread" x="230" y="300" width="150" height="50" rx="6"/>
+  <text class="t-num" x="246" y="330">5</text>
+  <text class="t" x="264" y="330">Stage 2 thread</text>
+  <line class="ln" x1="277" y1="230" x2="277" y2="298" marker-end="url(#wf-a)"/>
+  <line class="ln-warm" x1="333" y1="300" x2="333" y2="232" marker-end="url(#wf-w)"/>
+  <rect class="box-thread" x="420" y="300" width="150" height="50" rx="6"/>
+  <text class="t-num" x="436" y="330">5</text>
+  <text class="t" x="454" y="330">Stage 3 thread</text>
+  <line class="ln" x1="467" y1="230" x2="467" y2="298" marker-end="url(#wf-a)"/>
+  <line class="ln-warm" x1="523" y1="300" x2="523" y2="232" marker-end="url(#wf-w)"/>
+  <text class="t-lab" x="40" y="376">one stage per fresh thread, each starting from the home</text>
+  <rect class="box-thread" x="600" y="300" width="22" height="14" rx="2"/>
+  <text class="t-sm" x="630" y="311">disposable</text>
+  <rect class="box-home" x="600" y="324" width="22" height="14" rx="2"/>
+  <text class="t-sm" x="630" y="335">durable</text>
+  <line class="ln-warm" x1="600" y1="355" x2="622" y2="355"/>
+  <text class="t-sm" x="630" y="359">saves to home</text>
+</svg>
+</div>
+<figcaption>Everything flows through the project home. Threads come and go; each one reads the current state and exports only what you approved.</figcaption>
+</figure>
+
+<h2>What a project home contains</h2>
+<p>Set this up once. Every later step reads from it or writes to it.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th scope="col">Item</th><th scope="col">What goes in it</th><th scope="col">Changes</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Project brief</strong></td><td>Goal, audience, background, constraints, what success looks like</td><td>Rarely</td></tr>
+    <tr><td><strong>Current state</strong></td><td>One page: the plan, what is done, decisions made, what is next</td><td>After every stage</td></tr>
+    <tr><td><strong>Approved outputs</strong></td><td>Finished pieces you have checked and would stand behind</td><td>As stages finish</td></tr>
+    <tr><td><strong>Sources</strong></td><td>Papers, links, and documents the work relies on</td><td>As you go</td></tr>
+  </tbody>
+</table>
+</div>
+
+<ol class="steps">
+  <li>
+    <h3>Create the project home.</h3>
+    <p>Choose the desktop or cloud location where the durable project memory and approved outputs will live. Create the four items above, even if they are empty.</p>
+    <p>Then create a platform project (a Claude or ChatGPT project) for the same work. Its instructions say what the project is and that the current state lives in the home.</p>
+    <p class="small"><strong>Done when:</strong> both exist and the project instructions point to the home.</p>
+  </li>
+  <li>
+    <h3>Describe the project.</h3>
+    <p>Brain-dump the goal, background, constraints, source material, and what a successful final result should look like. Talk or type; do not polish it.</p>
+    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Turn this brain-dump into a one-page project brief: goal, audience, background, constraints, and what success looks like. Then list what is missing or unclear before you could plan the work.</pre></div></div>
+    <p>Answer its questions, fix what it got wrong, and save the brief to the home. Paste the short version into the project instructions.</p>
+    <p class="small"><strong>Done when:</strong> someone else could read the brief and understand what you are making and why.</p>
+  </li>
+  <li>
+    <h3>Build and refine a plan.</h3>
+    <p>Ask the LLM to organize the project into stages. Each stage needs an output and a test for when it is finished.</p>
+    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Using the brief, propose 3–6 stages. For each: the output it produces, what it depends on, and how I will know it is done. Flag the stage most likely to go wrong.</pre></div></div>
+    <p>Push back until it fits: too many stages, wrong order, a stage that is really two. Save the plan in the current-state document.</p>
+    <p class="small"><strong>Done when:</strong> the plan accurately reflects what you are trying to do and the order you would actually do it.</p>
+  </li>
+  <li>
+    <h3>Work one stage at a time.</h3>
+    <p>Open a new thread for the stage inside the platform project. Give it the brief, the current state, and any approved outputs that stage depends on. Iterate, critique, and verify, using <a href="../core/iteration.html">Module 04</a>.</p>
+    <p>When the stage is solid, export it: save the output to Approved outputs and update the current-state document with what was done, what was decided, and what comes next.</p>
+    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Update the current-state document: mark this stage done, list the decisions we made and why, and state the next stage and what it needs from this one.</pre></div></div>
+    <p class="small"><strong>Done when:</strong> you would stand behind the output, and the current-state document is accurate without the thread.</p>
+  </li>
+  <li>
+    <h3>Continue from the trusted state.</h3>
+    <p>Move to the next stage in a fresh thread. Because the project instructions and the home carry the state, the new thread starts already oriented. You do not need the old conversation.</p>
+    <p>If you notice yourself typing the same instructions at the start of each thread, move them into the project instructions or turn them into a <a href="../core/going-deeper.html">skill</a>.</p>
+    <p class="small"><strong>Done when:</strong> every planned stage has an approved output.</p>
+  </li>
+  <li>
+    <h3>Review the final product as a whole.</h3>
+    <p>Check that the pieces fit together and that you understand and stand behind the finished result. Read it end to end, then ask a model to review it as the intended audience would.</p>
+    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Read this as [the intended audience]. What is unclear, inconsistent between sections, or unsupported? What would you ask the author?</pre></div></div>
+    <p class="small"><strong>Done when:</strong> you can explain every part without the model, and the important facts have been checked against their sources.</p>
+  </li>
+</ol>
+
+<h2>See it in practice</h2>
+<ul class="cards">
+  <li><a href="../examples/pubmed-scout.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="kicker">Example</span><span class="title">PubMed scout</span><span class="desc">A recurring workflow that prepares work for you to review.</span></a></li>
+</ul>
+<nav class="pager" aria-label="Page"><a class="prev" href="../core/project-memory.html"><span class="dir">Previous</span><span>Threads and memory</span></a><a class="next" href="../core/connectors.html"><span class="dir">Next</span><span>Connectors and agents</span></a></nav>
+<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.2</footer>
+</article>
+</main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PubMed scout · Practical AI Workflows</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidenav">
+  <div class="navbar">
+    <a class="brand" href="../index.html"><span class="mark">FIELD GUIDE</span><span class="name">Practical AI Workflows</span></a>
+    <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  </div>
+  <nav class="navlinks" id="navlinks" data-open="true" aria-label="Site">
+<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/project-memory.html"><span class="num">05</span><span>Threads and memory</span></a></li><li><a href="../core/project-workflow.html"><span class="num">06</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">07</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">08</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">09</span><span>Going deeper</span></a></li></ol></div>
+<div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/when-not-to-use.html"><span>When not to use AI</span><span class="tag">soon</span></a></li><li><a href="../topics/teaching.html"><span>AI for teaching</span><span class="tag">soon</span></a></li><li><a href="../topics/research.html"><span>Research use cases</span><span class="tag">soon</span></a></li></ul></div>
+<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research group database</span></a></li><li><a href="../examples/exercise-tracker.html"><span>Exercise tracker</span></a></li><li><a href="../examples/pubmed-scout.html" aria-current="page"><span>PubMed scout</span></a></li><li><a href="../examples/newsletter-digest.html"><span>Newsletter digest</span></a></li></ul></div>
+<div class="navgroup"><h2>Residents</h2><ul><li><a href="https://claude.ai/artifact/Q6PUc5QvV6muvLbgsadrvh"><span>Resident AI elective</span><span class="tag" aria-hidden="true">&#8599;</span></a></li></ul></div>
+  </nav>
+</aside>
+<main>
+<header class="page-head"><div class="head-inner"><div class="head-text">
+<p class="eyebrow">Worked example &middot; Scheduled tasks</p>
+<h1>PubMed scout</h1>
+<p class="lede">A recurring workflow that prepares work for you to review.</p>
+</div><div class="head-mark" aria-hidden="true"><svg class="bigicon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg></div></div></header>
+<article class="page">
+<div class="draft"><p><span class="draft-label">Draft</span>Paper titles below are placeholders. Replace with one real weekly digest entry.</p></div>
+
+<div class="case">
+  <dl>
+    <dt>Goal</dt><dd>Know about new publications relevant to ongoing projects without searching every week.</dd>
+    <dt>Tools</dt><dd>Claude connected to PubMed, running as a weekly scheduled task.</dd>
+    <dt>Delivers</dt><dd>An email with useful papers, why each may matter to a specific project, and links.</dd>
+    <dt>Your job</dt><dd>Decide what is relevant and verify anything you plan to use.</dd>
+  </dl>
+
+  <div class="exchange">
+    <div class="who"><span>Scheduled instruction</span><button class="copy-btn" type="button" data-copy="ps-prompt">Copy</button></div>
+    <div class="body"><pre id="ps-prompt">Every Monday: search PubMed for papers from the past 7 days related to each project listed in my project file. For each useful paper, give the citation, a two-sentence summary, which project it bears on and why, and the PubMed link. Skip anything that is only loosely related. Email the result to me.</pre></div>
+  </div>
+
+  <div class="exchange">
+    <div class="who"><span>Output excerpt</span><span>trimmed, placeholder</span></div>
+    <div class="body">
+      <p><strong>[Paper title]</strong>, [Journal], [Year].</p>
+      <p><strong>Why it matters:</strong> Relevant to [project]: uses a similar study design and reports the outcome we planned to measure.</p>
+    </div>
+  </div>
+</div>
+
+<figure class="shot" role="img" aria-label="Placeholder for a screenshot">
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="9" cy="10" r="2"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
+  <strong>Screenshot placeholder</strong>
+  <span>One weekly digest email, trimmed to two papers.</span>
+</figure>
+
+<h2>Takeaway</h2>
+<p>The automation prepares an internal review product. It never acts on its own, and every paper it finds is real because it retrieved it from PubMed rather than recalling it.</p>
+<nav class="pager" aria-label="Page"><a class="prev" href="../examples/exercise-tracker.html"><span class="dir">Previous</span><span>Exercise tracker</span></a><a class="next" href="../examples/newsletter-digest.html"><span class="dir">Next</span><span>Newsletter digest</span></a></nav>
+<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.2</footer>
+</article>
+</main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<p class="eyebrow">Worked example &middot; Giving context</p>
+<h1>Meeting summary</h1>
+<p class="lede">A transcript plus the material around it becomes a meeting record in a format you reuse.</p>
+<div class="draft"><p><span class="draft-label">Draft</span>The prompt and output below are illustrative, with fictional details. Replace them with a trimmed real excerpt.</p></div>
+
+<div class="case">
+  <dl>
+    <dt>Goal</dt><dd>A useful record of a recurring meeting: decisions, action items with owners, and open questions.</dd>
+    <dt>Tools</dt><dd>Teams or Otter for recording, then KUMC Copilot (internal meetings are confidential).</dd>
+    <dt>Context added</dt><dd>Exported transcript, agenda, slides, and last meeting's notes.</dd>
+    <dt>Became</dt><dd>A reusable skill once the format stopped changing.</dd>
+  </dl>
+
+  <div class="exchange">
+    <div class="who"><span>Key prompt</span><button class="copy-btn" type="button" data-copy="ms-prompt">Copy</button></div>
+    <div class="body"><pre id="ms-prompt">Attached: the transcript, agenda, and slides from today's education committee meeting, plus last month's notes.
+Write the summary in my usual format: decisions first, then action items as a table (task, owner, due date), then open questions. Under one page. Flag anything on the agenda that was not discussed.</pre></div>
+  </div>
+
+  <div class="exchange">
+    <div class="who"><span>Output excerpt</span><span>trimmed</span></div>
+    <div class="body">
+      <p><strong>Decisions:</strong> Simulation sessions move to the second Thursday starting next block.</p>
+      <p><strong>Not discussed:</strong> Agenda item 4 (conference travel budget).</p>
+    </div>
+  </div>
+
+  <div class="exchange">
+    <div class="who"><span>What I changed</span></div>
+    <div class="body"><pre>Two action items have no owner. Mark them "owner needed" rather than guessing. Drop the attendance list.</pre></div>
+  </div>
+</div>
+
+<h2>What the surrounding material changes</h2>
+<div class="compare">
+  <div class="side">
+    <div class="label">Transcript only</div>
+    <div class="prompt">Summarize this transcript in my usual format.</div>
+    <div class="result"><p>Decisions and action items, but no way to know what was skipped, and items already settled last month reappear as new.</p><span class="verdict">Plausible, incomplete.</span></div>
+  </div>
+  <div class="side strong">
+    <div class="label">Transcript + agenda + last notes</div>
+    <div class="prompt">Same request, with the agenda and last month's notes attached.</div>
+    <div class="result"><p>Flags the agenda item that was never discussed and separates new decisions from ones carried over.</p><span class="verdict">A record you can trust.</span></div>
+  </div>
+</div>
+<figure class="shot" role="img" aria-label="Placeholder for a screenshot">
+  {{icon:image}}
+  <strong>Screenshot placeholder</strong>
+  <span>A real summary from a past meeting, with names removed.</span>
+</figure>
+
+<h2>Takeaway</h2>
+<p>The surrounding material does more than the transcript alone: the agenda tells the model what was supposed to happen, and last month's notes tell it what was already decided. Once the same instructions repeated every month, they became a skill.</p>

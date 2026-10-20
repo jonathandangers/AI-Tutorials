@@ -1,0 +1,35 @@
+<p class="eyebrow">Worked example &middot; Scheduled tasks</p>
+<h1>PubMed scout</h1>
+<p class="lede">A recurring workflow that prepares work for you to review.</p>
+<div class="draft"><p><span class="draft-label">Draft</span>Paper titles below are placeholders. Replace with one real weekly digest entry.</p></div>
+
+<div class="case">
+  <dl>
+    <dt>Goal</dt><dd>Know about new publications relevant to ongoing projects without searching every week.</dd>
+    <dt>Tools</dt><dd>Claude connected to PubMed, running as a weekly scheduled task.</dd>
+    <dt>Delivers</dt><dd>An email with useful papers, why each may matter to a specific project, and links.</dd>
+    <dt>Your job</dt><dd>Decide what is relevant and verify anything you plan to use.</dd>
+  </dl>
+
+  <div class="exchange">
+    <div class="who"><span>Scheduled instruction</span><button class="copy-btn" type="button" data-copy="ps-prompt">Copy</button></div>
+    <div class="body"><pre id="ps-prompt">Every Monday: search PubMed for papers from the past 7 days related to each project listed in my project file. For each useful paper, give the citation, a two-sentence summary, which project it bears on and why, and the PubMed link. Skip anything that is only loosely related. Email the result to me.</pre></div>
+  </div>
+
+  <div class="exchange">
+    <div class="who"><span>Output excerpt</span><span>trimmed, placeholder</span></div>
+    <div class="body">
+      <p><strong>[Paper title]</strong>, [Journal], [Year].</p>
+      <p><strong>Why it matters:</strong> Relevant to [project]: uses a similar study design and reports the outcome we planned to measure.</p>
+    </div>
+  </div>
+</div>
+
+<figure class="shot" role="img" aria-label="Placeholder for a screenshot">
+  {{icon:image}}
+  <strong>Screenshot placeholder</strong>
+  <span>One weekly digest email, trimmed to two papers.</span>
+</figure>
+
+<h2>Takeaway</h2>
+<p>The automation prepares an internal review product. It never acts on its own, and every paper it finds is real because it retrieved it from PubMed rather than recalling it.</p>
