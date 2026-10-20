@@ -105,7 +105,10 @@ def prefix_for(path: str) -> str:
 
 def nav_html(current: str) -> str:
     pre = prefix_for(current)
-    parts = []
+    parts = [
+        f'<a class="nav-cta" href="{ELECTIVE_URL}"><span class="k">Resident?</span>'
+        '<span class="t">Explore the AI elective</span><span class="arr" aria-hidden="true">&#8599;</span></a>'
+    ]
     for gkey, glabel, numbered in GROUPS:
         items = [p for p in PAGES if p[3] == gkey]
         lis = []
@@ -116,11 +119,6 @@ def nav_html(current: str) -> str:
             lis.append(f'<li><a href="{pre}{path}"{cur}>{num}<span>{label}</span>{tg}</a></li>')
         tagname = "ol" if numbered else "ul"
         parts.append(f'<div class="navgroup"><h2>{glabel}</h2><{tagname}>{"".join(lis)}</{tagname}></div>')
-    parts.append(
-        '<div class="navgroup"><h2>Residents</h2><ul><li>'
-        f'<a href="{ELECTIVE_URL}"><span>Resident AI elective</span><span class="tag" aria-hidden="true">&#8599;</span></a>'
-        '</li></ul></div>'
-    )
     return "\n".join(parts)
 
 
@@ -181,7 +179,7 @@ TEMPLATE = """<!doctype html>
 <article class="page">
 {body}
 {pager}
-<footer class="site">{site} &middot; Created by {author} &middot; Draft v1.2</footer>
+<footer class="site">{site} &middot; Created by {author} &middot; Draft v1.4</footer>
 </article>
 </main>
 </div>
@@ -200,7 +198,7 @@ def build():
     for path, title, _label, _group, _tag, _ic in PAGES:
         pre = prefix_for(path)
         body = render_fragment((SRC / path).read_text(encoding="utf-8"), pre)
-        m = re.search(r'<p class="lede">.*?</p>', body, flags=re.S)
+        m = re.search(r'<!-- /head -->', body) or re.search(r'<p class="lede">.*?</p>', body, flags=re.S)
         if m:
             head, body = body[: m.end()], body[m.end():]
         else:

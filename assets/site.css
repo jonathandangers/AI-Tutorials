@@ -420,3 +420,42 @@ footer.site { margin-top: 3rem; font-size: var(--step--1); color: var(--muted); 
 .dg .dot-open { fill: var(--paper); stroke: var(--navy); stroke-width: 2; }
 .dg .band-ice { fill: var(--ice); }
 .dg .band-cream { fill: var(--cream); }
+
+/* ---------- elective entry points ---------- */
+.nav-cta {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 0.6rem;
+  margin-top: 1.1rem; padding: 0.6rem 0.75rem; border-radius: 4px; text-decoration: none;
+  background: var(--cream); color: var(--navy-deep); border-bottom: 3px solid var(--tan);
+}
+.nav-cta .k { grid-column: 1; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--copper-ink); }
+.nav-cta .t { grid-column: 1; font-weight: 700; line-height: 1.25; }
+.nav-cta .arr { grid-column: 2; grid-row: 1 / span 2; font-size: 1.15rem; }
+.nav-cta:hover { background: var(--cream-soft); color: var(--navy-deep); }
+
+.hero-cta { margin-top: 1.25rem; }
+.btn {
+  display: inline-flex; gap: 0.5rem; align-items: center; text-decoration: none;
+  font-family: var(--font-display); font-weight: 700; font-size: 1rem; line-height: 1.3;
+  background: var(--navy-deep); color: var(--paper); padding: 0.7rem 1.1rem; border-radius: 4px;
+}
+.btn:hover { background: var(--copper); color: var(--paper); }
+
+.quick { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; font-family: var(--font-display); }
+.quick a {
+  text-decoration: none; font-weight: 600; font-size: 0.92rem; color: var(--navy-deep);
+  border: 1px solid var(--navy); border-radius: 4px; padding: 0.4rem 0.8rem; background: var(--paper);
+}
+.quick a:first-child { background: var(--navy-deep); color: var(--paper); border-color: var(--navy-deep); }
+.quick a:hover { border-color: var(--copper); color: var(--copper); }
+.quick a:first-child:hover { background: var(--copper); border-color: var(--copper); color: var(--paper); }
+
+/* ---------- weekly schedule ---------- */
+.glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.75rem; margin: 1rem 0 0; }
+.glance > div { min-width: 0; background: var(--sheet); border-radius: 4px; padding: 0.7rem 0.9rem; }
+.glance dt { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--copper-ink); }
+.glance dd { margin: 0.25rem 0 0; font-size: 0.97rem; line-height: 1.45; }
+.tasks-h { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: 1.75rem; }
+.task { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+.tasks-h + .task { margin-top: 0.6rem; }
+.task h4 { font-size: 1.08rem; font-weight: 700; }
+.task > p:first-of-type, .task > ul:first-of-type { margin-top: 0.3rem; }
