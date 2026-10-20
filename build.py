@@ -4,7 +4,7 @@
 Edit page bodies in src/ (plain HTML fragments, no <head> or nav),
 then run:  python3 build.py
 Built pages are written next to this file (index.html, core/, topics/,
-examples/, elective/) so GitHub Pages can serve the repo root as-is.
+examples/) so GitHub Pages can serve the repo root as-is.
 
 In a fragment:
   {{pre}}          -> relative path back to the site root
