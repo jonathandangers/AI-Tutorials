@@ -459,3 +459,30 @@ footer.site { margin-top: 3rem; font-size: var(--step--1); color: var(--muted); 
 .tasks-h + .task { margin-top: 0.6rem; }
 .task h4 { font-size: 1.08rem; font-weight: 700; }
 .task > p:first-of-type, .task > ul:first-of-type { margin-top: 0.3rem; }
+
+/* ---------- home: two ways in ---------- */
+.paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+.path {
+  display: grid; gap: 0.35rem; align-content: start; text-decoration: none; color: var(--ink);
+  background: var(--paper); border: 1.5px solid var(--navy); border-radius: 6px; padding: 1.1rem 1.2rem 1.2rem;
+  border-top: 5px solid var(--navy);
+}
+.path + .path { border-top-color: var(--tan); }
+.path:hover { background: var(--sheet); color: var(--ink); }
+.path-k { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--copper-ink); }
+.path-t { font-family: var(--font-display); font-weight: 800; font-stretch: 88%; font-size: 1.45rem; line-height: 1.15; color: var(--navy-deep); }
+.path-d { font-size: 0.95rem; color: var(--muted); line-height: 1.45; }
+.path-go { margin-top: 0.35rem; font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; color: var(--peri-ink); }
+.path:hover .path-go { color: var(--copper); }
+.bring { scroll-margin-top: 1rem; }
+.bring .sides { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 1.75rem; margin-top: 0.9rem; }
+.bring .sides > div { min-width: 0; }
+.bring h3 { margin-top: 0; color: var(--nav-label); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--font-mono); font-weight: 500; }
+.bring ul { margin-top: 0.5rem; }
+.bring li::marker { color: var(--tan); }
+.bring .next { margin-top: 1.1rem; padding-top: 0.9rem; border-top: 1px solid var(--nav-hover); color: var(--nav-fg); }
+.bring a { color: var(--nav-fg); text-decoration-color: var(--nav-label); text-decoration-thickness: 2px; }
+.bring a:hover { color: var(--nav-label); }
+@media (max-width: 40rem) {
+  .paths, .bring .sides { grid-template-columns: minmax(0, 1fr); }
+}

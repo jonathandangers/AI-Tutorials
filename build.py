@@ -179,7 +179,7 @@ TEMPLATE = """<!doctype html>
 <article class="page">
 {body}
 {pager}
-<footer class="site">{site} &middot; Created by {author} &middot; Draft v1.4</footer>
+<footer class="site">{site} &middot; Created by {author} &middot; Draft v1.5</footer>
 </article>
 </main>
 </div>
