@@ -44,7 +44,7 @@ PAGES = [
     ("topics/research.html", "Research use cases", "Research use cases", "topics", "placeholder", "flask"),
 
     ("examples/meeting-summary.html", "Meeting summary", "Meeting summary", "examples", "", "chat"),
-    ("examples/research-workshop.html", "Research group database", "Research group database", "examples", "", "table"),
+    ("examples/research-workshop.html", "Research groups project home", "Research groups", "examples", "", "folder"),
     ("examples/exercise-tracker.html", "Exercise tracker", "Exercise tracker", "examples", "", "pulse"),
     ("examples/pubmed-scout.html", "PubMed scout", "PubMed scout", "examples", "", "search"),
     ("examples/newsletter-digest.html", "Newsletter digest", "Newsletter digest", "examples", "", "mail"),

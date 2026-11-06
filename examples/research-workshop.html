@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Research group database · Practical AI Workflows</title>
+<title>Research groups project home · Practical AI Workflows</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,44 +21,123 @@
 <a class="nav-cta" href="https://claude.ai/artifact/Q6PUc5QvV6muvLbgsadrvh"><span class="k">Resident?</span><span class="t">Explore the AI elective</span><span class="arr" aria-hidden="true">&#8599;</span></a>
 <div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/project-memory.html"><span class="num">05</span><span>Threads and memory</span></a></li><li><a href="../core/project-workflow.html"><span class="num">06</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">07</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">08</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">09</span><span>Going deeper</span></a></li></ol></div>
 <div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/when-not-to-use.html"><span>When not to use AI</span><span class="tag">soon</span></a></li><li><a href="../topics/teaching.html"><span>AI for teaching</span><span class="tag">soon</span></a></li><li><a href="../topics/research.html"><span>Research use cases</span><span class="tag">soon</span></a></li></ul></div>
-<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html" aria-current="page"><span>Research group database</span></a></li><li><a href="../examples/exercise-tracker.html"><span>Exercise tracker</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/newsletter-digest.html"><span>Newsletter digest</span></a></li></ul></div>
+<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html" aria-current="page"><span>Research groups</span></a></li><li><a href="../examples/exercise-tracker.html"><span>Exercise tracker</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/newsletter-digest.html"><span>Newsletter digest</span></a></li></ul></div>
   </nav>
 </aside>
 <main>
 <header class="page-head"><div class="head-inner"><div class="head-text">
-<p class="eyebrow">Worked example &middot; Connectors</p>
-<h1>Research group database</h1>
-<p class="lede">A Notion database, built with an LLM's help, that holds the state of every research group so meeting prep takes a question instead of an hour.</p>
-</div><div class="head-mark" aria-hidden="true"><svg class="bigicon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M3 14h18M9 4v16"/></svg></div></div></header>
+<p class="eyebrow">Worked example &middot; Project home</p>
+<h1>Research groups project home</h1>
+<p class="lede">What a long-running project looks like when everything about it lives in one place: a OneDrive folder holds the record, a Copilot workspace holds your instructions, and each task gets its own short thread.</p>
+</div><div class="head-mark" aria-hidden="true"><svg class="bigicon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h6l2 2h10v11H3z"/></svg></div></div></header>
 <article class="page">
-<div class="draft"><p><span class="draft-label">Draft</span>Groups, names, and projects below are fictional so no real group's work is shown. Replace with an anonymized real excerpt if you prefer.</p></div>
+<div class="note"><p><strong>This shows what is possible, not a setup guide.</strong> It assumes a premium Microsoft 365 Copilot license, which can work with your OneDrive files directly. Copilot Chat can do the same thread work with files you upload into the conversation.</p></div>
+<div class="draft"><p><span class="draft-label">Draft</span>Groups and details below are fictional. Confirm what your Copilot calls the place that holds standing instructions and saved prompts, and which steps it does directly versus drafting for you to apply.</p></div>
+
+<h2>How the pieces fit</h2>
+<figure class="dg">
+<div class="scroll">
+<svg viewBox="0 0 760 330" role="img" aria-label="A Copilot workspace holds standing instructions and skills and starts each short thread. Each thread reads files from the OneDrive project home and saves approved output back to it.">
+  <defs>
+    <marker id="ph-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
+    <marker id="ph-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah-warm"/></marker>
+  </defs>
+  <text class="t-lab" x="275" y="26" text-anchor="middle">starts</text>
+  <text class="t-lab" x="500" y="20" text-anchor="middle">reads files</text>
+  <text class="t-lab" x="500" y="318" text-anchor="middle">saves approved output</text>
+
+  <rect class="box-ice" x="30" y="40" width="220" height="248" rx="6"/>
+  <text class="t" x="50" y="70">Copilot workspace</text>
+  <text class="t-sm" x="50" y="90">the project inside the AI tool</text>
+  <text class="t-lab" x="50" y="126">STANDING INSTRUCTIONS</text>
+  <text class="t-sm" x="50" y="146">what the project is, where</text>
+  <text class="t-sm" x="50" y="162">its files live, house style</text>
+  <text class="t-lab" x="50" y="198">SKILLS</text>
+  <text class="t-sm" x="50" y="218">prep brief</text>
+  <text class="t-sm" x="50" y="236">post-meeting update</text>
+  <text class="t-sm" x="50" y="254">status report</text>
+
+  <rect class="box-thread" x="300" y="40" width="170" height="56" rx="6"/>
+  <text class="t" x="385" y="65" text-anchor="middle">Prep for Thursday</text>
+  <text class="t-sm" x="385" y="83" text-anchor="middle">prep-brief skill</text>
+  <line class="ln" x1="252" y1="68" x2="298" y2="68" marker-end="url(#ph-a)"/>
+  <line class="ln" x1="528" y1="60" x2="472" y2="60" marker-end="url(#ph-a)"/>
+  <line class="ln-warm" x1="472" y1="76" x2="526" y2="76" marker-end="url(#ph-w)"/>
+  <rect class="box-thread" x="300" y="136" width="170" height="56" rx="6"/>
+  <text class="t" x="385" y="161" text-anchor="middle">Think through a stall</text>
+  <text class="t-sm" x="385" y="179" text-anchor="middle">thinking partner</text>
+  <line class="ln" x1="252" y1="164" x2="298" y2="164" marker-end="url(#ph-a)"/>
+  <line class="ln" x1="528" y1="156" x2="472" y2="156" marker-end="url(#ph-a)"/>
+  <line class="ln-warm" x1="472" y1="172" x2="526" y2="172" marker-end="url(#ph-w)"/>
+  <rect class="box-thread" x="300" y="232" width="170" height="56" rx="6"/>
+  <text class="t" x="385" y="257" text-anchor="middle">Draft the follow-up</text>
+  <text class="t-sm" x="385" y="275" text-anchor="middle">writer</text>
+  <line class="ln" x1="252" y1="260" x2="298" y2="260" marker-end="url(#ph-a)"/>
+  <line class="ln" x1="528" y1="252" x2="472" y2="252" marker-end="url(#ph-a)"/>
+  <line class="ln-warm" x1="472" y1="268" x2="526" y2="268" marker-end="url(#ph-w)"/>
+
+  <rect class="box-home" x="530" y="40" width="200" height="248" rx="6"/>
+  <text class="t" x="550" y="70">OneDrive project home</text>
+  <text class="t-sm" x="550" y="90">the durable record</text>
+  <text class="t-lab" x="550" y="126">TRACKER</text>
+  <text class="t-sm" x="550" y="146">one row per group</text>
+  <text class="t-lab" x="550" y="182">GROUP FOLDERS</text>
+  <text class="t-sm" x="550" y="202">transcripts, notes, drafts</text>
+  <text class="t-lab" x="550" y="238">APPROVED OUTPUTS</text>
+  <text class="t-sm" x="550" y="258">briefs, summaries, emails</text>
+</svg>
+</div>
+<figcaption>Three parts, each with one job. The workspace holds how you want things done, the threads do one task each and then end, and the folder keeps everything you approved.</figcaption>
+</figure>
 
 <div class="case">
   <dl>
-    <dt>Goal</dt><dd>Keep 8–14 research groups' status, blockers, and next steps current without re-reading old emails before each meeting.</dd>
-    <dt>Tools</dt><dd>Notion database plus an LLM with the Notion connector.</dd>
-    <dt>Updates</dt><dd>Paste an email, upload a transcript, or dictate a quick note after a meeting.</dd>
-    <dt>Questions</dt><dd>"When did I last meet with this group?" or "Write a prep brief for Thursday."</dd>
+    <dt>Goal</dt><dd>Keep 8–14 research groups' status, blockers, and next steps current, and walk into every meeting prepared, without re-reading old emails.</dd>
+    <dt>Project home</dt><dd>A OneDrive folder: a tracker workbook with one row per group, a folder per group for transcripts and notes, and a folder of approved outputs.</dd>
+    <dt>AI workspace</dt><dd>KUMC Copilot, signed in with @kumc.edu. Standing instructions describe the project and point to the folder; skills hold the prompts you repeat.</dd>
+    <dt>Threads</dt><dd>One per task: prep a meeting, update after one, think through a stalled group, draft an email. Each ends when its output is approved and saved.</dd>
+    <dt>Data rules</dt><dd>Research group materials are internal, so they stay in KUMC tools. <a href="../core/start-here.html">See Start here</a>.</dd>
   </dl>
+</div>
 
+<h2>A week in the project</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th scope="col">When</th><th scope="col">What you do</th><th scope="col">What gets saved</th></tr></thead>
+  <tbody>
+    <tr><td><strong>After a meeting</strong></td><td>Drop the transcript in the group's folder. In a new thread, run the post-meeting update skill. Check its proposed tracker changes and action items.</td><td>Updated tracker row; meeting summary in the group folder</td></tr>
+    <tr><td><strong>Before a meeting</strong></td><td>Run the prep brief skill for that group.</td><td>Nothing, unless you want the brief kept</td></tr>
+    <tr><td><strong>When a group stalls</strong></td><td>Open a thread to think it through: what changed, what the options are, what to ask. Push back on easy answers.</td><td>The decision, in the tracker's notes</td></tr>
+    <tr><td><strong>Monthly</strong></td><td>Run the status report skill across all groups.</td><td>The approved report</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="case">
   <div class="exchange">
-    <div class="who"><span>Key prompt</span><button class="copy-btn" type="button" data-copy="rw-prompt">Copy</button></div>
-    <div class="body"><pre id="rw-prompt">Write a prep brief for my meeting with the Group C team tomorrow. Use their database page: last meeting date, current status, open blockers, and what they committed to last time. Five bullets at most, then two questions I should ask.</pre></div>
+    <div class="who"><span>Prep brief skill, in use</span><button class="copy-btn" type="button" data-copy="rw-prompt">Copy</button></div>
+    <div class="body"><pre id="rw-prompt">Prep brief for Group C, meeting tomorrow. Use their tracker row and the two most recent transcripts in their folder: last meeting date, current stage, open blockers, and what each person committed to last time. Five bullets at most, then two questions I should ask. Flag anything in the transcripts that contradicts the tracker.</pre></div>
   </div>
 
   <div class="exchange">
     <div class="who"><span>Output excerpt</span><span>trimmed, fictional</span></div>
     <div class="body">
-      <p><strong>Last met:</strong> six weeks ago. <strong>Status:</strong> data collection.</p>
-      <p><strong>Committed last time:</strong> finish chart-review form; send IRB amendment.</p>
-      <p><strong>Ask:</strong> Did the IRB amendment go out? Who is doing the second chart review?</p>
+      <p><strong>Last met:</strong> six weeks ago. <strong>Stage:</strong> data collection.</p>
+      <p><strong>Committed last time:</strong> finish the chart-review form; send the IRB amendment.</p>
+      <p><strong>Contradiction:</strong> the tracker lists the amendment as sent, but the last transcript says it was still being drafted.</p>
+      <p><strong>Ask:</strong> Did the amendment go out? Who is doing the second chart review?</p>
     </div>
   </div>
 
   <details>
-    <summary>How the database was built</summary>
+    <summary>What makes this work</summary>
     <div class="inner">
-      <p>I described the questions I wanted to be able to ask, and the LLM proposed fields that would answer them: group, members, stage, last meeting, blockers, next step, and links. I adjusted the fields, it built the database through the connector, and I loaded existing groups by pasting old notes.</p>
+      <ul>
+        <li><strong>The record lives outside the chat.</strong> Any thread, or any person, can pick up the project from the folder.</li>
+        <li><strong>Repeated prompts become skills.</strong> The prep brief asks the same things every time, so nobody rebuilds it.</li>
+        <li><strong>Threads stay short.</strong> One task each, so the model works from the files rather than from a long, noisy conversation.</li>
+        <li><strong>You approve before anything is saved.</strong> The tracker only changes after you check the proposed update.</li>
+      </ul>
     </div>
   </details>
 </div>
@@ -66,11 +145,11 @@
 <figure class="shot" role="img" aria-label="Placeholder for a screenshot">
   <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="9" cy="10" r="2"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
   <strong>Screenshot placeholder</strong>
-  <span>The Notion database view, with group names and members blurred.</span>
+  <span>The OneDrive folder layout and tracker, with group names blurred.</span>
 </figure>
 
 <h2>Takeaway</h2>
-<p>Design the database around the questions you will ask, not around what feels tidy. Conversation then becomes the way you read and update it.</p>
+<p>The same pattern fits any project that runs for months: a curriculum, a committee, a grant, a quality project. Keep the record in one folder, keep your instructions and repeated prompts in the AI workspace, and give each task its own short thread.</p>
 <nav class="pager" aria-label="Page"><a class="prev" href="../examples/meeting-summary.html"><span class="dir">Previous</span><span>Meeting summary</span></a><a class="next" href="../examples/exercise-tracker.html"><span class="dir">Next</span><span>Exercise tracker</span></a></nav>
 <footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.5</footer>
 </article>
