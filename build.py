@@ -173,6 +173,7 @@ TEMPLATE = """<!doctype html>
   </nav>
 </aside>
 <main>
+<p class="wip">Work in progress. Modules are being written and polished; some pages are placeholders.</p>
 <header class="page-head"><div class="head-inner"><div class="head-text">
 {head}
 </div>{mark}</div></header>
