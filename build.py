@@ -22,6 +22,9 @@ SRC = ROOT / "src"
 
 SITE_NAME = "Practical AI Workflows"
 ELECTIVE_URL = "https://ai-elective.jonathan-dangers.workers.dev"
+# Cloudflare Web Analytics: paste the site token from Cloudflare (Analytics & Logs > Web Analytics).
+# Empty means no analytics script is added.
+CF_ANALYTICS_TOKEN = ""
 AUTHOR = "Jonathan Dangers, MD"
 
 # (path, page title, nav label, group, tag, icon)
@@ -185,9 +188,16 @@ TEMPLATE = """<!doctype html>
 </main>
 </div>
 <script src="{pre}assets/site.js"></script>
-</body>
+{analytics}</body>
 </html>
 """
+
+
+def analytics_tag() -> str:
+    if not CF_ANALYTICS_TOKEN:
+        return ""
+    return ("<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" "
+            f"data-cf-beacon='{{\"token\": \"{CF_ANALYTICS_TOKEN}\"}}'></script>\n")
 
 
 def render_fragment(text: str, pre: str) -> str:
@@ -208,7 +218,7 @@ def build():
         html = TEMPLATE.format(
             title=full_title, pre=pre, site=SITE_NAME, author=AUTHOR,
             nav=nav_html(path), head=head.strip(), mark=head_mark(path),
-            body=body.strip(), pager=pager_html(path),
+            body=body.strip(), pager=pager_html(path), analytics=analytics_tag(),
         )
         out = ROOT / path
         out.parent.mkdir(parents=True, exist_ok=True)
