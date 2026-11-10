@@ -21,7 +21,7 @@ ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 
 SITE_NAME = "Practical AI Workflows"
-ELECTIVE_URL = "https://claude.ai/artifact/Q6PUc5QvV6muvLbgsadrvh"
+ELECTIVE_URL = "https://ai-elective.jonathan-dangers.workers.dev"
 AUTHOR = "Jonathan Dangers, MD"
 
 # (path, page title, nav label, group, tag, icon)
