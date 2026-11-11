@@ -133,9 +133,9 @@
   </li>
   <li>
     <h3>Build and refine a plan.</h3>
-    <p>Ask the LLM to organize the project into stages. Each stage needs an output and a test for when it is finished.</p>
-    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Using the brief, propose 3–6 stages. For each: the output it produces, what it depends on, and how I will know it is done. Flag the stage most likely to go wrong.</pre></div></div>
-    <p>Push back until it fits: too many stages, wrong order, a stage that is really two. Save the plan in the current-state document.</p>
+    <p>Break the project into stages yourself, or at least choose them. You know the work and where it is likely to go wrong. The model can then organize your stages and check them for gaps. Each stage needs an output and a test for when it is finished.</p>
+    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Here are the stages I have in mind: [your list]. Using the brief, organize them. For each: the output it produces, what it depends on, and how I will know it is done. Tell me if a stage is missing or is really two, and flag the one most likely to go wrong.</pre></div></div>
+    <p>If you cannot see the stages yet, ask the model to propose 3–6 and choose from those. Adjust until the plan fits: too many stages, wrong order, a stage that is really two. Save the plan in the current-state document.</p>
     <p class="small"><strong>Done when:</strong> the plan accurately reflects what you are trying to do and the order you would actually do it.</p>
   </li>
   <li>
