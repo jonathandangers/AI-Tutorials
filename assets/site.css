@@ -500,3 +500,76 @@ footer.site { margin-top: 3rem; font-size: var(--step--1); color: var(--muted); 
   background: var(--cream); color: var(--copper-ink); border-bottom: 1px solid var(--tan);
   font-family: var(--font-display); font-size: 0.88rem; font-weight: 600; text-align: center;
 }
+
+/* ---- Animated loop figure (Module 06). Script: assets/workflow-loop.js ---- */
+.wf2d { margin: 1.5rem 0 0; }
+.wf2d .frame { border: 1px solid var(--rule); border-radius: 6px; background: var(--paper); overflow: hidden; }
+.wf2d .stage { max-width: 38rem; margin: 0 auto; padding: 0.5rem; }
+.wf2d svg { display: block; width: 100%; height: auto; font-family: var(--font-display); overflow: hidden; }
+.wf2d .box { fill: var(--paper); stroke: var(--navy); stroke-width: 1.5; }
+.wf2d .box-home { fill: var(--cream); stroke: var(--navy); stroke-width: 2; }
+.wf2d .box-thread { fill: var(--sheet); stroke: var(--peri-ink); stroke-width: 1.5; stroke-dasharray: 6 4; }
+.wf2d .chip rect { fill: var(--paper); stroke: var(--navy); stroke-width: 1.25; }
+.wf2d .chip text { fill: var(--navy-deep); font-size: 12.5px; font-weight: 600; text-anchor: middle; }
+.wf2d .dot { fill: var(--rule); }
+.wf2d .dot-on { fill: var(--copper); }
+.wf2d .ln { stroke: var(--navy); stroke-width: 1.8; fill: none; stroke-dasharray: 1; }
+.wf2d .ln-warm { stroke: var(--copper); stroke-width: 2; fill: none; stroke-dasharray: 1; }
+.wf2d .ah { fill: var(--navy); }
+.wf2d .ah-warm { fill: var(--copper); }
+.wf2d .t { fill: var(--navy-deep); font-size: 15px; font-weight: 700; }
+.wf2d .t-sm { fill: var(--muted); font-size: 12px; }
+.wf2d .t-lab { fill: var(--copper-ink); font-size: 11px; font-family: var(--font-mono); }
+.wf2d .t-lab.cool { fill: var(--peri-ink); }
+.wf2d .t-num { fill: var(--copper); font-size: 14px; font-weight: 500; font-family: var(--font-mono); }
+.wf2d .tok { fill: var(--navy); }
+.wf2d .doc { fill: var(--copper); }
+.wf2d .rev rect { fill: var(--navy); }
+.wf2d .rev text { fill: var(--paper); font-size: 12px; font-weight: 700; }
+.wf2d .ring { fill: none; stroke: var(--copper); stroke-width: 3; stroke-dasharray: 1; }
+.wf2d .scan { stroke: var(--copper); stroke-width: 3; opacity: 0; }
+.wf2d .bar { display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 0.75rem; border-top: 1px solid var(--rule); background: var(--sheet); flex-wrap: wrap; }
+.wf2d.static .bar { display: none; }
+.wf2d button { font: inherit; cursor: pointer; }
+.wf2d .play { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; min-width: 5.5rem; min-height: 2.5rem; padding: 0 0.9rem; border-radius: 6px; border: 1.5px solid var(--navy); background: var(--navy); color: var(--paper); }
+.wf2d .beats { display: flex; gap: 0.35rem; list-style: none; margin: 0; padding: 0; }
+.wf2d .beats button { width: 2.5rem; height: 2.5rem; border-radius: 50%; border: 1.5px solid var(--peri); background: var(--paper); color: var(--navy-deep); font-family: var(--font-mono); font-size: 0.9rem; font-weight: 500; }
+.wf2d .beats button[aria-current="step"] { background: var(--cream); border-color: var(--copper); color: var(--copper-ink); }
+.wf2d button:focus-visible { outline: 3px solid var(--peri); outline-offset: 2px; }
+.wf2d .now { margin: 0; padding: 0.75rem; border-top: 1px solid var(--rule); min-height: 5.6rem; font-size: 0.98rem; line-height: 1.45; }
+.wf2d .now strong { display: block; font-family: var(--font-display); color: var(--navy-deep); }
+.wf2d .now .n { font-family: var(--font-mono); color: var(--copper); font-weight: 500; margin-right: 0.4rem; }
+.wf2d .legend { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; list-style: none; margin: 0.7rem 0 0; padding: 0; font-family: var(--font-display); font-size: 0.84rem; color: var(--muted); }
+.wf2d .legend li { display: flex; align-items: center; gap: 0.4rem; }
+.wf2d .sw { width: 22px; height: 14px; border-radius: 2px; flex: none; }
+.wf2d .sw.thread { border: 1.5px dashed var(--peri-ink); }
+.wf2d .sw.durable { background: var(--cream); border: 2px solid var(--navy); }
+.wf2d .sw.read { height: 0; border-top: 2px solid var(--navy); border-radius: 0; }
+.wf2d .sw.save { height: 0; border-top: 2px solid var(--copper); border-radius: 0; }
+.wf2d figcaption { font-size: 0.84rem; color: var(--muted); margin-top: 0.6rem; }
+.wf2d .card rect.bg { fill: var(--paper); stroke: var(--navy); stroke-width: 1.25; }
+.wf2d .card text.h { fill: var(--navy-deep); font-size: 12.5px; font-weight: 700; }
+.wf2d .card text.r { fill: var(--ink); font-size: 11.5px; }
+.wf2d .card text.ok { fill: var(--copper-ink); font-size: 10.5px; font-family: var(--font-mono); text-anchor: middle; }
+.wf2d .ck { fill: var(--paper); stroke: var(--navy); stroke-width: 1.2; }
+.wf2d .ck-on { fill: var(--copper); }
+.wf2d .draft { fill: var(--peri); }
+.wf2d .gate { fill: var(--paper); stroke: var(--copper); stroke-width: 2.5; }
+.wf2d .gcheck { fill: none; stroke: var(--copper); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; }
+.wf2d .beat { fill: var(--navy-deep); font-size: 12.5px; font-weight: 600; }
+.wf2d .beat .n { fill: var(--copper); font-family: var(--font-mono); font-weight: 500; }
+.wf2d .beats button { width: 2.75rem; height: 2.75rem; }
+.wf2d .card text.s { fill: var(--muted); font-size: 11px; }
+.wf2d .card rect.back { fill: var(--paper); stroke: var(--peri); stroke-width: 1; }
+.wf2d .card.quiet rect.bg { stroke: var(--peri-ink); }
+.wf2d .tok2 { fill: var(--peri-ink); }
+.wf2d .next { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; min-width: 5.5rem; min-height: 2.5rem; padding: 0 0.9rem; border-radius: 6px; border: 1.5px solid var(--navy); background: var(--paper); color: var(--navy-deep); }
+@media (max-width: 560px) {
+  .wf2d .stage { padding: 0.25rem; }
+  .wf2d .bar { gap: 0.5rem; }
+  .wf2d .play, .wf2d .next { flex: 1 1 40%; min-width: 0; }
+  .wf2d .beats { width: 100%; justify-content: space-between; }
+  .wf2d .beats button { width: 2.75rem; height: 2.75rem; }
+}
+.wf2d li + li { margin-top: 0; }
+.wf2d .now { font-family: var(--font-body); }

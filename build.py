@@ -36,7 +36,7 @@ PAGES = [
     ("core/ways-to-use.html", "Ways to use an LLM", "Ways to use an LLM", "core", "", "grid"),
     ("core/context.html", "Giving the model context", "Giving context", "core", "", "layers"),
     ("core/iteration.html", "Iteration, verification, and judgment", "Iterate and verify", "core", "", "loop"),
-    ("core/project-memory.html", "Threads, memory, and project homes", "Threads and memory", "core", "", "stack"),
+    ("core/project-memory.html", "Chats, memory, and project homes", "Chats and memory", "core", "", "stack"),
     ("core/project-workflow.html", "A workflow for larger projects", "Larger projects", "core", "", "flow"),
     ("core/connectors.html", "Connectors and agents", "Connectors and agents", "core", "", "plug"),
     ("core/models.html", "Models, reasoning, and usage", "Models and usage", "core", "", "gauge"),

@@ -1,14 +1,14 @@
 <p class="eyebrow">Worked example &middot; Project home</p>
 <h1>Research groups project home</h1>
-<p class="lede">What a long-running project looks like when everything about it lives in one place: a OneDrive folder holds the record, a Copilot workspace holds your instructions, and each task gets its own short thread.</p>
+<p class="lede">What a long-running project looks like when everything about it lives in one place: a OneDrive folder holds the record, a Copilot workspace holds your instructions, and each task gets its own short chat.</p>
 
-<div class="note"><p><strong>This shows what is possible, not a setup guide.</strong> It assumes a premium Microsoft 365 Copilot license, which can work with your OneDrive files directly. Copilot Chat can do the same thread work with files you upload into the conversation.</p></div>
+<div class="note"><p><strong>This shows what is possible, not a setup guide.</strong> It assumes a premium Microsoft 365 Copilot license, which can work with your OneDrive files directly. Copilot Chat can do the same work, one chat at a time, with files you upload into the conversation.</p></div>
 <div class="draft"><p><span class="draft-label">Draft</span>Groups and details below are fictional. Confirm what your Copilot calls the place that holds standing instructions and saved prompts, and which steps it does directly versus drafting for you to apply.</p></div>
 
 <h2>How the pieces fit</h2>
 <figure class="dg">
 <div class="scroll">
-<svg viewBox="0 0 760 330" role="img" aria-label="A Copilot workspace holds standing instructions and skills and starts each short thread. Each thread reads files from the OneDrive project home and saves approved output back to it.">
+<svg viewBox="0 0 760 330" role="img" aria-label="A Copilot workspace holds standing instructions and skills and starts each short chat. Each chat reads files from the OneDrive project home and saves approved output back to it.">
   <defs>
     <marker id="ph-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
     <marker id="ph-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah-warm"/></marker>
@@ -58,7 +58,7 @@
   <text class="t-sm" x="550" y="258">briefs, summaries, emails</text>
 </svg>
 </div>
-<figcaption>Three parts, each with one job. The workspace holds how you want things done, the threads do one task each and then end, and the folder keeps everything you approved.</figcaption>
+<figcaption>Three parts, each with one job. The workspace holds how you want things done, the chats do one task each and then end, and the folder keeps everything you approved.</figcaption>
 </figure>
 
 <div class="case">
@@ -66,7 +66,7 @@
     <dt>Goal</dt><dd>Keep 8–14 research groups' status, blockers, and next steps current, and walk into every meeting prepared, without re-reading old emails.</dd>
     <dt>Project home</dt><dd>A OneDrive folder: a tracker workbook with one row per group, a folder per group for transcripts and notes, and a folder of approved outputs.</dd>
     <dt>AI workspace</dt><dd>KUMC Copilot, signed in with @kumc.edu. Standing instructions describe the project and point to the folder; skills hold the prompts you repeat.</dd>
-    <dt>Threads</dt><dd>One per task: prep a meeting, update after one, think through a stalled group, draft an email. Each ends when its output is approved and saved.</dd>
+    <dt>Chats</dt><dd>One per task: prep a meeting, update after one, think through a stalled group, draft an email. Each ends when its output is approved and saved.</dd>
     <dt>Data rules</dt><dd>Research group materials are internal, so they stay in KUMC tools. <a href="{{pre}}core/start-here.html">See Start here</a>.</dd>
       <dt>Checked</dt><dd>Brief compared against the tracker row and the transcripts; any contradiction resolved before the meeting.</dd>
   </dl>
@@ -77,9 +77,9 @@
 <table>
   <thead><tr><th scope="col">When</th><th scope="col">What you do</th><th scope="col">What gets saved</th></tr></thead>
   <tbody>
-    <tr><td><strong>After a meeting</strong></td><td>Drop the transcript in the group's folder. In a new thread, run the post-meeting update skill. Check its proposed tracker changes and action items.</td><td>Updated tracker row; meeting summary in the group folder</td></tr>
+    <tr><td><strong>After a meeting</strong></td><td>Drop the transcript in the group's folder. In a new chat, run the post-meeting update skill. Check its proposed tracker changes and action items.</td><td>Updated tracker row; meeting summary in the group folder</td></tr>
     <tr><td><strong>Before a meeting</strong></td><td>Run the prep brief skill for that group.</td><td>Nothing, unless you want the brief kept</td></tr>
-    <tr><td><strong>When a group stalls</strong></td><td>Open a thread to think it through: what changed, what the options are, what to ask. Push back on easy answers.</td><td>The decision, in the tracker's notes</td></tr>
+    <tr><td><strong>When a group stalls</strong></td><td>Open a chat to think it through: what changed, what the options are, what to ask. Push back on easy answers.</td><td>The decision, in the tracker's notes</td></tr>
     <tr><td><strong>Monthly</strong></td><td>Run the status report skill across all groups.</td><td>The approved report</td></tr>
   </tbody>
 </table>
@@ -105,9 +105,9 @@
     <summary>What makes this work</summary>
     <div class="inner">
       <ul>
-        <li><strong>The record lives outside the chat.</strong> Any thread, or any person, can pick up the project from the folder.</li>
+        <li><strong>The record lives outside the chat.</strong> Any new chat, or any person, can pick up the project from the folder.</li>
         <li><strong>Repeated prompts become skills.</strong> The prep brief asks the same things every time, so nobody rebuilds it.</li>
-        <li><strong>Threads stay short.</strong> One task each, so the model works from the files rather than from a long, noisy conversation.</li>
+        <li><strong>Chats stay short.</strong> One task each, so the model works from the files rather than from a long, noisy conversation.</li>
         <li><strong>You approve before anything is saved.</strong> The tracker only changes after you check the proposed update.</li>
       </ul>
     </div>
@@ -121,4 +121,4 @@
 </figure>
 
 <h2>Takeaway</h2>
-<p>The same pattern fits any project that runs for months: a curriculum, a committee, a grant, a quality project. Keep the record in one folder, keep your instructions and repeated prompts in the AI workspace, and give each task its own short thread.</p>
+<p>The same pattern fits any project that runs for months: a curriculum, a committee, a grant, a quality project. Keep the record in one folder, keep your instructions and repeated prompts in the AI workspace, and give each task its own short chat.</p>

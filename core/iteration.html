@@ -19,7 +19,7 @@
   </div>
   <nav class="navlinks" id="navlinks" data-open="true" aria-label="Site">
 <a class="nav-cta" href="https://ai-elective.jonathan-dangers.workers.dev"><span class="k">Resident?</span><span class="t">Explore the AI elective</span><span class="arr" aria-hidden="true">&#8599;</span></a>
-<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html" aria-current="page"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/project-memory.html"><span class="num">05</span><span>Threads and memory</span></a></li><li><a href="../core/project-workflow.html"><span class="num">06</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">07</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">08</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">09</span><span>Going deeper</span></a></li></ol></div>
+<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html" aria-current="page"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/project-memory.html"><span class="num">05</span><span>Chats and memory</span></a></li><li><a href="../core/project-workflow.html"><span class="num">06</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">07</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">08</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">09</span><span>Going deeper</span></a></li></ol></div>
 <div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/when-not-to-use.html"><span>When not to use AI</span><span class="tag">soon</span></a></li><li><a href="../topics/teaching.html"><span>AI for teaching</span><span class="tag">soon</span></a></li><li><a href="../topics/research.html"><span>Research use cases</span><span class="tag">soon</span></a></li></ul></div>
 <div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research groups</span></a></li><li><a href="../examples/exercise-tracker.html"><span>Exercise tracker</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/newsletter-digest.html"><span>Newsletter digest</span></a></li></ul></div>
   </nav>
@@ -46,12 +46,12 @@
   <li><strong>Look closely.</strong> Does it actually answer the question? Is anything missing, wrong, generic, or out of character?</li>
   <li><strong>Give specific feedback.</strong> "Shorter." "Less formal." "You missed this constraint." "That conclusion does not follow." "Keep A, remove B, reorganize C."</li>
   <li><strong>Repeat.</strong> Continue until it passes the checks you set for this kind of work, not merely until it looks polished.</li>
-  <li><strong>Change perspective when stuck.</strong> Take a break, open a fresh thread from your saved project state, or ask another model to critique the work.</li>
+  <li><strong>Change perspective when stuck.</strong> Take a break, open a fresh chat from your saved project state, or ask another model to critique the work.</li>
 </ol>
 
 <figure class="dg">
 <div class="scroll">
-<svg viewBox="0 0 720 240" role="img" aria-label="The iteration loop: look closely, give specific feedback, the model revises, and you look again until it passes your checks. When stuck, change perspective with a fresh thread or another model.">
+<svg viewBox="0 0 720 240" role="img" aria-label="The iteration loop: look closely, give specific feedback, the model revises, and you look again until it passes your checks. When stuck, change perspective with a fresh chat or another model.">
   <defs>
     <marker id="it-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
     <marker id="it-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah-warm"/></marker>
@@ -80,7 +80,7 @@
   <text class="t-lab" x="374" y="148">stuck</text>
   <rect class="box-ice" x="265" y="170" width="200" height="46" rx="6"/>
   <text class="t" x="365" y="190" text-anchor="middle">Change perspective</text>
-  <text class="t-sm" x="365" y="207" text-anchor="middle">fresh thread · another model</text>
+  <text class="t-sm" x="365" y="207" text-anchor="middle">fresh chat · another model</text>
 
   <path class="ln" d="M465 193 H615 V120" marker-end="url(#it-a)"/>
   <text class="t-lab" x="540" y="186" text-anchor="middle">new angle</text>
@@ -139,7 +139,7 @@
   </tbody>
 </table>
 </div>
-<nav class="pager" aria-label="Page"><a class="prev" href="../core/context.html"><span class="dir">Previous</span><span>Giving context</span></a><a class="next" href="../core/project-memory.html"><span class="dir">Next</span><span>Threads and memory</span></a></nav>
+<nav class="pager" aria-label="Page"><a class="prev" href="../core/context.html"><span class="dir">Previous</span><span>Giving context</span></a><a class="next" href="../core/project-memory.html"><span class="dir">Next</span><span>Chats and memory</span></a></nav>
 <footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.6</footer>
 </article>
 </main>
