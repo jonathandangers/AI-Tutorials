@@ -5,7 +5,7 @@
 <div class="pocket">
   <p class="eyebrow">Pocket card</p>
   <ul>
-    <li>The project home holds the truth. Threads are disposable.</li>
+    <li>The project home is the record. Threads are temporary.</li>
     <li>One stage per thread. Approve it, export it, then move on.</li>
     <li>Repeated instructions become project instructions or a skill.</li>
   </ul>
@@ -13,7 +13,7 @@
 
 <figure class="dg">
 <div class="scroll">
-<svg viewBox="0 0 760 390" role="img" aria-label="The six-step workflow. Steps one to three create the project home and save the brief and plan into it. Each stage is worked in its own disposable thread that reads state from the home and exports approved output back to it. The final review reads everything in the home.">
+<svg viewBox="0 0 760 390" role="img" aria-label="The six-step workflow. Steps one to three create the project home and save the project description and plan into it. Each stage is worked in its own temporary thread that reads state from the home and exports approved output back to it. The final review reads everything in the home.">
   <defs>
     <marker id="wf-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
     <marker id="wf-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah-warm"/></marker>
@@ -32,12 +32,12 @@
   <line class="ln-warm" x1="115" y1="80" x2="115" y2="168" marker-end="url(#wf-w)"/>
   <text class="t-lab" x="124" y="128">creates</text>
   <line class="ln-warm" x1="305" y1="80" x2="305" y2="168" marker-end="url(#wf-w)"/>
-  <text class="t-lab" x="314" y="128">saves brief</text>
+  <text class="t-lab" x="314" y="128">saves description</text>
   <line class="ln-warm" x1="495" y1="80" x2="495" y2="168" marker-end="url(#wf-w)"/>
   <text class="t-lab" x="504" y="128">saves plan</text>
   <rect class="box-home" x="40" y="170" width="530" height="60" rx="6"/>
   <text class="t" x="60" y="196">Project home</text>
-  <text class="t-sm" x="60" y="215">brief · current state · decisions · approved outputs</text>
+  <text class="t-sm" x="60" y="215">description · current state · approved outputs · reference files</text>
   <rect class="box" x="600" y="170" width="130" height="60" rx="6"/>
   <text class="t-num" x="614" y="196">6</text>
   <text class="t" x="630" y="196">Review</text>
@@ -63,7 +63,7 @@
   <line class="ln-warm" x1="523" y1="300" x2="523" y2="232" marker-end="url(#wf-w)"/>
   <text class="t-lab" x="40" y="376">one stage per fresh thread, each starting from the home</text>
   <rect class="box-thread" x="600" y="300" width="22" height="14" rx="2"/>
-  <text class="t-sm" x="630" y="311">disposable</text>
+  <text class="t-sm" x="630" y="311">temporary</text>
   <rect class="box-home" x="600" y="324" width="22" height="14" rx="2"/>
   <text class="t-sm" x="630" y="335">durable</text>
   <line class="ln-warm" x1="600" y1="355" x2="622" y2="355"/>
@@ -79,10 +79,10 @@
 <table>
   <thead><tr><th scope="col">Item</th><th scope="col">What goes in it</th><th scope="col">Changes</th></tr></thead>
   <tbody>
-    <tr><td><strong>Project brief</strong></td><td>Goal, audience, background, constraints, what success looks like</td><td>Rarely</td></tr>
+    <tr><td><strong>Project description</strong></td><td>Goal, audience, requirements, background, constraints, what success looks like</td><td>Rarely</td></tr>
     <tr><td><strong>Current state</strong></td><td>One page: the plan, what is done, decisions made, what is next</td><td>After every stage</td></tr>
     <tr><td><strong>Approved outputs</strong></td><td>Finished pieces you have checked and would stand behind</td><td>As stages finish</td></tr>
-    <tr><td><strong>Sources</strong></td><td>Papers, links, and documents the work relies on</td><td>As you go</td></tr>
+    <tr><td><strong>Reference files</strong></td><td>Papers, templates, data, links, and other documents the work relies on</td><td>As you go</td></tr>
   </tbody>
 </table>
 </div>
@@ -97,20 +97,20 @@
   <li>
     <h3>Describe the project.</h3>
     <p>Brain-dump the goal, background, constraints, source material, and what a successful final result should look like. Talk or type; do not polish it.</p>
-    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Turn this brain-dump into a one-page project brief: goal, audience, background, constraints, and what success looks like. Then list what is missing or unclear before you could plan the work.</pre></div></div>
-    <p>Answer its questions, fix what it got wrong, and save the brief to the home. Paste the short version into the project instructions.</p>
-    <p class="small"><strong>Done when:</strong> someone else could read the brief and understand what you are making and why.</p>
+    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Turn this brain-dump into a one-page project description: goal, audience, requirements, background, constraints, and what success looks like. Then list what is missing or unclear before you could plan the work.</pre></div></div>
+    <p>Answer its questions, fix what it got wrong, and save the project description to the home. Paste the short version into the project instructions.</p>
+    <p class="small"><strong>Done when:</strong> someone else could read the project description and understand what you are making and why.</p>
   </li>
   <li>
     <h3>Build and refine a plan.</h3>
     <p>Ask the LLM to organize the project into stages. Each stage needs an output and a test for when it is finished.</p>
-    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Using the brief, propose 3–6 stages. For each: the output it produces, what it depends on, and how I will know it is done. Flag the stage most likely to go wrong.</pre></div></div>
+    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Using the project description, propose 3–6 stages. For each: the output it produces, what it depends on, and how I will know it is done. Flag the stage most likely to go wrong.</pre></div></div>
     <p>Push back until it fits: too many stages, wrong order, a stage that is really two. Save the plan in the current-state document.</p>
     <p class="small"><strong>Done when:</strong> the plan accurately reflects what you are trying to do and the order you would actually do it.</p>
   </li>
   <li>
     <h3>Work one stage at a time.</h3>
-    <p>Open a new thread for the stage inside the platform project. Give it the brief, the current state, and any approved outputs that stage depends on. Iterate, critique, and verify, using <a href="{{pre}}core/iteration.html">Module 04</a>.</p>
+    <p>Open a new thread for the stage inside the platform project. Give it the project description, the current state, and any approved outputs or reference files that stage depends on. Iterate, critique, and verify, using <a href="{{pre}}core/iteration.html">Module 04</a>.</p>
     <p>When the stage is solid, export it: save the output to Approved outputs and update the current-state document with what was done, what was decided, and what comes next.</p>
     <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Update the current-state document: mark this stage done, list the decisions we made and why, and state the next stage and what it needs from this one.</pre></div></div>
     <p class="small"><strong>Done when:</strong> you would stand behind the output, and the current-state document is accurate without the thread.</p>
