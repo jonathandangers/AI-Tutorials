@@ -19,7 +19,7 @@
   </div>
   <nav class="navlinks" id="navlinks" data-open="true" aria-label="Site">
 <a class="nav-cta" href="https://ai-elective.jonathan-dangers.workers.dev"><span class="k">Resident?</span><span class="t">Explore the AI elective</span><span class="arr" aria-hidden="true">&#8599;</span></a>
-<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/project-memory.html"><span class="num">05</span><span>Threads and memory</span></a></li><li><a href="../core/project-workflow.html" aria-current="page"><span class="num">06</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">07</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">08</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">09</span><span>Going deeper</span></a></li></ol></div>
+<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/project-memory.html"><span class="num">05</span><span>Chats and memory</span></a></li><li><a href="../core/project-workflow.html" aria-current="page"><span class="num">06</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">07</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">08</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">09</span><span>Going deeper</span></a></li></ol></div>
 <div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/when-not-to-use.html"><span>When not to use AI</span><span class="tag">soon</span></a></li><li><a href="../topics/teaching.html"><span>AI for teaching</span><span class="tag">soon</span></a></li><li><a href="../topics/research.html"><span>Research use cases</span><span class="tag">soon</span></a></li></ul></div>
 <div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research groups</span></a></li><li><a href="../examples/exercise-tracker.html"><span>Exercise tracker</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/newsletter-digest.html"><span>Newsletter digest</span></a></li></ul></div>
   </nav>
@@ -35,15 +35,15 @@
 <div class="pocket">
   <p class="eyebrow">Pocket card</p>
   <ul>
-    <li>The project home is the record. Threads are temporary.</li>
-    <li>One stage per thread. Approve it, export it, then move on.</li>
+    <li>The project home is the record. Chats are temporary.</li>
+    <li>One stage per chat. Approve it, export it, then move on.</li>
     <li>Repeated instructions become project instructions or a skill.</li>
   </ul>
 </div>
 
 <figure class="dg">
 <div class="scroll">
-<svg viewBox="0 0 760 390" role="img" aria-label="The six-step workflow. Steps one to three create the project home and save the project description and plan into it. Each stage is worked in its own temporary thread that reads state from the home and exports approved output back to it. The final review reads everything in the home.">
+<svg viewBox="0 0 760 390" role="img" aria-label="The six-step workflow. Steps one to three create the project home and save the project description and plan into it. Each stage is worked in its own temporary chat that reads state from the home and exports approved output back to it. The final review reads everything in the home.">
   <defs>
     <marker id="wf-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
     <marker id="wf-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah-warm"/></marker>
@@ -76,22 +76,22 @@
   <text class="t-lab" x="586" y="160" text-anchor="middle">reads all</text>
   <rect class="box-thread" x="40" y="300" width="150" height="50" rx="6"/>
   <text class="t-num" x="56" y="330">4</text>
-  <text class="t" x="74" y="330">Stage 1 thread</text>
+  <text class="t" x="74" y="330">Stage 1 chat</text>
   <line class="ln" x1="87" y1="230" x2="87" y2="298" marker-end="url(#wf-a)"/>
   <line class="ln-warm" x1="143" y1="300" x2="143" y2="232" marker-end="url(#wf-w)"/>
   <text class="t-lab" x="79" y="270" text-anchor="end">reads state</text>
   <text class="t-lab" x="151" y="270">exports approved</text>
   <rect class="box-thread" x="230" y="300" width="150" height="50" rx="6"/>
   <text class="t-num" x="246" y="330">5</text>
-  <text class="t" x="264" y="330">Stage 2 thread</text>
+  <text class="t" x="264" y="330">Stage 2 chat</text>
   <line class="ln" x1="277" y1="230" x2="277" y2="298" marker-end="url(#wf-a)"/>
   <line class="ln-warm" x1="333" y1="300" x2="333" y2="232" marker-end="url(#wf-w)"/>
   <rect class="box-thread" x="420" y="300" width="150" height="50" rx="6"/>
   <text class="t-num" x="436" y="330">5</text>
-  <text class="t" x="454" y="330">Stage 3 thread</text>
+  <text class="t" x="454" y="330">Stage 3 chat</text>
   <line class="ln" x1="467" y1="230" x2="467" y2="298" marker-end="url(#wf-a)"/>
   <line class="ln-warm" x1="523" y1="300" x2="523" y2="232" marker-end="url(#wf-w)"/>
-  <text class="t-lab" x="40" y="376">one stage per fresh thread, each starting from the home</text>
+  <text class="t-lab" x="40" y="376">one stage per fresh chat, each starting from the home</text>
   <rect class="box-thread" x="600" y="300" width="22" height="14" rx="2"/>
   <text class="t-sm" x="630" y="311">temporary</text>
   <rect class="box-home" x="600" y="324" width="22" height="14" rx="2"/>
@@ -100,7 +100,7 @@
   <text class="t-sm" x="630" y="359">saves to home</text>
 </svg>
 </div>
-<figcaption>Everything flows through the project home. Threads come and go; each one reads the current state and exports only what you approved.</figcaption>
+<figcaption>Everything flows through the project home. Chats come and go; each one reads the current state and exports only what you approved.</figcaption>
 </figure>
 
 <h2>What a project home contains</h2>
@@ -121,7 +121,7 @@
   <li>
     <h3>Create the project home.</h3>
     <p>Choose the desktop or cloud location where the durable project memory and approved outputs will live. Create the four items above, even if they are empty.</p>
-    <p>Then create a platform project (a Claude or ChatGPT project) for the same work. Its instructions say what the project is and where the current state lives. The model still needs the files themselves: upload them to each thread, or connect the tool to the folder and confirm it can read them.</p>
+    <p>Then create a platform project (a Claude or ChatGPT project) for the same work. Its instructions say what the project is and where the current state lives. The model still needs the files themselves: upload them to each chat, or connect the tool to the folder and confirm it can read them.</p>
     <p class="small"><strong>Done when:</strong> both exist and the project instructions point to the home.</p>
   </li>
   <li>
@@ -140,15 +140,15 @@
   </li>
   <li>
     <h3>Work one stage at a time.</h3>
-    <p>Open a new thread for the stage inside the platform project. Give it the project description, the current state, and any approved outputs or reference files that stage depends on. Iterate, critique, and verify, using <a href="../core/iteration.html">Module 04</a>.</p>
+    <p>Open a new chat for the stage inside the platform project. Give it the project description, the current state, and any approved outputs or reference files that stage depends on. Iterate, critique, and verify, using <a href="../core/iteration.html">Module 04</a>.</p>
     <p>When the stage is solid, export it: save the output to Approved outputs and update the current-state document with what was done, what was decided, and what comes next.</p>
     <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Update the current-state document: mark this stage done, list the decisions we made and why, and state the next stage and what it needs from this one.</pre></div></div>
-    <p class="small"><strong>Done when:</strong> you would stand behind the output, and the current-state document is accurate without the thread.</p>
+    <p class="small"><strong>Done when:</strong> you would stand behind the output, and the current-state document is accurate without the chat.</p>
   </li>
   <li>
     <h3>Continue from the trusted state.</h3>
-    <p>Move to the next stage in a fresh thread. Because the project instructions and the home carry the state, the new thread starts already oriented. You do not need the old conversation.</p>
-    <p>If you notice yourself typing the same instructions at the start of each thread, move them into the project instructions or turn them into a <a href="../core/going-deeper.html">skill</a>.</p>
+    <p>Move to the next stage in a fresh chat. Because the project instructions and the home carry the state, the new chat starts already oriented. You do not need the old conversation.</p>
+    <p>If you notice yourself typing the same instructions at the start of each chat, move them into the project instructions or turn them into a <a href="../core/going-deeper.html">skill</a>.</p>
     <p class="small"><strong>Done when:</strong> every planned stage has an approved output.</p>
   </li>
   <li>
@@ -164,7 +164,7 @@
   <li><a href="../examples/research-workshop.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h6l2 2h10v11H3z"/></svg><span class="kicker">Example</span><span class="title">Research groups project home</span><span class="desc">The project home running for months across many groups.</span></a></li>
   <li><a href="../examples/pubmed-scout.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="kicker">Example</span><span class="title">PubMed scout</span><span class="desc">A recurring workflow that prepares work for you to review.</span></a></li>
 </ul>
-<nav class="pager" aria-label="Page"><a class="prev" href="../core/project-memory.html"><span class="dir">Previous</span><span>Threads and memory</span></a><a class="next" href="../core/connectors.html"><span class="dir">Next</span><span>Connectors and agents</span></a></nav>
+<nav class="pager" aria-label="Page"><a class="prev" href="../core/project-memory.html"><span class="dir">Previous</span><span>Chats and memory</span></a><a class="next" href="../core/connectors.html"><span class="dir">Next</span><span>Connectors and agents</span></a></nav>
 <footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.6</footer>
 </article>
 </main>
