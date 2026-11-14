@@ -11,6 +11,111 @@
   </ul>
 </div>
 
+<figure class="wf2d static" id="wf2d">
+  <div class="frame">
+    <div class="stage">
+<svg id="wf-svg" viewBox="0 0 480 446" role="img" aria-label="Animated loop for working on a large project, using a grant application as the example. A project home holds the project description, reference files, the current state, and approved outputs. For each stage a new chat reads the current state, the stage is drafted and revised, you approve the result, it is saved to the home and checked off, and the chat is closed. The loop repeats for Aims, Methods, and Budget.">
+<g id="home"><rect class="box-home" x="16" y="16" width="448" height="176" rx="6"/><text class="t" x="30" y="44">Project home</text><text class="t-sm" x="450" y="44" text-anchor="end">grant application</text></g>
+<g class="card" id="brief"><rect class="bg" x="26" y="56" width="264" height="42" rx="5"/><text class="h" x="38" y="74">Project description</text><text class="s" x="38" y="89">goals, audience, requirements</text></g>
+<g class="card quiet" id="refs"><rect class="back" x="308" y="52" width="150" height="42" rx="5"/><rect class="back" x="305" y="54" width="150" height="42" rx="5"/><rect class="bg" x="302" y="56" width="150" height="42" rx="5"/><text class="h" x="314" y="74">Reference files</text><text class="s" x="314" y="89">papers, templates, data</text></g>
+<g class="card" id="state"><rect class="bg" x="26" y="106" width="132" height="74" rx="5"/><text class="h" x="37" y="124">Current state</text><rect class="ck" x="37" y="131" width="9.5" height="9.5" rx="1.5"/><rect class="ck-on" id="ck0" x="37" y="131" width="9.5" height="9.5" rx="1.5"/><text class="r" x="53" y="140">Aims</text><rect class="ck" x="37" y="146" width="9.5" height="9.5" rx="1.5"/><rect class="ck-on" id="ck1" x="37" y="146" width="9.5" height="9.5" rx="1.5"/><text class="r" x="53" y="155">Methods</text><rect class="ck" x="37" y="161" width="9.5" height="9.5" rx="1.5"/><rect class="ck-on" id="ck2" x="37" y="161" width="9.5" height="9.5" rx="1.5"/><text class="r" x="53" y="170">Budget</text></g>
+<g class="card" id="o0"><rect class="bg" x="170" y="106" width="88" height="74" rx="5"/><text class="h" x="214" y="141" text-anchor="middle">Aims</text><text class="ok" x="214" y="159">approved</text></g>
+<g class="card" id="o1"><rect class="bg" x="268" y="106" width="88" height="74" rx="5"/><text class="h" x="312" y="141" text-anchor="middle">Methods</text><text class="ok" x="312" y="159">approved</text></g>
+<g class="card" id="o2"><rect class="bg" x="366" y="106" width="88" height="74" rx="5"/><text class="h" x="410" y="141" text-anchor="middle">Budget</text><text class="ok" x="410" y="159">approved</text></g>
+<line id="rd" class="ln" pathLength="1" x1="170" y1="192" x2="170" y2="302"/><path id="rdh" class="ah" d="M165 300L175 300L170 309z"/>
+<line id="xa" class="ln-warm" pathLength="1" x1="310" y1="310" x2="310" y2="274"/>
+<line id="xb" class="ln-warm" pathLength="1" x1="310" y1="250" x2="310" y2="201"/><path id="xbh" class="ah-warm" d="M305 202L315 202L310 193z"/>
+<g id="gate"><circle class="gate" cx="310" cy="262" r="12"/><path id="gcheck" class="gcheck" pathLength="1" d="M304 262.5L308.5 267L316.5 257.5"/></g>
+<text id="l1" class="beat" x="158" y="254" text-anchor="end"><tspan class="n">1 </tspan>Read the state</text>
+<text id="l3" class="beat" x="330" y="267"><tspan class="n">3 </tspan>You approve</text>
+<text id="l4" class="beat" x="322" y="228"><tspan class="n">4 </tspan>Save to home</text>
+<text id="l2" class="beat" x="120" y="354" text-anchor="end"><tspan class="n">2 </tspan>Work one</text><text id="l2b" class="beat" x="120" y="370" text-anchor="end">stage</text>
+<text id="l5" class="beat" x="362" y="354"><tspan class="n">5 </tspan>Close the</text><text id="l5b" class="beat" x="362" y="370">chat</text>
+<g id="chat"><rect class="box-thread" id="chr" x="130" y="310" width="220" height="100" rx="6"/><text class="t" id="ct0" x="146" y="336">New chat: Aims</text><text class="t" id="ct1" x="146" y="336">New chat: Methods</text><text class="t" id="ct2" x="146" y="336">New chat: Budget</text><rect class="draft" id="dr0" x="146" y="348" width="168" height="6" rx="3"/><rect class="draft" id="dr1" x="146" y="361" width="188" height="6" rx="3"/><rect class="draft" id="dr2" x="146" y="374" width="120" height="6" rx="3"/><text class="t-sm" x="146" y="400">draft, critique, revise</text></g>
+<text id="foot" class="t-lab" x="240" y="434" text-anchor="middle">one stage per chat, repeat until the plan is done</text>
+<circle id="tok2" class="tok2" cx="378" cy="98" r="4.5" opacity="0"/><circle id="tok" class="tok" cx="92" cy="143" r="6" opacity="0"/><rect id="doc" class="doc" x="0" y="0" width="15" height="19" rx="2" opacity="0"/>
+</svg>
+    </div>
+    <div class="bar">
+      <button type="button" class="play" id="wf-play">Play</button>
+      <button type="button" class="next" id="wf-next">Next beat</button>
+      <ol class="beats" aria-label="Jump to a beat of the loop">
+        <li><button type="button" data-step="0" aria-label="Beat 1, read the current state">1</button></li>
+        <li><button type="button" data-step="1" aria-label="Beat 2, work one stage">2</button></li>
+        <li><button type="button" data-step="2" aria-label="Beat 3, you approve">3</button></li>
+        <li><button type="button" data-step="3" aria-label="Beat 4, save to the home">4</button></li>
+        <li><button type="button" data-step="4" aria-label="Beat 5, close the chat">5</button></li>
+      </ol>
+    </div>
+    <p class="now" id="wf-now" aria-live="polite"></p>
+  </div>
+  <ul class="legend">
+    <li><span class="sw thread"></span>Chat, temporary</li>
+    <li><span class="sw durable"></span>Project home, durable</li>
+    <li><span class="sw read"></span>Reads state</li>
+    <li><span class="sw save"></span>Saves to home</li>
+  </ul>
+  <figcaption>One loop, repeated for each stage. The chat does the work; the home keeps only what you approved.</figcaption>
+</figure>
+
+<h2>What a project home contains</h2>
+<p>Set this up once. Every later step reads from it or writes to it.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th scope="col">Item</th><th scope="col">What goes in it</th><th scope="col">Changes</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Project description</strong></td><td>Goal, audience, requirements, background, constraints, what success looks like</td><td>Rarely</td></tr>
+    <tr><td><strong>Current state</strong></td><td>One page: the plan, what is done, decisions made, what is next</td><td>After every stage</td></tr>
+    <tr><td><strong>Approved outputs</strong></td><td>Finished pieces you have checked and would stand behind</td><td>As stages finish</td></tr>
+    <tr><td><strong>Reference files</strong></td><td>Papers, templates, data, links, and other documents the work relies on</td><td>As you go</td></tr>
+  </tbody>
+</table>
+</div>
+
+<ol class="steps">
+  <li>
+    <h3>Create the project home.</h3>
+    <p>Choose the desktop or cloud location where the durable project memory and approved outputs will live. Create the four items above, even if they are empty.</p>
+    <p>Then create a platform project (a Claude or ChatGPT project) for the same work. Its instructions say what the project is and where the current state lives. The model still needs the files themselves: upload them to each chat, or connect the tool to the folder and confirm it can read them.</p>
+    <p class="small"><strong>Done when:</strong> both exist and the project instructions point to the home.</p>
+  </li>
+  <li>
+    <h3>Describe the project.</h3>
+    <p>Brain-dump the goal, background, constraints, source material, and what a successful final result should look like. Talk or type; do not polish it.</p>
+    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Turn this brain-dump into a one-page project description: goal, audience, requirements, background, constraints, and what success looks like. Then list what is missing or unclear before you could plan the work.</pre></div></div>
+    <p>Answer its questions, fix what it got wrong, and save the project description to the home. Paste the short version into the project instructions.</p>
+    <p class="small"><strong>Done when:</strong> someone else could read the project description and understand what you are making and why.</p>
+  </li>
+  <li>
+    <h3>Build and refine a plan.</h3>
+    <p>Ask the LLM to organize the project into stages. Each stage needs an output and a test for when it is finished.</p>
+    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Using the project description, propose 3–6 stages. For each: the output it produces, what it depends on, and how I will know it is done. Flag the stage most likely to go wrong.</pre></div></div>
+    <p>Push back until it fits: too many stages, wrong order, a stage that is really two. Save the plan in the current-state document.</p>
+    <p class="small"><strong>Done when:</strong> the plan accurately reflects what you are trying to do and the order you would actually do it.</p>
+  </li>
+  <li>
+    <h3>Work one stage at a time.</h3>
+    <p>Open a new chat for the stage inside the platform project. Give it the project description, the current state, and any approved outputs or reference files that stage depends on. Iterate, critique, and verify, using <a href="{{pre}}core/iteration.html">Module 04</a>.</p>
+    <p>When the stage is solid, export it: save the output to Approved outputs and update the current-state document with what was done, what was decided, and what comes next.</p>
+    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Update the current-state document: mark this stage done, list the decisions we made and why, and state the next stage and what it needs from this one.</pre></div></div>
+    <p class="small"><strong>Done when:</strong> you would stand behind the output, and the current-state document is accurate without the chat.</p>
+  </li>
+  <li>
+    <h3>Continue from the trusted state.</h3>
+    <p>Move to the next stage in a fresh chat. Because the project instructions and the home carry the state, the new chat starts already oriented. You do not need the old conversation.</p>
+    <p>If you notice yourself typing the same instructions at the start of each chat, move them into the project instructions or turn them into a <a href="{{pre}}core/going-deeper.html">skill</a>.</p>
+    <p class="small"><strong>Done when:</strong> every planned stage has an approved output.</p>
+  </li>
+  <li>
+    <h3>Review the final product as a whole.</h3>
+    <p>Check that the pieces fit together and that you understand and stand behind the finished result. Read it end to end, then ask a model to review it as the intended audience would.</p>
+    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Read this as [the intended audience]. What is unclear, inconsistent between sections, or unsupported? What would you ask the author?</pre></div></div>
+    <p class="small"><strong>Done when:</strong> you can explain every part without the model, and the important facts have been checked against their sources.</p>
+  </li>
+</ol>
+
+<h2>The whole workflow at a glance</h2>
+<p>The loop above is steps 4 and 5. Here are all six steps in one picture.</p>
 <figure class="dg">
 <div class="scroll">
 <svg viewBox="0 0 760 390" role="img" aria-label="The six-step workflow. Steps one to three create the project home and save the project description and plan into it. Each stage is worked in its own temporary chat that reads state from the home and exports approved output back to it. The final review reads everything in the home.">
@@ -73,64 +178,20 @@
 <figcaption>Everything flows through the project home. Chats come and go; each one reads the current state and exports only what you approved.</figcaption>
 </figure>
 
-<h2>What a project home contains</h2>
-<p>Set this up once. Every later step reads from it or writes to it.</p>
-<div class="table-wrap">
-<table>
-  <thead><tr><th scope="col">Item</th><th scope="col">What goes in it</th><th scope="col">Changes</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Project description</strong></td><td>Goal, audience, requirements, background, constraints, what success looks like</td><td>Rarely</td></tr>
-    <tr><td><strong>Current state</strong></td><td>One page: the plan, what is done, decisions made, what is next</td><td>After every stage</td></tr>
-    <tr><td><strong>Approved outputs</strong></td><td>Finished pieces you have checked and would stand behind</td><td>As stages finish</td></tr>
-    <tr><td><strong>Reference files</strong></td><td>Papers, templates, data, links, and other documents the work relies on</td><td>As you go</td></tr>
-  </tbody>
-</table>
-</div>
+<h2>When something changes</h2>
+<p>Projects get revised after they are done: a reviewer's comments, a new deadline, a better idea. You do not need a new process. A revision is one more pass through the same loop.</p>
+<p><strong>Revise one piece.</strong> Open a new chat. Give it the project description, the current state, and the approved output you are changing. When the new version is solid, replace the old one in Approved outputs, then note what changed and why in the current state.</p>
+<p><strong>If the goal changes, start with the project description.</strong> Update it before any other work, then check the plan against it. Every new chat reads the description first, so a stale one points each of them in the wrong direction.</p>
+<p><strong>Keep one approved version.</strong> Replace the old output rather than keeping "final" and "final v2" side by side. If you want the history, move the old version to an archive folder.</p>
+<div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>The project description changed: [what changed]. Using the current state, list which approved outputs are affected and which stages need to be redone, in order.</pre></div></div>
+<p class="small"><strong>Done when:</strong> the project description, the current state, and the approved outputs agree with each other.</p>
 
-<ol class="steps">
-  <li>
-    <h3>Create the project home.</h3>
-    <p>Choose the desktop or cloud location where the durable project memory and approved outputs will live. Create the four items above, even if they are empty.</p>
-    <p>Then create a platform project (a Claude or ChatGPT project) for the same work. Its instructions say what the project is and where the current state lives. The model still needs the files themselves: upload them to each chat, or connect the tool to the folder and confirm it can read them.</p>
-    <p class="small"><strong>Done when:</strong> both exist and the project instructions point to the home.</p>
-  </li>
-  <li>
-    <h3>Describe the project.</h3>
-    <p>Brain-dump the goal, background, constraints, source material, and what a successful final result should look like. Talk or type; do not polish it.</p>
-    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Turn this brain-dump into a one-page project description: goal, audience, requirements, background, constraints, and what success looks like. Then list what is missing or unclear before you could plan the work.</pre></div></div>
-    <p>Answer its questions, fix what it got wrong, and save the project description to the home. Paste the short version into the project instructions.</p>
-    <p class="small"><strong>Done when:</strong> someone else could read the project description and understand what you are making and why.</p>
-  </li>
-  <li>
-    <h3>Build and refine a plan.</h3>
-    <p>Ask the LLM to organize the project into stages. Each stage needs an output and a test for when it is finished.</p>
-    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Using the project description, propose 3–6 stages. For each: the output it produces, what it depends on, and how I will know it is done. Flag the stage most likely to go wrong.</pre></div></div>
-    <p>Push back until it fits: too many stages, wrong order, a stage that is really two. Save the plan in the current-state document.</p>
-    <p class="small"><strong>Done when:</strong> the plan accurately reflects what you are trying to do and the order you would actually do it.</p>
-  </li>
-  <li>
-    <h3>Work one stage at a time.</h3>
-    <p>Open a new chat for the stage inside the platform project. Give it the project description, the current state, and any approved outputs or reference files that stage depends on. Iterate, critique, and verify, using <a href="{{pre}}core/iteration.html">Module 04</a>.</p>
-    <p>When the stage is solid, export it: save the output to Approved outputs and update the current-state document with what was done, what was decided, and what comes next.</p>
-    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Update the current-state document: mark this stage done, list the decisions we made and why, and state the next stage and what it needs from this one.</pre></div></div>
-    <p class="small"><strong>Done when:</strong> you would stand behind the output, and the current-state document is accurate without the chat.</p>
-  </li>
-  <li>
-    <h3>Continue from the trusted state.</h3>
-    <p>Move to the next stage in a fresh chat. Because the project instructions and the home carry the state, the new chat starts already oriented. You do not need the old conversation.</p>
-    <p>If you notice yourself typing the same instructions at the start of each chat, move them into the project instructions or turn them into a <a href="{{pre}}core/going-deeper.html">skill</a>.</p>
-    <p class="small"><strong>Done when:</strong> every planned stage has an approved output.</p>
-  </li>
-  <li>
-    <h3>Review the final product as a whole.</h3>
-    <p>Check that the pieces fit together and that you understand and stand behind the finished result. Read it end to end, then ask a model to review it as the intended audience would.</p>
-    <div class="exchange"><div class="who"><span>Ask</span></div><div class="body"><pre>Read this as [the intended audience]. What is unclear, inconsistent between sections, or unsupported? What would you ask the author?</pre></div></div>
-    <p class="small"><strong>Done when:</strong> you can explain every part without the model, and the important facts have been checked against their sources.</p>
-  </li>
-</ol>
 
 <h2>See it in practice</h2>
 <ul class="cards">
   <li><a href="{{pre}}examples/research-workshop.html">{{icon:folder}}<span class="kicker">Example</span><span class="title">Research groups project home</span><span class="desc">The project home running for months across many groups.</span></a></li>
   <li><a href="{{pre}}examples/pubmed-scout.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="kicker">Example</span><span class="title">PubMed scout</span><span class="desc">A recurring workflow that prepares work for you to review.</span></a></li>
 </ul>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="{{pre}}assets/workflow-loop.js"></script>
