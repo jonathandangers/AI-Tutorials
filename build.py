@@ -185,7 +185,7 @@ TEMPLATE = """<!doctype html>
 <article class="page">
 {body}
 {pager}
-<footer class="site">{site} &middot; Created by {author} &middot; Draft v1.6</footer>
+<footer class="site">{site} &middot; Created by {author} &middot; Draft v1.6<span class="disclaimer">A personal educational resource. It is not official policy of KU Medical Center or The University of Kansas Health System. Where this guide and official guidance differ, follow the official guidance.</span></footer>
 </article>
 </main>
 </div>

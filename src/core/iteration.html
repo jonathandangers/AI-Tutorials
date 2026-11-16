@@ -19,41 +19,45 @@
   <li><strong>Change perspective when stuck.</strong> Take a break, open a fresh chat from your saved project state, or ask another model to critique the work.</li>
 </ol>
 
-<figure class="dg">
+<figure class="dg narrow">
 <div class="scroll">
-<svg viewBox="0 0 720 240" role="img" aria-label="The iteration loop: look closely, give specific feedback, the model revises, and you look again until it passes your checks. When stuck, change perspective with a fresh chat or another model.">
+<svg viewBox="0 0 360 350" role="img" aria-label="The iteration loop. Start with the first output and look closely. If it passes your checks, you are done. If not, give specific feedback, the model revises, and you look again. If you are going in circles, change perspective with a fresh chat, another model, or a break, then look again.">
   <defs>
     <marker id="it-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
     <marker id="it-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah-warm"/></marker>
   </defs>
-  <path class="ln-warm" d="M615 70 C615 22 115 22 115 68" marker-end="url(#it-w)"/>
-  <text class="t-lab" x="365" y="52" text-anchor="middle">look again</text>
+  <rect class="box-soft" x="28" y="14" width="120" height="32" rx="16"/>
+  <text class="t" x="88" y="35" text-anchor="middle">First output</text>
+  <line class="ln" x1="88" y1="46" x2="88" y2="70" marker-end="url(#it-a)"/>
 
-  <rect class="box" x="40" y="70" width="150" height="48" rx="6"/>
-  <text class="t" x="115" y="99" text-anchor="middle">Look closely</text>
-  <rect class="box" x="280" y="70" width="170" height="48" rx="6"/>
-  <text class="t" x="365" y="99" text-anchor="middle">Specific feedback</text>
-  <rect class="box" x="540" y="70" width="150" height="48" rx="6"/>
-  <text class="t" x="615" y="99" text-anchor="middle">Revised output</text>
+  <rect class="box" x="16" y="72" width="144" height="58" rx="6"/>
+  <text class="t" x="88" y="97" text-anchor="middle">Look closely</text>
+  <text class="t-sm" x="88" y="116" text-anchor="middle">passes your checks?</text>
 
-  <line class="ln" x1="190" y1="94" x2="278" y2="94" marker-end="url(#it-a)"/>
-  <text class="t-lab" x="234" y="86" text-anchor="middle">find gaps</text>
-  <line class="ln" x1="450" y1="94" x2="538" y2="94" marker-end="url(#it-a)"/>
-  <text class="t-lab" x="494" y="86" text-anchor="middle">model revises</text>
+  <line class="ln" x1="160" y1="101" x2="198" y2="101" marker-end="url(#it-a)"/>
+  <text class="t-lab" x="179" y="93" text-anchor="middle">no</text>
+  <rect class="box" x="200" y="72" width="144" height="58" rx="6"/>
+  <text class="t" x="272" y="97" text-anchor="middle">Specific feedback</text>
+  <text class="t-sm" x="272" y="116" text-anchor="middle">say what to change</text>
 
-  <line class="ln" x1="115" y1="118" x2="115" y2="168" marker-end="url(#it-a)"/>
-  <text class="t-lab" x="124" y="148">passes checks</text>
-  <rect class="box-home" x="40" y="170" width="150" height="46" rx="6"/>
-  <text class="t" x="115" y="198" text-anchor="middle">Done</text>
+  <line class="ln" x1="272" y1="130" x2="272" y2="168" marker-end="url(#it-a)"/>
+  <text class="t-lab" x="264" y="153" text-anchor="end">model revises</text>
+  <rect class="box" x="200" y="170" width="144" height="50" rx="6"/>
+  <text class="t" x="272" y="200" text-anchor="middle">Revised output</text>
 
-  <line class="ln" x1="365" y1="118" x2="365" y2="168" marker-end="url(#it-a)"/>
-  <text class="t-lab" x="374" y="148">stuck</text>
-  <rect class="box-ice" x="265" y="170" width="200" height="46" rx="6"/>
-  <text class="t" x="365" y="190" text-anchor="middle">Change perspective</text>
-  <text class="t-sm" x="365" y="207" text-anchor="middle">fresh chat · another model</text>
+  <path class="ln-warm" d="M200 195 H128 V133" marker-end="url(#it-w)"/>
+  <text class="t-lab" x="168" y="187" text-anchor="middle">look again</text>
 
-  <path class="ln" d="M465 193 H615 V120" marker-end="url(#it-a)"/>
-  <text class="t-lab" x="540" y="186" text-anchor="middle">new angle</text>
+  <line class="ln" x1="56" y1="130" x2="56" y2="178" marker-end="url(#it-a)"/>
+  <text class="t-lab" x="64" y="158">yes</text>
+  <rect class="box-home" x="16" y="180" width="84" height="44" rx="6"/>
+  <text class="t" x="58" y="207" text-anchor="middle">Done</text>
+
+  <line class="ln-dash" x1="272" y1="220" x2="272" y2="262"/>
+  <text class="t-lab" x="264" y="245" text-anchor="end">going in circles?</text>
+  <rect class="box-ice" x="16" y="264" width="328" height="70" rx="6"/>
+  <text class="t" x="32" y="292">Change perspective, then look again</text>
+  <text class="t-sm" x="32" y="314">a fresh chat · another model · a break</text>
 </svg>
 </div>
 <figcaption>The loop ends when the output passes the checks you set, not when it looks finished. Getting stuck is a reason to change perspective, not to accept what you have.</figcaption>
@@ -94,7 +98,6 @@
   <li><strong>Check that the summary matches the source.</strong> A real paper can still be summarized wrong. Read the abstract or the relevant section yourself.</li>
   <li><strong>Raise your bar with the stakes.</strong> A brainstorm can tolerate errors. Anything clinical, published, or sent under your name cannot.</li>
 </ul>
-<div class="draft"><p><span class="draft-label">Draft</span>Add one real side-by-side: a fabricated reference next to the real paper it resembles.</p></div>
 </section>
 
 <h2>Know where an answer came from</h2>

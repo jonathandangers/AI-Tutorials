@@ -56,11 +56,11 @@
 <line id="xa" class="ln-warm" pathLength="1" x1="310" y1="310" x2="310" y2="274"/>
 <line id="xb" class="ln-warm" pathLength="1" x1="310" y1="250" x2="310" y2="201"/><path id="xbh" class="ah-warm" d="M305 202L315 202L310 193z"/>
 <g id="gate"><circle class="gate" cx="310" cy="262" r="12"/><path id="gcheck" class="gcheck" pathLength="1" d="M304 262.5L308.5 267L316.5 257.5"/></g>
-<text id="l1" class="beat" x="158" y="254" text-anchor="end"><tspan class="n">1 </tspan>Read the state</text>
-<text id="l3" class="beat" x="330" y="267"><tspan class="n">3 </tspan>You approve</text>
-<text id="l4" class="beat" x="322" y="228"><tspan class="n">4 </tspan>Save to home</text>
-<text id="l2" class="beat" x="120" y="354" text-anchor="end"><tspan class="n">2 </tspan>Work one</text><text id="l2b" class="beat" x="120" y="370" text-anchor="end">stage</text>
-<text id="l5" class="beat" x="362" y="354"><tspan class="n">5 </tspan>Close the</text><text id="l5b" class="beat" x="362" y="370">chat</text>
+<text id="l1" class="beat" x="158" y="254" text-anchor="end"><tspan class="n">A </tspan>Read the state</text>
+<text id="l3" class="beat" x="330" y="267"><tspan class="n">C </tspan>You approve</text>
+<text id="l4" class="beat" x="322" y="228"><tspan class="n">D </tspan>Save to home</text>
+<text id="l2" class="beat" x="120" y="354" text-anchor="end"><tspan class="n">B </tspan>Work one</text><text id="l2b" class="beat" x="120" y="370" text-anchor="end">stage</text>
+<text id="l5" class="beat" x="362" y="354"><tspan class="n">E </tspan>Close the</text><text id="l5b" class="beat" x="362" y="370">chat</text>
 <g id="chat"><rect class="box-thread" id="chr" x="130" y="310" width="220" height="100" rx="6"/><text class="t" id="ct0" x="146" y="336">New chat: Aims</text><text class="t" id="ct1" x="146" y="336">New chat: Methods</text><text class="t" id="ct2" x="146" y="336">New chat: Budget</text><rect class="draft" id="dr0" x="146" y="348" width="168" height="6" rx="3"/><rect class="draft" id="dr1" x="146" y="361" width="188" height="6" rx="3"/><rect class="draft" id="dr2" x="146" y="374" width="120" height="6" rx="3"/><text class="t-sm" x="146" y="400">draft, critique, revise</text></g>
 <text id="foot" class="t-lab" x="240" y="434" text-anchor="middle">one stage per chat, repeat until the plan is done</text>
 <circle id="tok2" class="tok2" cx="378" cy="98" r="4.5" opacity="0"/><circle id="tok" class="tok" cx="92" cy="143" r="6" opacity="0"/><rect id="doc" class="doc" x="0" y="0" width="15" height="19" rx="2" opacity="0"/>
@@ -70,11 +70,11 @@
       <button type="button" class="play" id="wf-play">Play</button>
       <button type="button" class="next" id="wf-next">Next beat</button>
       <ol class="beats" aria-label="Jump to a beat of the loop">
-        <li><button type="button" data-step="0" aria-label="Beat 1, read the current state">1</button></li>
-        <li><button type="button" data-step="1" aria-label="Beat 2, work one stage">2</button></li>
-        <li><button type="button" data-step="2" aria-label="Beat 3, you approve">3</button></li>
-        <li><button type="button" data-step="3" aria-label="Beat 4, save to the home">4</button></li>
-        <li><button type="button" data-step="4" aria-label="Beat 5, close the chat">5</button></li>
+        <li><button type="button" data-step="0" aria-label="Beat A, read the current state">A</button></li>
+        <li><button type="button" data-step="1" aria-label="Beat B, work one stage">B</button></li>
+        <li><button type="button" data-step="2" aria-label="Beat C, you approve">C</button></li>
+        <li><button type="button" data-step="3" aria-label="Beat D, save to the home">D</button></li>
+        <li><button type="button" data-step="4" aria-label="Beat E, close the chat">E</button></li>
       </ol>
     </div>
     <p class="now" id="wf-now" aria-live="polite"></p>
@@ -145,68 +145,31 @@
 </ol>
 
 <h2>The whole workflow at a glance</h2>
-<p>The loop above is steps 4 and 5. Here are all six steps in one picture.</p>
-<figure class="dg">
-<div class="scroll">
-<svg viewBox="0 0 760 390" role="img" aria-label="The six-step workflow. Steps one to three create the project home and save the project description and plan into it. Each stage is worked in its own temporary chat that reads state from the home and exports approved output back to it. The final review reads everything in the home.">
-  <defs>
-    <marker id="wf-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
-    <marker id="wf-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah-warm"/></marker>
-  </defs>
-  <rect class="box" x="40" y="30" width="150" height="50" rx="6"/>
-  <text class="t-num" x="56" y="60">1</text>
-  <text class="t" x="74" y="60">Create home</text>
-  <rect class="box" x="230" y="30" width="150" height="50" rx="6"/>
-  <text class="t-num" x="246" y="60">2</text>
-  <text class="t" x="264" y="60">Describe</text>
-  <rect class="box" x="420" y="30" width="150" height="50" rx="6"/>
-  <text class="t-num" x="436" y="60">3</text>
-  <text class="t" x="454" y="60">Plan</text>
-  <line class="ln" x1="190" y1="55" x2="228" y2="55" marker-end="url(#wf-a)"/>
-  <line class="ln" x1="380" y1="55" x2="418" y2="55" marker-end="url(#wf-a)"/>
-  <line class="ln-warm" x1="115" y1="80" x2="115" y2="168" marker-end="url(#wf-w)"/>
-  <text class="t-lab" x="124" y="128">creates</text>
-  <line class="ln-warm" x1="305" y1="80" x2="305" y2="168" marker-end="url(#wf-w)"/>
-  <text class="t-lab" x="314" y="128">saves description</text>
-  <line class="ln-warm" x1="495" y1="80" x2="495" y2="168" marker-end="url(#wf-w)"/>
-  <text class="t-lab" x="504" y="128">saves plan</text>
-  <rect class="box-home" x="40" y="170" width="530" height="60" rx="6"/>
-  <text class="t" x="60" y="196">Project home</text>
-  <text class="t-sm" x="60" y="215">description · current state · approved outputs · reference files</text>
-  <rect class="box" x="600" y="170" width="130" height="60" rx="6"/>
-  <text class="t-num" x="614" y="196">6</text>
-  <text class="t" x="630" y="196">Review</text>
-  <text class="t-sm" x="614" y="215">the whole product</text>
-  <line class="ln" x1="570" y1="200" x2="598" y2="200" marker-end="url(#wf-a)"/>
-  <text class="t-lab" x="586" y="160" text-anchor="middle">reads all</text>
-  <rect class="box-thread" x="40" y="300" width="150" height="50" rx="6"/>
-  <text class="t-num" x="56" y="330">4</text>
-  <text class="t" x="74" y="330">Stage 1 chat</text>
-  <line class="ln" x1="87" y1="230" x2="87" y2="298" marker-end="url(#wf-a)"/>
-  <line class="ln-warm" x1="143" y1="300" x2="143" y2="232" marker-end="url(#wf-w)"/>
-  <text class="t-lab" x="79" y="270" text-anchor="end">reads state</text>
-  <text class="t-lab" x="151" y="270">exports approved</text>
-  <rect class="box-thread" x="230" y="300" width="150" height="50" rx="6"/>
-  <text class="t-num" x="246" y="330">5</text>
-  <text class="t" x="264" y="330">Stage 2 chat</text>
-  <line class="ln" x1="277" y1="230" x2="277" y2="298" marker-end="url(#wf-a)"/>
-  <line class="ln-warm" x1="333" y1="300" x2="333" y2="232" marker-end="url(#wf-w)"/>
-  <rect class="box-thread" x="420" y="300" width="150" height="50" rx="6"/>
-  <text class="t-num" x="436" y="330">5</text>
-  <text class="t" x="454" y="330">Stage 3 chat</text>
-  <line class="ln" x1="467" y1="230" x2="467" y2="298" marker-end="url(#wf-a)"/>
-  <line class="ln-warm" x1="523" y1="300" x2="523" y2="232" marker-end="url(#wf-w)"/>
-  <text class="t-lab" x="40" y="376">one stage per fresh chat, each starting from the home</text>
-  <rect class="box-thread" x="600" y="300" width="22" height="14" rx="2"/>
-  <text class="t-sm" x="630" y="311">temporary</text>
-  <rect class="box-home" x="600" y="324" width="22" height="14" rx="2"/>
-  <text class="t-sm" x="630" y="335">durable</text>
-  <line class="ln-warm" x1="600" y1="355" x2="622" y2="355"/>
-  <text class="t-sm" x="630" y="359">saves to home</text>
-</svg>
+<p>Steps 1 to 3 happen once. Steps 4 and 5 are the loop at the top of this page, repeated for each stage. Step 6 happens once at the end.</p>
+<div class="glance6" role="group" aria-label="The six steps, grouped by when they happen">
+  <section class="g once">
+    <h3>Set up once</h3>
+    <ol>
+      <li value="1"><strong>Create the project home</strong><span>An empty home and a platform project that points to it</span></li>
+      <li value="2"><strong>Describe the project</strong><span>Saves the project description</span></li>
+      <li value="3"><strong>Build a plan</strong><span>Saves the plan in the current state</span></li>
+    </ol>
+  </section>
+  <section class="g repeat">
+    <h3>Repeat for each stage</h3>
+    <ol>
+      <li value="4"><strong>Work one stage in a new chat</strong><span>Saves the approved output and updates the current state</span></li>
+      <li value="5"><strong>Continue from the home</strong><span>The next stage starts in a fresh chat</span></li>
+    </ol>
+    <p class="again">Back to step 4 until every stage has an approved output.</p>
+  </section>
+  <section class="g end">
+    <h3>Finish</h3>
+    <ol>
+      <li value="6"><strong>Review the whole product</strong><span>Read it end to end and check that the pieces fit</span></li>
+    </ol>
+  </section>
 </div>
-<figcaption>Everything flows through the project home. Chats come and go; each one reads the current state and exports only what you approved.</figcaption>
-</figure>
 
 <h2>When something changes</h2>
 <p>Projects get revised after they are done: a reviewer's comments, a new deadline, a better idea. You do not need a new process. A revision is one more pass through the same loop.</p>
@@ -226,7 +189,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="../assets/workflow-loop.js"></script>
 <nav class="pager" aria-label="Page"><a class="prev" href="../core/project-memory.html"><span class="dir">Previous</span><span>Chats and memory</span></a><a class="next" href="../core/connectors.html"><span class="dir">Next</span><span>Connectors and agents</span></a></nav>
-<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.6</footer>
+<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.6<span class="disclaimer">A personal educational resource. It is not official policy of KU Medical Center or The University of Kansas Health System. Where this guide and official guidance differ, follow the official guidance.</span></footer>
 </article>
 </main>
 </div>
