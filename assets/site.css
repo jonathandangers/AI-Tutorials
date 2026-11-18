@@ -579,3 +579,44 @@ footer.site { margin-top: 3rem; font-size: var(--step--1); color: var(--muted); 
 }
 .wf2d li + li { margin-top: 0; }
 .wf2d .now { font-family: var(--font-body); }
+
+/* ---------- footer disclaimer ---------- */
+footer.site .disclaimer { display: block; margin-top: 0.4rem; max-width: 46rem; }
+
+/* ---------- narrow diagram: fits a phone without sideways scrolling ---------- */
+.dg.narrow svg { min-width: 0; max-width: 27rem; margin: 0 auto; }
+.dg .ln-dash { stroke: var(--peri-ink); stroke-width: 1.5; fill: none; stroke-dasharray: 4 4; }
+
+/* ---------- loop figure when the animation script has not run ---------- */
+.wf2d.static #ct0, .wf2d.static #ct1 { display: none; }
+.wf2d.static .now { display: none; }
+
+/* ---------- six steps at a glance ---------- */
+.glance6 { margin-top: 1.25rem; display: grid; gap: 1.6rem; }
+.glance6 .g { position: relative; border: 1.5px solid var(--navy); border-radius: 6px; padding: 0.9rem 1rem 1rem; background: var(--paper); }
+.glance6 .g + .g::before { content: ""; position: absolute; left: 50%; top: -1.6rem; height: 1.6rem; border-left: 2px solid var(--navy); }
+.glance6 .g.repeat { border: 1.5px dashed var(--peri-ink); background: var(--sheet); }
+.glance6 .g.end { background: var(--cream-soft); }
+.glance6 h3 { margin: 0 0 0.6rem; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--copper-ink); }
+.glance6 ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); counter-reset: none; }
+.glance6 li { margin: 0; position: relative; padding-left: 2.1rem; font-family: var(--font-display); }
+.glance6 li + li { margin-top: 0; }
+.glance6 li::before { content: attr(value); position: absolute; left: 0; top: 0; width: 1.55rem; height: 1.55rem; border-radius: 50%; display: grid; place-items: center; background: var(--navy); color: var(--paper); font-family: var(--font-mono); font-size: 0.8rem; }
+.glance6 li strong { display: block; color: var(--navy-deep); line-height: 1.3; }
+.glance6 li span { display: block; font-size: 0.86rem; color: var(--muted); line-height: 1.35; margin-top: 0.15rem; }
+.glance6 .again { margin: 0.8rem 0 0; font-family: var(--font-mono); font-size: 0.78rem; color: var(--copper-ink); }
+
+/* ---------- data-rule tiles on a phone: one card per kind of information ---------- */
+.rules td .lab { display: none; }
+@media (max-width: 40rem) {
+  .rules-wrap { overflow-x: visible; }
+  .rules { display: block; min-width: 0; margin: 0; border-spacing: 0; }
+  .rules thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .rules tbody, .rules tr, .rules tbody th, .rules td { display: block; width: auto; }
+  .rules tr + tr { margin-top: 1.1rem; }
+  .rules tbody th { border-radius: 6px 6px 0 0; }
+  .rules td { margin-top: 3px; border-radius: 0; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.15rem 0.75rem; }
+  .rules td:last-child { border-radius: 0 0 6px 6px; }
+  .rules td .lab { display: block; font-weight: 700; color: var(--ink); font-size: 0.95rem; }
+  .rules td .why { grid-column: 1 / -1; }
+}

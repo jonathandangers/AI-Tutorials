@@ -116,7 +116,7 @@
     if (b !== shown) {
       shown = b;
       var d = b < 0 ? INTRO : BEATS[b];
-      nowEl.innerHTML = '<strong>' + (b < 0 ? '' : '<span class="n">' + (b + 1) + '</span>') + d.h + '</strong>' + d.p;
+      nowEl.innerHTML = '<strong>' + (b < 0 ? '' : '<span class="n">' + 'ABCDE'.charAt(b) + '</span>') + d.h + '</strong>' + d.p;
       chips.forEach(function (c, j) { if (j === b) c.setAttribute('aria-current', 'step'); else c.removeAttribute('aria-current'); });
     }
     playBtn.textContent = !tl.paused() ? 'Pause' : (x >= END - 0.01 ? 'Replay' : 'Play');

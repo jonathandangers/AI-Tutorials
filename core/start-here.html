@@ -19,7 +19,7 @@
   </div>
   <nav class="navlinks" id="navlinks" data-open="true" aria-label="Site">
 <a class="nav-cta" href="https://ai-elective.jonathan-dangers.workers.dev"><span class="k">Resident?</span><span class="t">Explore the AI elective</span><span class="arr" aria-hidden="true">&#8599;</span></a>
-<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html" aria-current="page"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/project-memory.html"><span class="num">05</span><span>Chats and memory</span></a></li><li><a href="../core/project-workflow.html"><span class="num">06</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">07</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">08</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">09</span><span>Going deeper</span></a></li></ol></div>
+<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html" aria-current="page"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/quality.html"><span class="num">05</span><span>Quality vs. slop</span><span class="tag">soon</span></a></li><li><a href="../core/project-memory.html"><span class="num">06</span><span>Chats and memory</span></a></li><li><a href="../core/project-workflow.html"><span class="num">07</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">08</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">09</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">10</span><span>Going deeper</span></a></li></ol></div>
 <div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/when-not-to-use.html"><span>When not to use AI</span><span class="tag">soon</span></a></li><li><a href="../topics/teaching.html"><span>AI for teaching</span><span class="tag">soon</span></a></li><li><a href="../topics/research.html"><span>Research use cases</span><span class="tag">soon</span></a></li></ul></div>
 <div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research groups</span></a></li><li><a href="../examples/exercise-tracker.html"><span>Exercise tracker</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/newsletter-digest.html"><span>Newsletter digest</span></a></li></ul></div>
   </nav>
@@ -68,33 +68,32 @@
   <tbody>
     <tr>
       <th scope="row"><strong>Public</strong>Published papers, guidelines, public websites, your own general writing</th>
-      <td class="ok"><span class="verdict"><span class="glyph" aria-hidden="true">&#10003;</span>Yes</span></td>
-      <td class="ok"><span class="verdict"><span class="glyph" aria-hidden="true">&#10003;</span>Yes</span></td>
+      <td class="ok"><span class="lab">Personal AI accounts</span><span class="verdict"><span class="glyph" aria-hidden="true">&#10003;</span>Yes</span></td>
+      <td class="ok"><span class="lab">KUMC Copilot</span><span class="verdict"><span class="glyph" aria-hidden="true">&#10003;</span>Yes</span></td>
     </tr>
     <tr>
       <th scope="row"><strong>Sensitive or confidential</strong>Internal documents, learner evaluations, unpublished research, committee materials</th>
-      <td class="nope"><span class="verdict"><span class="glyph" aria-hidden="true">&#10005;</span>No</span></td>
-      <td class="ok"><span class="verdict"><span class="glyph" aria-hidden="true">&#10003;</span>Yes</span></td>
+      <td class="nope"><span class="lab">Personal AI accounts</span><span class="verdict"><span class="glyph" aria-hidden="true">&#10005;</span>No</span></td>
+      <td class="ok"><span class="lab">KUMC Copilot</span><span class="verdict"><span class="glyph" aria-hidden="true">&#10003;</span>Yes</span></td>
     </tr>
     <tr>
       <th scope="row"><strong>Restricted, including PHI</strong>Anything about an identifiable patient</th>
-      <td class="nope"><span class="verdict"><span class="glyph" aria-hidden="true">&#10005;</span>No</span></td>
-      <td class="cond"><span class="verdict"><span class="glyph" aria-hidden="true">~</span>Yes, with limits</span><span class="why">Routine, minimum-necessary use</span></td>
+      <td class="nope"><span class="lab">Personal AI accounts</span><span class="verdict"><span class="glyph" aria-hidden="true">&#10005;</span>No</span></td>
+      <td class="cond"><span class="lab">KUMC Copilot</span><span class="verdict"><span class="glyph" aria-hidden="true">~</span>Yes, with limits</span><span class="why">Routine, minimum-necessary use</span></td>
     </tr>
   </tbody>
 </table>
 </div>
 <ul>
   <li><strong>"De-identified from memory" is still patient information.</strong> Retelling a case you saw last shift belongs in Copilot, not a personal account.</li>
-  <li><strong>UpToDate</strong> (through the KUMC license) is approved for clinical questions that include patient information.</li>
   <li><strong>Research with patient-level data</strong> stays in its designated research storage. AI work on that data goes through Research Informatics.</li>
   <li><strong>Unsure?</strong> Ask before you paste. KU's AI taskforce takes questions at <span class="mono">ai_taskforce@ku.edu</span>.</li>
   <li><strong>Source:</strong> KU's <a href="https://ai.ku.edu/data-use-and-protection">Data Use and Protection</a> guidance, checked November 2026.</li>
+  <li><strong>This table is a summary, not policy.</strong> It is one person's reading of the guidance. Where it differs from official KU Medical Center or health system guidance, the official guidance governs.</li>
 </ul>
-<div class="draft"><p><span class="draft-label">Draft</span>Add a source for the UpToDate approval before this goes live. KU's public welcome page still says Copilot is the only approved tool for sensitive identifying information.</p></div>
-<div class="note"><p><strong>On a KU computer?</strong> Google Drive is blocked on the KUMC network; use your own device for it. Gemini and NotebookLM do open on KU computers, but they are still personal accounts: public information only, the same as any other personal AI tool.</p></div>
+<div class="note"><p><strong>On a KU computer?</strong> Gemini and NotebookLM open on KU computers, but they are still personal accounts: public information only, the same as any other personal AI tool.</p></div>
 <nav class="pager" aria-label="Page"><a class="next" href="../core/ways-to-use.html"><span class="dir">Next</span><span>Ways to use an LLM</span></a></nav>
-<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.6</footer>
+<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.6<span class="disclaimer">A personal educational resource. It is not official policy of KU Medical Center or The University of Kansas Health System. Where this guide and official guidance differ, follow the official guidance.</span></footer>
 </article>
 </main>
 </div>
