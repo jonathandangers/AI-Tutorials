@@ -587,36 +587,39 @@ footer.site .disclaimer { display: block; margin-top: 0.4rem; max-width: 46rem; 
   .rules td .why { grid-column: 1 / -1; }
 }
 
-/* ---------- home: one photograph, the title, one sentence ---------- */
-.home-hero { margin: 0; }
-.home-photo { display: block; width: 100%; height: clamp(15rem, 56vh, 34rem); object-fit: cover; object-position: 50% 62%; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .home-photo { filter: brightness(0.72) saturate(0.9); } }
-:root[data-theme="dark"] .home-photo { filter: brightness(0.72) saturate(0.9); }
+/* ---------- home: darkened photograph behind the title; the page slides up over it ---------- */
+.home-hero {
+  position: sticky; top: 0; z-index: 0; overflow: hidden;
+  min-height: 100vh; min-height: 100svh; display: grid; align-items: center;
+  background: #1c2536; color: #f4f6fb;
+}
+.home-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
+.home-hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(20, 27, 40, 0.62) 0%, rgba(20, 27, 40, 0.5) 45%, rgba(20, 27, 40, 0.72) 100%);
+}
 .home-words {
-  max-width: 46rem; margin: 0 auto; box-sizing: content-box;
-  padding-block: 3rem 0.5rem;
+  position: relative; z-index: 1; width: 100%; max-width: 46rem; margin: 0 auto; box-sizing: border-box;
+  padding-block: 4rem;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
-.home-line { font-size: var(--step-1); line-height: 1.5; margin-top: 1rem; max-width: 36rem; color: var(--ink); }
-.home-hero + .page .paths { margin-top: 2.5rem; }
-.home-h {
-  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 500; text-transform: uppercase;
-  letter-spacing: 0.1em; color: var(--copper-ink); margin-top: 3.5rem;
+.home-hero h1 { color: #ffffff; font-size: clamp(2.6rem, 6vw, 4.4rem); text-shadow: 0 1px 24px rgba(10, 14, 22, 0.55); }
+.home-hero h1 em { color: #f7e6c2; }
+.home-line { font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.45; margin-top: 1.1rem; max-width: 32rem; color: #f4f6fb; text-shadow: 0 1px 16px rgba(10, 14, 22, 0.6); }
+.home-cue {
+  display: inline-block; margin-top: 3rem; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.12em;
+  text-transform: uppercase; text-decoration: none; color: #f4f6fb; opacity: 0.85;
+  border-bottom: 1px solid rgba(244, 246, 251, 0.5); padding-bottom: 0.2rem;
 }
-.toc { list-style: none; margin: 0.6rem 0 0; padding: 0; border-top: 1px solid var(--rule); }
-.toc li { margin: 0; border-bottom: 1px solid var(--rule); }
-.toc a {
-  display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); column-gap: 0.25rem; align-items: baseline;
-  padding: 0.85rem 0.25rem; text-decoration: none; color: var(--ink);
+.home-cue:hover { color: #f7e6c2; opacity: 1; }
+.home-hero + .page {
+  position: relative; z-index: 1; background: var(--paper); max-width: none; margin: 0;
+  padding-top: 4rem; box-shadow: 0 -18px 40px rgba(10, 14, 22, 0.28);
 }
-ul.toc a { grid-template-columns: minmax(0, 1fr); padding-block: 0.65rem; }
-.toc a:hover { background: var(--sheet); color: var(--ink); }
-.toc .n { font-family: var(--font-mono); font-size: 0.8rem; color: var(--copper-ink); }
-.toc .t { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; line-height: 1.3; color: var(--navy-deep); }
-ul.toc .t { font-weight: 600; font-size: 1rem; }
-.toc .d { grid-column: 2; font-size: 0.95rem; color: var(--muted); line-height: 1.45; margin-top: 0.1rem; }
-.toc a:hover .t { color: var(--copper-ink); }
-.home-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.5rem; }
-.home-cols .home-h { margin-top: 3rem; }
-.bring { margin-top: 4rem; }
-@media (max-width: 40rem) { .home-cols { grid-template-columns: minmax(0, 1fr); } .home-words { padding-top: 2rem; } }
+.home-hero + .page > * { max-width: 46rem; margin-left: auto; margin-right: auto; }
+.home-hero + .page > h2 { margin-top: 6rem; }
+.home-hero + .page > .paths { margin-top: 0; scroll-margin-top: 4rem; }
+.home-hero + .page > .bring { margin-top: 6rem; }
+.home-hero + .page > .cards { margin-top: 1.5rem; gap: 1rem; }
+html:has(.home-hero) { scroll-behavior: smooth; }
+@media (max-width: 60rem) { .home-hero { min-height: calc(100svh - 4rem); position: relative; } }

@@ -207,11 +207,12 @@ PAGE_HEADER = """<header class="page-head"><div class="head-inner"><div class="h
 {head}
 </div>{mark}</div></header>"""
 
-# Home: one photograph, the title, one sentence.
+# Home: a darkened photograph fills the first screen, with the title and one sentence over it.
 HOME_HEADER = """<header class="home-hero">
-<img class="home-photo" src="assets/home.jpg" width="1500" height="1125" alt="A snow-covered trail running between bare trees and tan prairie grass under a grey winter sky.">
+<img class="home-photo" src="assets/home.jpg" alt="">
 <div class="home-words">
 {head}
+<a class="home-cue" href="#start">Scroll <span aria-hidden="true">&darr;</span></a>
 </div>
 </header>"""
 
