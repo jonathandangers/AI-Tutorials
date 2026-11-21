@@ -26,15 +26,16 @@
 </aside>
 <main>
 <header class="home-hero">
-<img class="home-photo" src="assets/home.jpg" width="1500" height="1125" alt="A snow-covered trail running between bare trees and tan prairie grass under a grey winter sky.">
+<img class="home-photo" src="assets/home.jpg" alt="">
 <div class="home-words">
 <h1>Practical <em>AI Workflows</em></h1>
-<p class="home-line">A field guide for faculty and residents in academic medicine: how to use an LLM for teaching, projects, and your own learning, with your judgment in charge.</p>
+<p class="home-line">A field guide to using AI for teaching, projects, and your own learning in academic medicine.</p>
 <!-- /head -->
+<a class="home-cue" href="#start">Scroll <span aria-hidden="true">&darr;</span></a>
 </div>
 </header>
 <article class="page">
-<nav class="paths" aria-label="Where to start">
+<nav class="paths" id="start" aria-label="Where to start">
   <a class="path" href="core/start-here.html">
     <span class="path-t">Start from the beginning</span>
     <span class="path-d">Six short modules, in order.</span>
@@ -47,40 +48,35 @@
   </a>
 </nav>
 
-<h2 class="home-h">Core modules</h2>
-<ol class="toc">
-  <li><a href="core/start-here.html"><span class="n">01</span><span class="t">Start here</span><span class="d">Ownership, and which tools may see which information at KUMC.</span></a></li>
-  <li><a href="core/ways-to-use.html"><span class="n">02</span><span class="t">Ways to use an LLM</span><span class="d">Six roles, production versus practice, and what you can ask it to make.</span></a></li>
-  <li><a href="core/context.html"><span class="n">03</span><span class="t">Giving the model context</span><span class="d">What a capable colleague would need to know.</span></a></li>
-  <li><a href="core/iteration.html"><span class="n">04</span><span class="t">Iterate and verify</span><span class="d">Feedback, agreeable models, invented references, and outdated guidelines.</span></a></li>
-  <li><a href="core/quality.html"><span class="n">05</span><span class="t">Quality, slop, and when to skip AI</span><span class="d">Making output worth a reader's time.</span></a></li>
-  <li><a href="core/project-workflow.html"><span class="n">06</span><span class="t">Running larger projects</span><span class="d">Chats, memory, a project home, and a six-step workflow.</span></a></li>
-</ol>
+<h2>Core modules</h2>
+<p>Work through these in order the first time. Each one opens with a short summary card.</p>
+<ul class="cards">
+  <li><a href="core/start-here.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span class="kicker">01</span><span class="title">Start here</span><span class="desc">Ownership, and which tools may see which information at KUMC.</span></a></li>
+  <li><a href="core/ways-to-use.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="5" height="5" rx="1"/><rect x="9.5" y="5" width="5" height="5" rx="1"/><rect x="16" y="5" width="5" height="5" rx="1"/><rect x="3" y="14" width="5" height="5" rx="1"/><rect x="9.5" y="14" width="5" height="5" rx="1"/><rect x="16" y="14" width="5" height="5" rx="1"/></svg><span class="kicker">02</span><span class="title">Ways to use an LLM</span><span class="desc">Six roles, production versus practice, and what you can ask it to make.</span></a></li>
+  <li><a href="core/context.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><span class="kicker">03</span><span class="title">Giving the model context</span><span class="desc">What a capable colleague would need to know, and how to add it.</span></a></li>
+  <li><a href="core/iteration.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M18.5 2.5v4h-4"/></svg><span class="kicker">04</span><span class="title">Iterate and verify</span><span class="desc">Feedback, agreeable models, invented references, and outdated guidelines.</span></a></li>
+  <li><a href="core/quality.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16l-6 7v6l-4 2v-8z"/></svg><span class="kicker">05</span><span class="title">Quality, slop, and when to skip AI</span><span class="desc">Making output worth a reader's time.</span></a></li>
+  <li><a href="core/project-workflow.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/><path d="M9 6h4a2 2 0 0 1 2 2v7"/></svg><span class="kicker">06</span><span class="title">Running larger projects</span><span class="desc">Chats, memory, a project home, and a six-step workflow.</span></a></li>
+</ul>
 
-<div class="home-cols">
-  <div>
-    <h2 class="home-h">Going deeper</h2>
-    <ul class="toc">
-      <li><a href="core/models.html"><span class="t">Models and usage</span></a></li>
-      <li><a href="core/connectors.html"><span class="t">Connectors</span></a></li>
-      <li><a href="core/going-deeper.html"><span class="t">Skills, scheduled tasks, and file agents</span></a></li>
-    </ul>
-    <h2 class="home-h">Topic modules</h2>
-    <ul class="toc">
-      <li><a href="topics/clinical.html"><span class="t">Clinical questions and patient communication</span></a></li>
-    </ul>
-  </div>
-  <div>
-    <h2 class="home-h">Worked examples</h2>
-    <ul class="toc">
-      <li><a href="examples/meeting-summary.html"><span class="t">Meeting summary</span></a></li>
-      <li><a href="examples/research-workshop.html"><span class="t">Research groups project home</span></a></li>
-      <li><a href="examples/consensus-search.html"><span class="t">Evidence search with Consensus</span></a></li>
-      <li><a href="examples/pubmed-scout.html"><span class="t">PubMed scout</span></a></li>
-      <li><a href="examples/journal-digest.html"><span class="t">Journal email digest</span></a></li>
-    </ul>
-  </div>
-</div>
+<h2>Going deeper</h2>
+<p>Come back to these once the core habits are in place.</p>
+<ul class="cards">
+  <li><a href="core/models.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l4-6"/></svg><span class="kicker">Going deeper</span><span class="title">Models and usage</span><span class="desc">Which model and how much reasoning a task deserves.</span></a></li>
+  <li><a href="core/connectors.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v5M15 3v5"/><path d="M6 8h12v3a6 6 0 0 1-12 0z"/><path d="M12 17v4"/></svg><span class="kicker">Going deeper</span><span class="title">Connectors</span><span class="desc">Letting the model work where your material already lives.</span></a></li>
+  <li><a href="core/going-deeper.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/><rect x="8" y="3" width="8" height="8" rx="1"/></svg><span class="kicker">Going deeper</span><span class="title">Skills, scheduled tasks, and file agents</span><span class="desc">Saved instructions, recurring work, and Claude Code, Codex, and Antigravity.</span></a></li>
+  <li><a href="topics/clinical.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg><span class="kicker">Topic</span><span class="title">Clinical questions and patient communication</span><span class="desc">Point-of-care lookup and plain-language writing for patients.</span></a></li>
+</ul>
+
+<h2>Worked examples</h2>
+<p>Each example is a short case card: the goal, the setup, one key prompt, and what was checked.</p>
+<ul class="cards">
+  <li><a href="examples/meeting-summary.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><span class="kicker">Context</span><span class="title">Meeting summary</span><span class="desc">A transcript plus surrounding material becomes a useful record.</span></a></li>
+  <li><a href="examples/research-workshop.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h6l2 2h10v11H3z"/></svg><span class="kicker">Project home</span><span class="title">Research groups project home</span><span class="desc">OneDrive for the record, Copilot for instructions, one short chat per task.</span></a></li>
+  <li><a href="examples/consensus-search.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="kicker">Connector</span><span class="title">Evidence search with Consensus</span><span class="desc">One clinical question answered from retrieved papers.</span></a></li>
+  <li><a href="examples/pubmed-scout.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span class="kicker">Scheduled task</span><span class="title">PubMed scout</span><span class="desc">Weekly literature surveillance delivered to your inbox.</span></a></li>
+  <li><a href="examples/journal-digest.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg><span class="kicker">Scheduled task</span><span class="title">Journal email digest</span><span class="desc">Journal and society emails in one twice-weekly summary.</span></a></li>
+</ul>
 
 <section class="bring" id="project" aria-labelledby="bring-h">
   <h2 id="bring-h">Bring one project</h2>
