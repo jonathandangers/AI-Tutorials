@@ -24,7 +24,9 @@
 
   document.querySelectorAll(".copy-btn").forEach(function (b) {
     b.addEventListener("click", function () {
-      var target = document.getElementById(b.getAttribute("data-copy"));
+      var id = b.getAttribute("data-copy");
+      var box = b.closest ? b.closest(".exchange") : null;
+      var target = id ? document.getElementById(id) : (box ? box.querySelector("pre") : null);
       if (!target) return;
       var text = target.innerText;
       function done(label) { var old = b.textContent; b.textContent = label; setTimeout(function () { b.textContent = old; }, 1500); }

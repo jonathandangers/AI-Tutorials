@@ -9,10 +9,16 @@ examples/) so GitHub Pages can serve the repo root as-is.
 In a fragment:
   {{pre}}          -> relative path back to the site root
   {{icon:name}}    -> inline line icon from ICONS below
-Everything up to and including the first <p class="lede"> becomes the
-page's header band.
+Everything up to the <!-- /head --> marker becomes the page's header
+band. Without a marker, the band ends after the first <h1> (and a
+<p class="lede"> directly after it, if there is one).
 
 To add a page: create src/<path>.html and add one line to PAGES below.
+To retire a page: remove it from PAGES and add its old path to REDIRECTS,
+so existing links (including the Resident AI Elective site) keep working.
+
+The Resident AI Elective repo imports this file and assets/site.css at
+build time. Keep ICONS, icon(), and the shared CSS classes intact.
 """
 import re
 from pathlib import Path
@@ -28,40 +34,47 @@ CF_ANALYTICS_TOKEN = ""
 AUTHOR = "Jonathan Dangers, MD"
 
 # (path, page title, nav label, group, tag, icon)
-# group None = home. tag: "" | "new" | "placeholder" | "draft"
+# group None = home. tag: "" | "hidden" (built, but left out of the nav and pager)
 PAGES = [
     ("index.html", SITE_NAME, "Home", None, "", "compass"),
 
     ("core/start-here.html", "Start here", "Start here", "core", "", "compass"),
     ("core/ways-to-use.html", "Ways to use an LLM", "Ways to use an LLM", "core", "", "grid"),
     ("core/context.html", "Giving the model context", "Giving context", "core", "", "layers"),
-    ("core/iteration.html", "Iteration, verification, and judgment", "Iterate and verify", "core", "", "loop"),
-    ("core/quality.html", "Quality vs. slop", "Quality vs. slop", "core", "placeholder", "sieve"),
-    ("core/project-memory.html", "Chats, memory, and project homes", "Chats and memory", "core", "", "stack"),
-    ("core/project-workflow.html", "A workflow for larger projects", "Larger projects", "core", "", "flow"),
-    ("core/connectors.html", "Connectors and agents", "Connectors and agents", "core", "", "plug"),
-    ("core/models.html", "Models, reasoning, and usage", "Models and usage", "core", "", "gauge"),
-    ("core/going-deeper.html", "Going deeper", "Going deeper", "core", "", "clock"),
+    ("core/iteration.html", "Iterate and verify", "Iterate and verify", "core", "", "loop"),
+    ("core/quality.html", "Quality, slop, and when to skip AI", "Quality and when to skip AI", "core", "", "sieve"),
+    ("core/project-workflow.html", "Running larger projects", "Larger projects", "core", "", "flow"),
 
-    ("topics/when-not-to-use.html", "When not to use AI", "When not to use AI", "topics", "placeholder", "pause"),
-    ("topics/teaching.html", "AI for teaching", "AI for teaching", "topics", "placeholder", "book"),
-    ("topics/research.html", "Research use cases", "Research use cases", "topics", "placeholder", "flask"),
+    ("core/models.html", "Models, reasoning, and usage", "Models and usage", "deeper", "", "gauge"),
+    ("core/connectors.html", "Connectors", "Connectors", "deeper", "", "plug"),
+    ("core/going-deeper.html", "Skills, scheduled tasks, and file agents", "Skills and agents", "deeper", "", "blocks"),
+
+    ("topics/clinical.html", "Clinical questions and patient communication", "Clinical and patient use", "topics", "", "pulse"),
+    ("topics/teaching.html", "AI for teaching", "AI for teaching", "topics", "hidden", "book"),
+    ("topics/research.html", "Research use cases", "Research use cases", "topics", "hidden", "flask"),
 
     ("examples/meeting-summary.html", "Meeting summary", "Meeting summary", "examples", "", "chat"),
     ("examples/research-workshop.html", "Research groups project home", "Research groups", "examples", "", "folder"),
-    ("examples/exercise-tracker.html", "Exercise tracker", "Exercise tracker", "examples", "", "pulse"),
-    ("examples/pubmed-scout.html", "PubMed scout", "PubMed scout", "examples", "", "search"),
-    ("examples/newsletter-digest.html", "Newsletter digest", "Newsletter digest", "examples", "", "mail"),
-
+    ("examples/consensus-search.html", "Evidence search with Consensus", "Evidence search", "examples", "", "search"),
+    ("examples/pubmed-scout.html", "PubMed scout", "PubMed scout", "examples", "", "calendar"),
+    ("examples/journal-digest.html", "Journal email digest", "Journal digest", "examples", "", "mail"),
 ]
+
+# Retired paths -> where they point now. Each gets a small redirect page.
+REDIRECTS = {
+    "core/project-memory.html": "core/project-workflow.html",
+    "topics/when-not-to-use.html": "core/quality.html",
+    "examples/exercise-tracker.html": "examples/consensus-search.html",
+    "examples/newsletter-digest.html": "examples/journal-digest.html",
+}
 
 GROUPS = [
     ("core", "Core modules", True),
+    ("deeper", "Going deeper", False),
     ("topics", "Topic modules", False),
     ("examples", "Worked examples", False),
 ]
 
-TAG_TEXT = {"new": "new", "placeholder": "soon", "draft": "draft"}
 
 # 24x24 line icons, drawn in currentColor.
 ICONS = {
@@ -115,13 +128,12 @@ def nav_html(current: str) -> str:
         '<span class="t">Explore the AI elective</span><span class="arr" aria-hidden="true">&#8599;</span></a>'
     ]
     for gkey, glabel, numbered in GROUPS:
-        items = [p for p in PAGES if p[3] == gkey]
+        items = [p for p in PAGES if p[3] == gkey and p[4] != "hidden"]
         lis = []
-        for i, (path, _title, label, _g, tag, _ic) in enumerate(items, start=1):
+        for i, (path, _title, label, _g, _tag, _ic) in enumerate(items, start=1):
             cur = ' aria-current="page"' if path == current else ""
             num = f'<span class="num">{i:02d}</span>' if numbered else ""
-            tg = f'<span class="tag">{TAG_TEXT[tag]}</span>' if tag else ""
-            lis.append(f'<li><a href="{pre}{path}"{cur}>{num}<span>{label}</span>{tg}</a></li>')
+            lis.append(f'<li><a href="{pre}{path}"{cur}>{num}<span>{label}</span></a></li>')
         tagname = "ol" if numbered else "ul"
         parts.append(f'<div class="navgroup"><h2>{glabel}</h2><{tagname}>{"".join(lis)}</{tagname}></div>')
     return "\n".join(parts)
@@ -129,9 +141,9 @@ def nav_html(current: str) -> str:
 
 def pager_html(current: str) -> str:
     page = next(p for p in PAGES if p[0] == current)
-    if page[3] is None:
+    if page[3] is None or page[4] == "hidden":
         return ""
-    items = [p for p in PAGES if p[3] == page[3]]
+    items = [p for p in PAGES if p[3] == page[3] and p[4] != "hidden"]
     i = items.index(page)
     pre = prefix_for(current)
     prev_html = next_html = ""
@@ -160,7 +172,6 @@ TEMPLATE = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
@@ -178,19 +189,41 @@ TEMPLATE = """<!doctype html>
   </nav>
 </aside>
 <main>
-<p class="wip">Work in progress. Modules are being written and polished; some pages are placeholders.</p>
-<header class="page-head"><div class="head-inner"><div class="head-text">
-{head}
-</div>{mark}</div></header>
+{header}
 <article class="page">
 {body}
 {pager}
-<footer class="site">{site} &middot; Created by {author} &middot; Draft v1.6<span class="disclaimer">A personal educational resource. It is not official policy of KU Medical Center or The University of Kansas Health System. Where this guide and official guidance differ, follow the official guidance.</span></footer>
+<footer class="site">{site} &middot; Created by {author} &middot; Draft v1.7, work in progress<span class="disclaimer">A personal educational resource. It is not official policy of KU Medical Center or The University of Kansas Health System. Where this guide and official guidance differ, follow the official guidance.</span></footer>
 </article>
 </main>
 </div>
 <script src="{pre}assets/site.js"></script>
 {analytics}</body>
+</html>
+"""
+
+
+PAGE_HEADER = """<header class="page-head"><div class="head-inner"><div class="head-text">
+{head}
+</div>{mark}</div></header>"""
+
+# Home: one photograph, the title, one sentence.
+HOME_HEADER = """<header class="home-hero">
+<img class="home-photo" src="assets/home.jpg" width="1500" height="1125" alt="A snow-covered trail running between bare trees and tan prairie grass under a grey winter sky.">
+<div class="home-words">
+{head}
+</div>
+</header>"""
+
+REDIRECT = """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Moved · {site}</title>
+<meta http-equiv="refresh" content="0; url={target}">
+<link rel="canonical" href="{target}">
+</head>
+<body><p>This page has moved to <a href="{target}">{target}</a>.</p></body>
 </html>
 """
 
@@ -211,21 +244,32 @@ def build():
     for path, title, _label, _group, _tag, _ic in PAGES:
         pre = prefix_for(path)
         body = render_fragment((SRC / path).read_text(encoding="utf-8"), pre)
-        m = re.search(r'<!-- /head -->', body) or re.search(r'<p class="lede">.*?</p>', body, flags=re.S)
+        m = (re.search(r'<!-- /head -->', body)
+             or re.search(r'</h1>(\s*<p class="lede">.*?</p>)?', body, flags=re.S))
         if m:
             head, body = body[: m.end()], body[m.end():]
         else:
             head = ""
+        if path == "index.html":
+            header = HOME_HEADER.format(head=head.strip())
+        else:
+            header = PAGE_HEADER.format(head=head.strip(), mark=head_mark(path))
         full_title = title if path == "index.html" else f"{title} · {SITE_NAME}"
         html = TEMPLATE.format(
             title=full_title, pre=pre, site=SITE_NAME, author=AUTHOR,
-            nav=nav_html(path), head=head.strip(), mark=head_mark(path),
+            nav=nav_html(path), header=header,
             body=body.strip(), pager=pager_html(path), analytics=analytics_tag(),
         )
         out = ROOT / path
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(html, encoding="utf-8")
         print("built", path)
+    for old, new in REDIRECTS.items():
+        target = "../" * old.count("/") + new
+        out = ROOT / old
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(REDIRECT.format(target=target, site=SITE_NAME), encoding="utf-8")
+        print("redirect", old, "->", new)
 
 
 if __name__ == "__main__":

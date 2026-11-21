@@ -2,36 +2,29 @@
 <h1>PubMed scout</h1>
 <p class="lede">A recurring workflow that prepares work for you to review.</p>
 
-<div class="draft"><p><span class="draft-label">Illustrative</span>Paper titles below are placeholders.</p></div>
-
 <div class="case">
   <dl>
-    <dt>Goal</dt><dd>Know about new publications relevant to ongoing projects without searching every week.</dd>
+    <dt>Goal</dt><dd>Learn about new publications on the topics I teach without searching every week.</dd>
     <dt>Tools</dt><dd>Claude connected to PubMed, running as a weekly scheduled task.</dd>
-    <dt>Delivers</dt><dd>An email with useful papers, why each may matter to a specific project, and links.</dd>
+    <dt>Delivers</dt><dd>An email with useful papers, why each may matter to a specific topic, and links.</dd>
+    <dt>Inputs</dt><dd>A public topic list: the subjects I follow, in plain words. No unpublished work or study data.</dd>
     <dt>Your job</dt><dd>Decide what is relevant and verify anything you plan to use.</dd>
       <dt>Checked</dt><dd>Every link opens the PubMed record, and each summary matches the abstract before a paper is used.</dd>
   </dl>
 
   <div class="exchange">
     <div class="who"><span>Scheduled instruction</span><button class="copy-btn" type="button" data-copy="ps-prompt">Copy</button></div>
-    <div class="body"><pre id="ps-prompt">Every Monday: search PubMed for papers from the past 7 days related to each project listed in my project file. For each useful paper, give the citation, a two-sentence summary, which project it bears on and why, and the PubMed link. Skip anything that is only loosely related. Email the result to me.</pre></div>
+    <div class="body"><pre id="ps-prompt">Every Monday: search PubMed for papers from the past 7 days on each topic in my public topic list. For each useful paper, give the citation, a two-sentence summary, which topic it bears on and why, and the PubMed link. Skip anything that is only loosely related. Email the result to me.</pre></div>
   </div>
 
   <div class="exchange">
-    <div class="who"><span>Output excerpt</span><span>trimmed, placeholder</span></div>
+    <div class="who"><span>Output excerpt</span><span>one paper</span></div>
     <div class="body">
-      <p><strong>[Paper title]</strong>, [Journal], [Year].</p>
-      <p><strong>Why it matters:</strong> Relevant to [project]: uses a similar study design and reports the outcome we planned to measure.</p>
+      <p><strong>Intravenous thrombolysis for acute central retinal artery occlusion: protocol for a systematic review and individual participant data meta-analysis of randomized controlled trials.</strong> Mac Grory B, et al. <em>PLoS One</em>, 2026. <a href="https://doi.org/10.1371/journal.pone.0342739">doi:10.1371/journal.pone.0342739</a> &middot; PMID 41805966</p>
+      <p><strong>Why it matters:</strong> Bears on the eye emergencies topic. The pooled analysis will address whether IV thrombolysis within 4.5 hours improves vision in CRAO, a question the current lecture describes as unsettled. This is a protocol, so there are no results yet.</p>
     </div>
   </div>
 </div>
 
-<figure class="shot" role="img" aria-label="Placeholder for a screenshot">
-  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="9" cy="10" r="2"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
-  <strong>Screenshot placeholder</strong>
-  <span>One weekly digest email, trimmed to two papers.</span>
-</figure>
-
 <h2>Takeaway</h2>
-<p>The automation prepares an internal review product and never acts on its own. Because it searches PubMed instead of recalling papers from memory, invented citations are much less likely, but not impossible, and a summary can still misstate a paper. Open the link and check the abstract before you use anything.</p>
+<p>The automation prepares material for your review and takes no action on its own. It searches PubMed, so the citations start from real records, which makes invented papers much less likely. A summary can still misstate a paper. Open the link and check the abstract before you use anything.</p>

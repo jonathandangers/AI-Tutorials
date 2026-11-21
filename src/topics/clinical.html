@@ -1,0 +1,56 @@
+<p class="eyebrow">Topic module</p>
+<h1>Clinical questions and patient communication</h1>
+
+<div class="draft"><p><span class="draft-label">First draft</span>A starting version for the author to revise. The tool list reflects what is named elsewhere in this guide; confirm current availability on the health system's Artificial Intelligence intranet page.</p></div>
+
+<div class="pocket">
+  <p class="eyebrow">Pocket card</p>
+  <ul>
+    <li>For a clinical question, prefer a tool that searches the literature and shows its sources.</li>
+    <li>General questions can go to any tool. Anything about a real patient goes only to tools you sign in to with @kumc.edu.</li>
+    <li>For patient-facing writing, give the reading level, the length, and the action you need the patient to take, then check every instruction yourself.</li>
+  </ul>
+</div>
+
+<h2>Looking something up at the point of care</h2>
+<p>Clinical lookup is the most familiar use of AI in medicine, and the one where an error costs the most. Two choices matter: which tool, and how the question is phrased.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th scope="col">Tool</th><th scope="col">Sign-in</th><th scope="col">Suited to</th></tr></thead>
+  <tbody>
+    <tr><td><strong>UpToDate Expert AI</strong></td><td>@kumc.edu</td><td>Questions answered from UpToDate's reviewed content; may include patient details</td></tr>
+    <tr><td><strong>KUMC Copilot</strong></td><td>@kumc.edu</td><td>General drafting and reasoning that involves patient or internal information</td></tr>
+    <tr><td><strong>OpenEvidence</strong></td><td>Personal account</td><td>General clinical questions with cited literature; public information only</td></tr>
+    <tr><td><strong>Consensus, PubMed connectors</strong></td><td>Personal account</td><td>Finding and summarizing papers on a general question</td></tr>
+    <tr><td><strong>General chat models</strong></td><td>Personal account</td><td>Explaining a concept, building a differential for a textbook-style presentation</td></tr>
+  </tbody>
+</table>
+</div>
+<p>The line between a general question and a real patient is drawn in <a href="{{pre}}core/start-here.html">Start here</a>. It applies to every row above.</p>
+
+<h3>Phrasing a clinical question</h3>
+<ul>
+  <li><strong>Ask open questions.</strong> Give the findings and ask for a differential or the options. A question that names your leading diagnosis tends to get agreement back; <a href="{{pre}}core/iteration.html">Iterate and verify</a> explains why.</li>
+  <li><strong>Ask for the source and its date.</strong> "Which guideline is this from, and what year?" Then open it. Recommendations change after a model's training ends.</li>
+  <li><strong>Verify doses, thresholds, and intervals every time.</strong> These are the details a model is most likely to state confidently and get wrong.</li>
+  <li><strong>Use the answer to direct your reading.</strong> The tool points you to the relevant guideline or trial faster than a manual search. The clinical decision stays with you and the primary source.</li>
+</ul>
+<div class="exchange"><div class="who"><span>A general question, well phrased</span><button class="copy-btn" type="button">Copy</button></div><div class="body"><pre>Adult with a chemical splash to the eye, alkali suspected. Summarize current recommendations for irrigation: fluid, volume, duration, and the pH endpoint. Name the guideline or review each point comes from and its year, and tell me where sources disagree.</pre></div></div>
+
+<section class="band">
+<h2>Writing for patients</h2>
+<p>Models are good at turning clinical language into plain language, and at producing the same content at several reading levels or in another format. Common uses include discharge instructions, a handout explaining a diagnosis, and return precautions written as a short list.</p>
+<p>Give the model four things: the reading level, the length, what the patient needs to do, and when to come back.</p>
+<div class="exchange"><div class="who"><span>Plain-language instructions</span><button class="copy-btn" type="button">Copy</button></div><div class="body"><pre>Write discharge instructions for an adult with a corneal abrasion. Sixth-grade reading level, under 200 words, short sentences. Sections: what this is, what to do at home, what to avoid, when to come back right away. Use the medication plan I give below and add nothing to it.</pre></div></div>
+<p>A request like the one above describes a condition, so it contains no patient information and any tool may be used. Once you add a specific patient's details, the work belongs in an @kumc.edu tool.</p>
+<h3>Before it reaches a patient</h3>
+<ul>
+  <li>Read every instruction against your own plan. The model may add advice you did not give, or soften a return precaution.</li>
+  <li>Check medication names, doses, and durations against the order.</li>
+  <li>Translations need review by a qualified interpreter or a fluent clinician before use.</li>
+  <li>Follow your department's process for what becomes part of the record.</li>
+</ul>
+</section>
+
+<h2>Where the judgment stays</h2>
+<p>The health system's policy places final responsibility for decisions that affect a patient's care with a qualified person. In practice: the tool can widen a differential, find the guideline, and draft the handout. Choosing the diagnosis, the treatment, and the words the patient hears is the clinician's work.</p>

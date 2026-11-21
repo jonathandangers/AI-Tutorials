@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Clinical questions and patient communication · Practical AI Workflows</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidenav">
+  <div class="navbar">
+    <a class="brand" href="../index.html"><span class="mark">FIELD GUIDE</span><span class="name">Practical AI Workflows</span></a>
+    <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  </div>
+  <nav class="navlinks" id="navlinks" data-open="true" aria-label="Site">
+<a class="nav-cta" href="https://ai-elective.jonathan-dangers.workers.dev"><span class="k">Resident?</span><span class="t">Explore the AI elective</span><span class="arr" aria-hidden="true">&#8599;</span></a>
+<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/quality.html"><span class="num">05</span><span>Quality and when to skip AI</span></a></li><li><a href="../core/project-workflow.html"><span class="num">06</span><span>Larger projects</span></a></li></ol></div>
+<div class="navgroup"><h2>Going deeper</h2><ul><li><a href="../core/models.html"><span>Models and usage</span></a></li><li><a href="../core/connectors.html"><span>Connectors</span></a></li><li><a href="../core/going-deeper.html"><span>Skills and agents</span></a></li></ul></div>
+<div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/clinical.html" aria-current="page"><span>Clinical and patient use</span></a></li></ul></div>
+<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research groups</span></a></li><li><a href="../examples/consensus-search.html"><span>Evidence search</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/journal-digest.html"><span>Journal digest</span></a></li></ul></div>
+  </nav>
+</aside>
+<main>
+<header class="page-head"><div class="head-inner"><div class="head-text">
+<p class="eyebrow">Topic module</p>
+<h1>Clinical questions and patient communication</h1>
+</div><div class="head-mark" aria-hidden="true"><svg class="bigicon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></div></div></header>
+<article class="page">
+<div class="draft"><p><span class="draft-label">First draft</span>A starting version for the author to revise. The tool list reflects what is named elsewhere in this guide; confirm current availability on the health system's Artificial Intelligence intranet page.</p></div>
+
+<div class="pocket">
+  <p class="eyebrow">Pocket card</p>
+  <ul>
+    <li>For a clinical question, prefer a tool that searches the literature and shows its sources.</li>
+    <li>General questions can go to any tool. Anything about a real patient goes only to tools you sign in to with @kumc.edu.</li>
+    <li>For patient-facing writing, give the reading level, the length, and the action you need the patient to take, then check every instruction yourself.</li>
+  </ul>
+</div>
+
+<h2>Looking something up at the point of care</h2>
+<p>Clinical lookup is the most familiar use of AI in medicine, and the one where an error costs the most. Two choices matter: which tool, and how the question is phrased.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th scope="col">Tool</th><th scope="col">Sign-in</th><th scope="col">Suited to</th></tr></thead>
+  <tbody>
+    <tr><td><strong>UpToDate Expert AI</strong></td><td>@kumc.edu</td><td>Questions answered from UpToDate's reviewed content; may include patient details</td></tr>
+    <tr><td><strong>KUMC Copilot</strong></td><td>@kumc.edu</td><td>General drafting and reasoning that involves patient or internal information</td></tr>
+    <tr><td><strong>OpenEvidence</strong></td><td>Personal account</td><td>General clinical questions with cited literature; public information only</td></tr>
+    <tr><td><strong>Consensus, PubMed connectors</strong></td><td>Personal account</td><td>Finding and summarizing papers on a general question</td></tr>
+    <tr><td><strong>General chat models</strong></td><td>Personal account</td><td>Explaining a concept, building a differential for a textbook-style presentation</td></tr>
+  </tbody>
+</table>
+</div>
+<p>The line between a general question and a real patient is drawn in <a href="../core/start-here.html">Start here</a>. It applies to every row above.</p>
+
+<h3>Phrasing a clinical question</h3>
+<ul>
+  <li><strong>Ask open questions.</strong> Give the findings and ask for a differential or the options. A question that names your leading diagnosis tends to get agreement back; <a href="../core/iteration.html">Iterate and verify</a> explains why.</li>
+  <li><strong>Ask for the source and its date.</strong> "Which guideline is this from, and what year?" Then open it. Recommendations change after a model's training ends.</li>
+  <li><strong>Verify doses, thresholds, and intervals every time.</strong> These are the details a model is most likely to state confidently and get wrong.</li>
+  <li><strong>Use the answer to direct your reading.</strong> The tool points you to the relevant guideline or trial faster than a manual search. The clinical decision stays with you and the primary source.</li>
+</ul>
+<div class="exchange"><div class="who"><span>A general question, well phrased</span><button class="copy-btn" type="button">Copy</button></div><div class="body"><pre>Adult with a chemical splash to the eye, alkali suspected. Summarize current recommendations for irrigation: fluid, volume, duration, and the pH endpoint. Name the guideline or review each point comes from and its year, and tell me where sources disagree.</pre></div></div>
+
+<section class="band">
+<h2>Writing for patients</h2>
+<p>Models are good at turning clinical language into plain language, and at producing the same content at several reading levels or in another format. Common uses include discharge instructions, a handout explaining a diagnosis, and return precautions written as a short list.</p>
+<p>Give the model four things: the reading level, the length, what the patient needs to do, and when to come back.</p>
+<div class="exchange"><div class="who"><span>Plain-language instructions</span><button class="copy-btn" type="button">Copy</button></div><div class="body"><pre>Write discharge instructions for an adult with a corneal abrasion. Sixth-grade reading level, under 200 words, short sentences. Sections: what this is, what to do at home, what to avoid, when to come back right away. Use the medication plan I give below and add nothing to it.</pre></div></div>
+<p>A request like the one above describes a condition, so it contains no patient information and any tool may be used. Once you add a specific patient's details, the work belongs in an @kumc.edu tool.</p>
+<h3>Before it reaches a patient</h3>
+<ul>
+  <li>Read every instruction against your own plan. The model may add advice you did not give, or soften a return precaution.</li>
+  <li>Check medication names, doses, and durations against the order.</li>
+  <li>Translations need review by a qualified interpreter or a fluent clinician before use.</li>
+  <li>Follow your department's process for what becomes part of the record.</li>
+</ul>
+</section>
+
+<h2>Where the judgment stays</h2>
+<p>The health system's policy places final responsibility for decisions that affect a patient's care with a qualified person. In practice: the tool can widen a differential, find the guideline, and draft the handout. Choosing the diagnosis, the treatment, and the words the patient hears is the clinician's work.</p>
+
+<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.7, work in progress<span class="disclaimer">A personal educational resource. It is not official policy of KU Medical Center or The University of Kansas Health System. Where this guide and official guidance differ, follow the official guidance.</span></footer>
+</article>
+</main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>
