@@ -1,4 +1,4 @@
-/* Animated loop figure in Module 06. Needs GSAP, loaded just before this file. */
+/* Animated loop figure in Running larger projects. Needs GSAP, loaded just before this file. */
 (function () {
   var fig = document.getElementById('wf2d');
   if (typeof gsap === 'undefined') return;
@@ -20,7 +20,7 @@
   var OFF = [0, 2.2, 4.8, 6.8, 8.7, 10.4];
   var SPEED = 0.8;
   var segs = [{ t: 0, b: -1 }], L1 = [];
-  var stopAt = 0, shown = -2;
+  var stopAt = 0, shown = -2, played = false;
   var tl = gsap.timeline({ paused: true, onUpdate: sync });
 
   function pop(sel, at, from, later) {
@@ -119,9 +119,9 @@
       nowEl.innerHTML = '<strong>' + (b < 0 ? '' : '<span class="n">' + 'ABCDE'.charAt(b) + '</span>') + d.h + '</strong>' + d.p;
       chips.forEach(function (c, j) { if (j === b) c.setAttribute('aria-current', 'step'); else c.removeAttribute('aria-current'); });
     }
-    playBtn.textContent = !tl.paused() ? 'Pause' : (x >= END - 0.01 ? 'Replay' : 'Play');
+    playBtn.textContent = !tl.paused() ? 'Pause' : (!played ? 'Watch the loop' : (x >= END - 0.01 ? 'Replay' : 'Play'));
   }
-  function run(from, to) { stopAt = to; tl.pause(); tl.time(from); tl.play(); sync(); }
+  function run(from, to) { played = true; stopAt = to; tl.pause(); tl.time(from); tl.play(); sync(); }
   function jump(to) { tl.pause(); tl.time(to - 0.001); shown = -2; sync(); }
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   playBtn.addEventListener('click', function () {
@@ -140,12 +140,6 @@
     });
   });
 
-  /* rests on the full picture; plays once when it scrolls into view */
+  /* rests on the full picture until the reader presses Watch the loop */
   tl.time(END); stopAt = END; sync();
-  if (!reduce && window.IntersectionObserver) {
-    var io = new IntersectionObserver(function (es) {
-      if (es[0].isIntersecting) { io.disconnect(); setTimeout(function () { if (tl.paused() && tl.time() >= END - 0.01) run(0, END); }, 900); }
-    }, { threshold: 0.5 });
-    io.observe(svg);
-  }
 })();

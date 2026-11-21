@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Journal email digest · Practical AI Workflows</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidenav">
+  <div class="navbar">
+    <a class="brand" href="../index.html"><span class="mark">FIELD GUIDE</span><span class="name">Practical AI Workflows</span></a>
+    <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  </div>
+  <nav class="navlinks" id="navlinks" data-open="true" aria-label="Site">
+<a class="nav-cta" href="https://ai-elective.jonathan-dangers.workers.dev"><span class="k">Resident?</span><span class="t">Explore the AI elective</span><span class="arr" aria-hidden="true">&#8599;</span></a>
+<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/quality.html"><span class="num">05</span><span>Quality and when to skip AI</span></a></li><li><a href="../core/project-workflow.html"><span class="num">06</span><span>Larger projects</span></a></li></ol></div>
+<div class="navgroup"><h2>Going deeper</h2><ul><li><a href="../core/models.html"><span>Models and usage</span></a></li><li><a href="../core/connectors.html"><span>Connectors</span></a></li><li><a href="../core/going-deeper.html"><span>Skills and agents</span></a></li></ul></div>
+<div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/clinical.html"><span>Clinical and patient use</span></a></li></ul></div>
+<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research groups</span></a></li><li><a href="../examples/consensus-search.html"><span>Evidence search</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/journal-digest.html" aria-current="page"><span>Journal digest</span></a></li></ul></div>
+  </nav>
+</aside>
+<main>
+<header class="page-head"><div class="head-inner"><div class="head-text">
+<p class="eyebrow">Worked example &middot; Scheduled tasks</p>
+<h1>Journal email digest</h1>
+<p class="lede">Journal and society emails pile up faster than anyone reads them. This scheduled task condenses them into one short digest twice a week.</p>
+</div><div class="head-mark" aria-hidden="true"><svg class="bigicon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></div></div></header>
+<article class="page">
+<div class="draft"><p><span class="draft-label">Illustrative</span>The instruction below shows the pattern. Edit the sources and topics to match your own inbox.</p></div>
+
+<div class="case">
+  <dl>
+    <dt>Goal</dt><dd>Keep up with table-of-contents and alert emails (NEJM, ACCESSSS, specialty society updates) without opening each one.</dd>
+    <dt>Tools</dt><dd>An LLM with access to a personal mail account, running on a schedule. Journal alerts are public information.</dd>
+    <dt>Does</dt><dd>Merges items that appear in more than one email and drops topics outside my practice.</dd>
+    <dt>Delivers</dt><dd>One digest, twice a week, with a link to every article.</dd>
+    <dt>Checked</dt><dd>Links open the article, and merged items are the same paper. Anything I plan to use, I read at the source.</dd>
+  </dl>
+
+  <div class="exchange">
+    <div class="who"><span>Scheduled instruction</span><button class="copy-btn" type="button">Copy</button></div>
+    <div class="body"><pre>Twice a week: read the journal and society alert emails that arrived since the last digest (NEJM, ACCESSSS, and my specialty society). Merge items that appear in more than one email. Keep anything relevant to emergency medicine, medical education, or AI in clinical practice, and skip the rest. For each item give the title, journal, one sentence on the finding, and the link. Put practice-changing items first.</pre></div>
+  </div>
+</div>
+
+<h2>Takeaway</h2>
+<p>This is a good first automation. The stakes are low, the output comes back to you, and one edit to the instruction changes what you receive. The digest tells you what to read; the article itself is still the source.</p>
+<div class="note"><p><strong>Use a personal mail account for this.</strong> Have the alerts sent to a personal address. Connecting a personal AI account to KUMC email would expose institutional messages to a tool approved for public information only.</p></div>
+<nav class="pager" aria-label="Page"><a class="prev" href="../examples/pubmed-scout.html"><span class="dir">Previous</span><span>PubMed scout</span></a></nav>
+<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.7, work in progress<span class="disclaimer">A personal educational resource. It is not official policy of KU Medical Center or The University of Kansas Health System. Where this guide and official guidance differ, follow the official guidance.</span></footer>
+</article>
+</main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

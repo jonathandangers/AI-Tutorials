@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ways to use an LLM · Practical AI Workflows</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
@@ -19,79 +18,87 @@
   </div>
   <nav class="navlinks" id="navlinks" data-open="true" aria-label="Site">
 <a class="nav-cta" href="https://ai-elective.jonathan-dangers.workers.dev"><span class="k">Resident?</span><span class="t">Explore the AI elective</span><span class="arr" aria-hidden="true">&#8599;</span></a>
-<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html" aria-current="page"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/quality.html"><span class="num">05</span><span>Quality vs. slop</span><span class="tag">soon</span></a></li><li><a href="../core/project-memory.html"><span class="num">06</span><span>Chats and memory</span></a></li><li><a href="../core/project-workflow.html"><span class="num">07</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">08</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">09</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html"><span class="num">10</span><span>Going deeper</span></a></li></ol></div>
-<div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/when-not-to-use.html"><span>When not to use AI</span><span class="tag">soon</span></a></li><li><a href="../topics/teaching.html"><span>AI for teaching</span><span class="tag">soon</span></a></li><li><a href="../topics/research.html"><span>Research use cases</span><span class="tag">soon</span></a></li></ul></div>
-<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research groups</span></a></li><li><a href="../examples/exercise-tracker.html"><span>Exercise tracker</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/newsletter-digest.html"><span>Newsletter digest</span></a></li></ul></div>
+<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html" aria-current="page"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/quality.html"><span class="num">05</span><span>Quality and when to skip AI</span></a></li><li><a href="../core/project-workflow.html"><span class="num">06</span><span>Larger projects</span></a></li></ol></div>
+<div class="navgroup"><h2>Going deeper</h2><ul><li><a href="../core/models.html"><span>Models and usage</span></a></li><li><a href="../core/connectors.html"><span>Connectors</span></a></li><li><a href="../core/going-deeper.html"><span>Skills and agents</span></a></li></ul></div>
+<div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/clinical.html"><span>Clinical and patient use</span></a></li></ul></div>
+<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research groups</span></a></li><li><a href="../examples/consensus-search.html"><span>Evidence search</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/journal-digest.html"><span>Journal digest</span></a></li></ul></div>
   </nav>
 </aside>
 <main>
-<p class="wip">Work in progress. Modules are being written and polished; some pages are placeholders.</p>
 <header class="page-head"><div class="head-inner"><div class="head-text">
 <p class="eyebrow">Module 02</p>
-<h1>Conversation is only the interface.</h1>
-<p class="lede">An LLM can play several different roles in your work. The chat box is how you direct it, not the limit of what it does.</p>
+<h1>Ways to use an LLM</h1>
 </div><div class="head-mark" aria-hidden="true"><span class="bignum">02</span></div></div></header>
 <article class="page">
 <div class="pocket">
   <p class="eyebrow">Pocket card</p>
   <ul>
     <li>Six roles: thinking partner, tutor, organizer, writer, research assistant, builder.</li>
-    <li>Brain-dump first, organize second. Skip the polished prompt.</li>
-    <li>Ask for the output you actually need: a table, a deck, a file, a database.</li>
+    <li>Tell the model whether you want a finished product or want to practice.</li>
+    <li>Dictate the messy version first and let the model organize it.</li>
+    <li>Ask for the output you need: a teaching page, a handout, a table, a quiz.</li>
   </ul>
 </div>
 
 <h2>Six ways to use an LLM</h2>
 <ul class="roles">
-  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h11v7H8l-3 3v-3H3z"/><path d="M17 9h4v7h-2v3l-3-3h-5v-2"/></svg><h3>Thinking and strategy partner</h3><p>Brainstorm, pressure-test an idea, compare approaches, find blind spots, or simply bounce ideas off someone very capable whenever you need to.</p></li>
-  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1z"/><path d="M12 6v14"/></svg><h3>Tutor and guide</h3><p>Ask it to teach you something you do not know yet, or guide you through a task while you do it. Ask follow-up questions until the fuzzy parts make sense.</p></li>
-  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h6M4 10h4M3 14h5M5 18h3"/><path d="M11 12h3"/><path d="M13 10l2 2-2 2"/><path d="M17 7h4M17 12h4M17 17h4"/></svg><h3>Organizer for messy thinking</h3><p>Brain-dump by typing or voice. Let the LLM turn it into an outline, plan, email, table, or organized set of thoughts. Then react and revise.</p></li>
-  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-5L16 4l4 4L9 19z"/><path d="M14 6l4 4"/></svg><h3>Writer and editor</h3><p>Draft, shorten, restructure, rewrite, or adapt something for a particular audience. You provide the judgment about what is worth saying and whether it sounds right.</p></li>
-  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/><path d="M8 10.5h5"/></svg><h3>Research and analysis assistant</h3><p>Search connected sources, synthesize information, compare options, extract data, critique reasoning, or help you work through evidence.</p></li>
-  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/><rect x="8" y="3" width="8" height="8" rx="1"/></svg><h3>Builder and operator</h3><p>Create files, databases, presentations, sites, simple apps, or workflows, and, with the right tools, interact with the systems where your work lives.</p></li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h11v7H8l-3 3v-3H3z"/><path d="M17 9h4v7h-2v3l-3-3h-5v-2"/></svg><h3>Thinking and strategy partner</h3><p>Brainstorm, pressure-test an idea, compare approaches, or look for blind spots in a plan before you commit to it.</p></li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1z"/><path d="M12 6v14"/></svg><h3>Tutor and guide</h3><p>Ask it to teach you something new, or to guide you through a task while you do it. Keep asking follow-up questions until the unclear parts make sense.</p></li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h6M4 10h4M3 14h5M5 18h3"/><path d="M11 12h3"/><path d="M13 10l2 2-2 2"/><path d="M17 7h4M17 12h4M17 17h4"/></svg><h3>Organizer for messy thinking</h3><p>Brain-dump by typing or voice. The model turns it into an outline, plan, email, or table, and you react and revise.</p></li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-5L16 4l4 4L9 19z"/><path d="M14 6l4 4"/></svg><h3>Writer and editor</h3><p>Draft, shorten, restructure, or adapt a piece for a particular audience. You decide what is worth saying and whether it sounds like you.</p></li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/><path d="M8 10.5h5"/></svg><h3>Research and analysis assistant</h3><p>Search connected sources, synthesize papers, extract data, and critique reasoning.</p></li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/><rect x="8" y="3" width="8" height="8" rx="1"/></svg><h3>Builder and operator</h3><p>Create files, databases, presentations, websites, and small apps. With the right connections, it can also work inside the systems where your material lives.</p></li>
 </ul>
 
-<h2>Production or practice? <span class="badge new">New</span></h2>
-<p>Decide at the start of a session which kind of work you are doing, and tell the model.</p>
+<h2>Production or practice?</h2>
+<p>Decide at the start of a session which kind of work you are doing, and tell the model. Models default to production: they hand over answers unless you ask for coaching.</p>
 <div class="compare">
   <div class="side strong">
     <div class="label">Production</div>
     <div class="result">
-      <p><strong>You want a finished product you would put your name on.</strong> AI does much of the drafting. You shape it, push back, iterate, and check it against your standards before it goes anywhere. "Build this, looks good" is not production; see <a href="../core/iteration.html">Module 04</a> for what checking means.</p>
+      <p><strong>You want a finished product you would sign.</strong> The model does much of the drafting. You shape it, push back, and check it against your standards before it goes anywhere. <a href="../core/iteration.html">Iterate and verify</a> covers what checking involves.</p>
     </div>
   </div>
   <div class="side strong">
     <div class="label">Practice</div>
     <div class="result">
-      <p><strong>You want to get better at the task itself.</strong> You do the work, and AI coaches: it asks questions, gives hints, and critiques, but does not hand you the answer. Use it when the effort is what builds the skill.</p>
-      <p class="small">Try: "Quiz me one question at a time; hint before answer." Or: "I'll write it first. Tell me what I missed, but don't rewrite it."</p>
+      <p><strong>You want to get better at the task itself.</strong> You do the work and the model coaches: it asks questions, gives hints, and critiques your attempt. Choose this when the effort is what builds the skill.</p>
     </div>
   </div>
 </div>
-<p>The models default to production and will hand you answers unless you ask for coaching. Some tools have a built-in study mode that does this for you.</p>
 
 <section class="band warm">
-<h2>Brain-dump first. Organize second.</h2>
-<p>One of the highest-value habits. You do not need to spend ten minutes turning your thoughts into a polished prompt. Type or dictate the messy version. Ask the LLM to organize it. Then react: "keep this," "move that," "this is too formal," "I forgot something." The LLM does the friction-heavy work of writing and reorganizing while you supply the ideas and judgment.</p>
+<h2>Practice mode is the larger opportunity for learners</h2>
+<p>In practice mode you have a very bright instructor who is available at any hour, never tires, and is willing to help with anything you bring. It can give feedback on everything you write, produce as many examples of a concept as you need, and build a quiz on any topic at the level you choose. That is a different use from "please do this for me," and for a resident or student it is usually the more valuable one.</p>
+<p>Some tools include a study or learning mode that sets this up for you. In any tool, a few sentences are enough:</p>
+<div class="exchange"><div class="who"><span>Oral-board drill</span><button class="copy-btn" type="button">Copy</button></div><div class="body"><pre>Act as an oral boards examiner in emergency medicine. Give me one case at a time. Reveal findings only when I ask for them. Hold your feedback until I commit to a diagnosis and plan, then tell me what I missed and what an examiner would have wanted to hear.</pre></div></div>
+<div class="exchange"><div class="who"><span>Feedback on my own attempt</span><button class="copy-btn" type="button">Copy</button></div><div class="body"><pre>I will write my assessment and plan first. Then tell me what is missing or weak, and ask me two questions that test whether I understand why. Leave the rewriting to me.</pre></div></div>
+<div class="exchange"><div class="who"><span>More examples, then a quiz</span><button class="copy-btn" type="button">Copy</button></div><div class="body"><pre>Explain acid-base compensation with three worked examples of increasing difficulty. Then quiz me with five questions, one at a time, and give a hint before the answer.</pre></div></div>
 </section>
 
-<h2>You can make much more than a chat response.</h2>
+<h2>Brain-dump first, organize second</h2>
+<p>This is one of the highest-value habits. Type or dictate the messy version of what you are thinking, then ask the model to organize it. React to what comes back: "keep this," "move that," "this is too formal," "I forgot something." The model handles the writing and reorganizing while you supply the ideas.</p>
+<p>Voice works well here. Most apps have a microphone button, and two minutes of talking produces more context than most people would type.</p>
+
+<h2>What you can ask it to make</h2>
+<p>A chat reply is one kind of output. The same request can end in a file you can open, share, or publish.</p>
 <div class="table-wrap">
 <table>
-  <thead><tr><th scope="col">Kind</th><th scope="col">Examples</th></tr></thead>
+  <thead><tr><th scope="col">Kind</th><th scope="col">Examples from academic medicine</th></tr></thead>
   <tbody>
-    <tr><td>Writing</td><td>emails, outlines, reports, summaries</td></tr>
-    <tr><td>Documents</td><td>Word docs, PDFs, reference guides</td></tr>
-    <tr><td>Data</td><td>tables, CSV files, spreadsheets, charts</td></tr>
-    <tr><td>Presentations</td><td>slides, teaching materials, speaker notes</td></tr>
-    <tr><td>Visuals</td><td>images, diagrams, graphics</td></tr>
-    <tr><td>Things you can use</td><td>databases, websites, small apps, workflows</td></tr>
+    <tr><td>Teaching pages</td><td>A visual HTML page built from your Word lecture notes; an interactive case; a topic hub that links several lectures</td></tr>
+    <tr><td>Handouts</td><td>A one-page reference for a rotation, a pocket card, a plain-language patient handout</td></tr>
+    <tr><td>Slides</td><td>A slide outline with speaker notes, built from a chapter or your own outline</td></tr>
+    <tr><td>Quizzes</td><td>Board-style questions with explanations, written from material you supply</td></tr>
+    <tr><td>Structured tables</td><td>A comparison of guidelines, a summary of papers, a curriculum map</td></tr>
+    <tr><td>Planning documents</td><td>A project description, a timeline, an agenda, a meeting summary</td></tr>
+    <tr><td>Working tools</td><td>A tracking database, a small website, a scheduled literature search</td></tr>
   </tbody>
 </table>
 </div>
-<p class="pull">Conversation can be how you control the work without conversation being the final product.</p>
+<p>Converting material from one format to another is a strong use. A dense Word document can become a page with headings, diagrams, and a quiz, and the content stays yours.</p>
 <nav class="pager" aria-label="Page"><a class="prev" href="../core/start-here.html"><span class="dir">Previous</span><span>Start here</span></a><a class="next" href="../core/context.html"><span class="dir">Next</span><span>Giving context</span></a></nav>
-<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.6<span class="disclaimer">A personal educational resource. It is not official policy of KU Medical Center or The University of Kansas Health System. Where this guide and official guidance differ, follow the official guidance.</span></footer>
+<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.7, work in progress<span class="disclaimer">A personal educational resource. It is not official policy of KU Medical Center or The University of Kansas Health System. Where this guide and official guidance differ, follow the official guidance.</span></footer>
 </article>
 </main>
 </div>

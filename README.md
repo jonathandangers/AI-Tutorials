@@ -4,3 +4,5 @@ Static site for GitHub Pages. Page bodies live in `src/`; run `python3 build.py`
 
 - Add a page: create `src/<path>.html`, add one line to `PAGES` in `build.py`, rebuild.
 - Shared styles: `assets/site.css`. Small script for the phone menu and copy buttons: `assets/site.js`.
+- Writing style: see `VOICE.md`.
+- Retiring a page: remove it from `PAGES` and add the old path to `REDIRECTS` in `build.py`. The Resident AI Elective site links into this one and shares its stylesheet.

@@ -1,19 +1,18 @@
 <p class="eyebrow">Module 03</p>
-<h1>Give it the information a smart human would need.</h1>
-<p class="lede">Most weak output comes from missing context, not a weak model. Explain the task the way you would to a capable colleague who just walked in.</p>
+<h1>Giving the model context</h1>
 
 <div class="pocket">
   <p class="eyebrow">Pocket card</p>
   <ul>
-    <li>Say the goal, the audience, the constraints, and what the output should look like.</li>
-    <li>Add material directly: files, screenshots, transcripts, links, connected sources.</li>
-    <li>Not sure it is enough? Ask: "What else would you need from me to do this well?"</li>
+    <li>State the goal, the audience, the constraints, and what the output should look like.</li>
+    <li>Add the material itself: files, screenshots, transcripts, links, connected sources.</li>
+    <li>When unsure, ask: "What else would you need from me to do this well?"</li>
   </ul>
 </div>
 
 <h2>What to explain</h2>
-<p>Start by explaining what you are trying to accomplish and the background needed to understand the task. Describe the intended audience, important constraints, and what you want the output to look like.</p>
-<p>Use the list below as a checklist before you send a request. Not every task needs every item: a quick question may need only the goal, and a document other people will read usually needs most of them.</p>
+<p>Explain the task the way you would to a capable colleague who just walked into the room. Weak output usually traces back to something the model was never told.</p>
+<p>The list below works as a checklist before you send a request. A quick question may need only the goal. A document other people will read usually needs most of the list.</p>
 <div class="checklist">
   <p class="eyebrow">Almost always</p>
   <ul>
@@ -27,29 +26,29 @@
     <li><strong>Desired format.</strong> Email, table, outline, slides.</li>
     <li><strong>Length and level of detail.</strong> One paragraph or five pages.</li>
     <li><strong>Tone or writing style.</strong> Formal, plain, or matched to a sample of your writing.</li>
-    <li><strong>An example or template.</strong> Something you want the result to look like.</li>
+    <li><strong>An example or template.</strong> Something you want the result to resemble.</li>
     <li><strong>What you have already tried.</strong> And why it fell short.</li>
   </ul>
 </div>
 
 <h2>The same request, with and without context</h2>
-<p>Illustrative: the same meeting transcript, asked about two ways.</p>
+<p>Illustrative: one meeting transcript, requested two ways.</p>
 <div class="compare">
   <div class="side">
     <div class="label">One line</div>
     <div class="prompt">Summarize this meeting transcript.</div>
     <div class="result">
       <p>The committee discussed several topics, including scheduling, simulation, and the budget. Members shared updates and agreed to follow up on open items.</p>
-      <span class="verdict">Accurate, and useless to anyone who missed the meeting.</span>
+      <span class="verdict">Accurate, and of little use to anyone who missed the meeting.</span>
     </div>
   </div>
   <div class="side strong">
     <div class="label">With context</div>
-    <div class="prompt">For committee members who missed it. Decisions first, then action items with owners and due dates, then open questions. Under one page. Flag agenda items that were not discussed. Agenda attached.</div>
+    <div class="prompt">For committee members who missed it. Decisions first, then action items with owners and due dates, then open questions. Under one page. Flag agenda items that were skipped. Agenda attached.</div>
     <div class="result">
       <p><strong>Decision:</strong> Simulation moves to the second Thursday.</p>
       <p><strong>Action:</strong> Draft the new sim schedule. Owner needed.</p>
-      <p><strong>Not discussed:</strong> Travel budget (agenda item 4).</p>
+      <p><strong>Skipped:</strong> Travel budget (agenda item 4).</p>
       <span class="verdict">Someone could act on this.</span>
     </div>
   </div>
@@ -62,12 +61,12 @@
 <p>Every item you add follows the data rules in <a href="{{pre}}core/start-here.html">Start here</a>. A transcript of an internal meeting is confidential, so it belongs in KUMC Copilot.</p>
 
 <section class="band warm">
-<h2>Not sure whether you have provided enough?</h2>
-<p class="pull">"What else would you need from me to do this well?"</p>
-<p>The model will usually name the missing audience, format, or constraint. Answer, then let it start.</p>
+<h2>Let the model tell you what is missing</h2>
+<p>When you are unsure whether you have given enough, end your request with one question. The model will usually name the missing audience, format, or constraint. Answer, then let it start.</p>
+<div class="exchange"><div class="who"><span>Add to any request</span><button class="copy-btn" type="button">Copy</button></div><div class="body"><pre>Before you start: what else would you need from me to do this well?</pre></div></div>
 </section>
 
 <h2>See it in practice</h2>
 <ul class="cards">
-  <li><a href="{{pre}}examples/meeting-summary.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><span class="kicker">Example</span><span class="title">Meeting summary</span><span class="desc">A transcript plus the agenda, slides, and prior notes produce a record in a format you reuse.</span></a></li>
+  <li><a href="{{pre}}examples/meeting-summary.html">{{icon:chat}}<span class="kicker">Example</span><span class="title">Meeting summary</span><span class="desc">A transcript plus the agenda, slides, and prior notes produce a record in a format you reuse.</span></a></li>
 </ul>

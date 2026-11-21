@@ -1,0 +1,47 @@
+<p class="eyebrow">Worked example &middot; Connectors</p>
+<h1>Evidence search with Consensus</h1>
+<p class="lede">One clinical question for a teaching page, answered from peer-reviewed papers the connector retrieved.</p>
+
+<div class="case">
+  <dl>
+    <dt>Goal</dt><dd>Find out what the evidence says about antifibrinolytics for traumatic hyphema before writing a slide on it.</dd>
+    <dt>Tools</dt><dd>Claude with the Consensus connector turned on. A general question with no patient information, so a personal account is appropriate.</dd>
+    <dt>Returned</dt><dd>Five papers: two versions of a Cochrane review and three randomized trials, each with its design, sample size, and a link.</dd>
+    <dt>Checked</dt><dd>The key numbers below were compared with the abstract of the 2023 Cochrane review before use.</dd>
+  </dl>
+
+  <div class="exchange">
+    <div class="who"><span>Question</span><button class="copy-btn" type="button">Copy</button></div>
+    <div class="body"><pre>Use Consensus. Do tranexamic acid or aminocaproic acid reduce rebleeding or improve visual outcomes in traumatic hyphema? Start with systematic reviews, then the main trials. For each paper give the design, the sample size, and the finding in one sentence. Tell me where the evidence is weak.</pre></div>
+  </div>
+
+  <div class="exchange">
+    <div class="who"><span>Output excerpt</span><span>trimmed</span></div>
+    <div class="body">
+      <p><strong>Rebleeding:</strong> In the 2023 Cochrane review (30 trials, 2,969 participants), systemic tranexamic acid lowered the rate of secondary hemorrhage (RR 0.33, 95% CI 0.21 to 0.53; seven trials, 754 participants). Systemic aminocaproic acid showed a similar effect (RR 0.28, 95% CI 0.13 to 0.60; six trials, 330 participants), which weakened in a sensitivity analysis.</p>
+      <p><strong>Vision:</strong> The review found no evidence that any intervention changed visual acuity, and rated the certainty of that evidence as low or very low.</p>
+      <p><strong>Where it is weak:</strong> Trials of topical agents were small. One was stopped early with 51 patients.</p>
+      <p class="small">Source: Woreta FA, Lindsley KB, et al. Medical interventions for traumatic hyphema. <em>Cochrane Database of Systematic Reviews</em>, 2023. <a href="https://doi.org/10.1002/14651858.CD005431.pub5">doi:10.1002/14651858.CD005431.pub5</a>. Retrieved through <a href="https://consensus.app/papers/details/w:2aaf2bad-7328-4b86-bac2-b22bc10562f8/?utm_source=claude_desktop">Consensus</a>.</p>
+    </div>
+  </div>
+
+  <div class="exchange">
+    <div class="who"><span>Follow-up</span><button class="copy-btn" type="button">Copy</button></div>
+    <div class="body"><pre>Turn this into one teaching slide for residents: the question, the two numbers that matter, and one line on what remains uncertain. Keep the citation on the slide.</pre></div>
+  </div>
+</div>
+
+<h2>What the connector changed</h2>
+<div class="compare">
+  <div class="side">
+    <div class="label">Model's memory alone</div>
+    <div class="result"><p>A fluent paragraph on antifibrinolytics in hyphema, with no way to tell which review it reflects, whether the numbers are right, or whether a cited trial exists.</p><span class="verdict">Plausible and unverifiable.</span></div>
+  </div>
+  <div class="side strong">
+    <div class="label">With the connector</div>
+    <div class="result"><p>Named papers with links, study design, and sample size. Each claim can be traced to an abstract in under a minute.</p><span class="verdict">Checkable.</span></div>
+  </div>
+</div>
+
+<h2>Takeaway</h2>
+<p>A research connector turns "what does the model recall?" into "what did the search find?" The summary still needs checking against the abstract, and the search may miss papers, so treat the result as a fast first pass. For a teaching slide, that first pass plus ten minutes with the review itself is usually enough.</p>

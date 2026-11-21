@@ -1,31 +1,41 @@
-<p class="eyebrow">Module 08</p>
-<h1>Let the LLM work with the systems where your information already lives.</h1>
-<p class="lede">Copying and pasting is fine to start. Connectors and agents let the model read and update the places your work actually lives.</p>
+<p class="eyebrow">Going deeper</p>
+<h1>Connectors</h1>
 
 <div class="pocket">
   <p class="eyebrow">Pocket card</p>
   <ul>
-    <li>A connector gives the model access to one service and the actions it allows.</li>
-    <li>Agents such as Codex and Claude Code work directly with files and tools.</li>
-    <li>Connectors follow the same data rules. A personal AI account connected to a KUMC system is still a personal account.</li>
+    <li>A connector gives the model access to one service and the actions that service allows.</li>
+    <li>Research connectors such as PubMed and Consensus search the literature, so answers start from real papers.</li>
+    <li>Connectors follow the data rules. A personal AI account connected to a KUMC system is still a personal account.</li>
   </ul>
 </div>
 
-<h2>Connectors</h2>
-<p>A connector gives the LLM access to a particular service, such as Notion, Google Drive, mail, or calendar, and to the actions that service makes available. That can let you find information, query it in plain language, summarize it, or update it when permissions allow.</p>
-<ul class="chips"><li>Notion</li><li>Google Drive</li><li>Mail</li><li>Calendar</li><li>Research sources such as PubMed</li></ul>
-<div class="stop"><p><strong>Do not connect a personal AI account to KUMC email, OneDrive, or SharePoint.</strong> That moves institutional information into a tool that is approved for public information only.</p></div>
-<div class="note"><p><strong>Building a tool that uses health system data?</strong> A custom-built AI tool needs approval from the health system's Executive AI Steering Committee before use, the same as a purchased one. Ask before you build, not after.</p></div>
+<h2>What a connector does</h2>
+<p>Copying and pasting works well when you are starting out. A connector removes that step: the model can read from, and sometimes write to, the place where your material already lives. You turn connectors on in the tool's settings, one service at a time, and the service asks you to approve the access.</p>
+<p>With a connector in place you can ask in plain language for things that used to take several steps: find a file, summarize a folder, search the literature on a question, or add an entry to a database.</p>
 
-<section class="band">
-<h2>Codex and Claude Code</h2>
-<p>Codex and Claude Code are parallel examples of another idea: instead of only talking about a project, an AI agent can work directly with project files and tools. That becomes useful when the work lives in a folder or codebase and benefits from editing files, running or testing things, and fixing problems based on what happens.</p>
-<p>You do not need this for every workflow.</p>
-<p class="pull">If your work lives entirely in Notion or Drive, a connector may be the simpler tool.</p>
-</section>
+<h2>Connectors worth knowing about</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th scope="col">Connector</th><th scope="col">What it lets the model do</th><th scope="col">A use in academic medicine</th></tr></thead>
+  <tbody>
+    <tr><td><strong>PubMed</strong></td><td>Search PubMed and read abstracts</td><td>A weekly search on your teaching topics, with links to each record</td></tr>
+    <tr><td><strong>Consensus</strong></td><td>Search peer-reviewed papers by question and report study design and sample size</td><td>A quick view of what the evidence says before you write a slide</td></tr>
+    <tr><td><strong>Google Drive</strong></td><td>Find and read files in your personal Drive</td><td>Pull last year's lecture notes into a new teaching page</td></tr>
+    <tr><td><strong>GitHub</strong></td><td>Read and update the files of a website or project</td><td>Keep a teaching site's pages versioned and published</td></tr>
+    <tr><td><strong>Notion, mail, calendar</strong></td><td>Read and update notes, messages, and events in personal accounts</td><td>A digest of journal emails; a project tracker you update by asking</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="stop"><p><strong>Keep personal AI accounts disconnected from KUMC email, OneDrive, and SharePoint.</strong> Connecting them moves institutional information into a tool that is approved for public information only.</p></div>
+<div class="note"><p><strong>Building a tool that uses health system data?</strong> A custom-built AI tool needs approval from the health system's Executive AI Steering Committee before use, the same as a purchased one. Ask before you build.</p></div>
+
+<h2>Retrieval still needs checking</h2>
+<p>A connector grounds the answer in a real source, which makes invented citations much less likely. The model can still choose the wrong paper or misstate a finding. Open the link and compare the summary with the abstract, as described in <a href="{{pre}}core/iteration.html">Iterate and verify</a>.</p>
 
 <h2>See it in practice</h2>
 <ul class="cards">
+  <li><a href="{{pre}}examples/consensus-search.html">{{icon:search}}<span class="kicker">Example</span><span class="title">Evidence search with Consensus</span><span class="desc">One clinical question, five papers, and what to check before using them.</span></a></li>
   <li><a href="{{pre}}examples/research-workshop.html">{{icon:folder}}<span class="kicker">Project home</span><span class="title">Research groups project home</span><span class="desc">OneDrive for the record, Copilot for instructions and skills, one short chat per task.</span></a></li>
-  <li><a href="{{pre}}examples/exercise-tracker.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg><span class="kicker">Example</span><span class="title">Exercise tracker</span><span class="desc">Build the tracker around the questions you want to ask.</span></a></li>
 </ul>

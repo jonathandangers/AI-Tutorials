@@ -3,8 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Going deeper · Practical AI Workflows</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<title>Skills, scheduled tasks, and file agents · Practical AI Workflows</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
@@ -19,50 +18,73 @@
   </div>
   <nav class="navlinks" id="navlinks" data-open="true" aria-label="Site">
 <a class="nav-cta" href="https://ai-elective.jonathan-dangers.workers.dev"><span class="k">Resident?</span><span class="t">Explore the AI elective</span><span class="arr" aria-hidden="true">&#8599;</span></a>
-<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/quality.html"><span class="num">05</span><span>Quality vs. slop</span><span class="tag">soon</span></a></li><li><a href="../core/project-memory.html"><span class="num">06</span><span>Chats and memory</span></a></li><li><a href="../core/project-workflow.html"><span class="num">07</span><span>Larger projects</span></a></li><li><a href="../core/connectors.html"><span class="num">08</span><span>Connectors and agents</span></a></li><li><a href="../core/models.html"><span class="num">09</span><span>Models and usage</span></a></li><li><a href="../core/going-deeper.html" aria-current="page"><span class="num">10</span><span>Going deeper</span></a></li></ol></div>
-<div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/when-not-to-use.html"><span>When not to use AI</span><span class="tag">soon</span></a></li><li><a href="../topics/teaching.html"><span>AI for teaching</span><span class="tag">soon</span></a></li><li><a href="../topics/research.html"><span>Research use cases</span><span class="tag">soon</span></a></li></ul></div>
-<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research groups</span></a></li><li><a href="../examples/exercise-tracker.html"><span>Exercise tracker</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/newsletter-digest.html"><span>Newsletter digest</span></a></li></ul></div>
+<div class="navgroup"><h2>Core modules</h2><ol><li><a href="../core/start-here.html"><span class="num">01</span><span>Start here</span></a></li><li><a href="../core/ways-to-use.html"><span class="num">02</span><span>Ways to use an LLM</span></a></li><li><a href="../core/context.html"><span class="num">03</span><span>Giving context</span></a></li><li><a href="../core/iteration.html"><span class="num">04</span><span>Iterate and verify</span></a></li><li><a href="../core/quality.html"><span class="num">05</span><span>Quality and when to skip AI</span></a></li><li><a href="../core/project-workflow.html"><span class="num">06</span><span>Larger projects</span></a></li></ol></div>
+<div class="navgroup"><h2>Going deeper</h2><ul><li><a href="../core/models.html"><span>Models and usage</span></a></li><li><a href="../core/connectors.html"><span>Connectors</span></a></li><li><a href="../core/going-deeper.html" aria-current="page"><span>Skills and agents</span></a></li></ul></div>
+<div class="navgroup"><h2>Topic modules</h2><ul><li><a href="../topics/clinical.html"><span>Clinical and patient use</span></a></li></ul></div>
+<div class="navgroup"><h2>Worked examples</h2><ul><li><a href="../examples/meeting-summary.html"><span>Meeting summary</span></a></li><li><a href="../examples/research-workshop.html"><span>Research groups</span></a></li><li><a href="../examples/consensus-search.html"><span>Evidence search</span></a></li><li><a href="../examples/pubmed-scout.html"><span>PubMed scout</span></a></li><li><a href="../examples/journal-digest.html"><span>Journal digest</span></a></li></ul></div>
   </nav>
 </aside>
 <main>
-<p class="wip">Work in progress. Modules are being written and polished; some pages are placeholders.</p>
 <header class="page-head"><div class="head-inner"><div class="head-text">
-<p class="eyebrow">Module 10</p>
-<h1>Useful once the basics start repeating.</h1>
-<p class="lede">Three ways to stop rebuilding the same setup by hand. Come back to these once a workflow is something you do every week.</p>
-</div><div class="head-mark" aria-hidden="true"><span class="bignum">10</span></div></div></header>
+<p class="eyebrow">Going deeper</p>
+<h1>Skills, scheduled tasks, and file agents</h1>
+</div><div class="head-mark" aria-hidden="true"><svg class="bigicon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/><rect x="8" y="3" width="8" height="8" rx="1"/></svg></div></div></header>
 <article class="page">
 <div class="pocket">
   <p class="eyebrow">Pocket card</p>
   <ul>
-    <li>Skills package instructions you use repeatedly.</li>
-    <li>A personal context portfolio carries how you work across tools.</li>
-    <li>Scheduled tasks start recurring work without you. Start with ones that report back for review.</li>
+    <li>A skill saves instructions you use repeatedly.</li>
+    <li>A scheduled task starts recurring work without you. Begin with ones that report back for your review.</li>
+    <li>A file agent such as Claude Code, Codex, or Antigravity works directly in a folder: it reads your files, edits them, and builds things from them.</li>
+    <li>GitHub stores the result, keeps every version, and can publish it as a website.</li>
   </ul>
 </div>
 
+<p>Come back to this page once a workflow is something you do every week, or once a project has outgrown the chat window.</p>
+
 <h2>Skills: save instructions you use repeatedly</h2>
-<p>A skill packages recurring instructions and supporting knowledge so you do not have to reconstruct the same prompt every time. This is useful for work such as meeting summaries where you repeatedly want the same structure, length, style, and areas of attention.</p>
-<p>For cross-platform work, it can be useful to keep the canonical instructions with the rest of the project so they can be maintained and adapted for more than one model or platform.</p>
+<p>A skill packages recurring instructions and supporting material so the same prompt does not have to be rebuilt each time. Meeting summaries are a good candidate, because you want the same structure, length, and points of attention every month.</p>
+<p>If you work across more than one platform, keep the master copy of the instructions in your project home and adapt it for each tool.</p>
 
 <section class="band">
-<h2>Personal context portfolio: portable information about how you work</h2>
-<p>If you work across multiple models, you can maintain an external set of important personal or professional context: recurring preferences, roles, constraints, working style, or other information that would materially change how an assistant helps you. Project-specific instructions can tell the model when to retrieve the relevant portions.</p>
-<p>The tradeoff is maintenance: portable context is only valuable if the important parts stay current.</p>
+<h2>Personal context portfolio</h2>
+<p>If you use several models, a short document about how you work saves repetition: your roles, recurring preferences, constraints, and writing style. Project instructions can tell the model when to read the relevant part.</p>
+<p>The cost is upkeep. The document only helps while the important parts are current.</p>
 </section>
 
-<h2>Scheduled and automated tasks: let recurring work start without you</h2>
-<p>Once a workflow is stable, recurrence can become a trigger: literature surveillance, newsletter consolidation, reminders, or internal preparation. Start with automations whose output comes back to you for review rather than sending or acting externally without oversight.</p>
-<p class="pull">Start with automations whose output comes back to you for review.</p>
+<h2>Scheduled tasks: let recurring work start without you</h2>
+<p>Once a workflow is stable, it can run on a schedule: a literature search every Monday, a digest of journal emails twice a week, a reminder with the material already prepared. Start with tasks whose output comes back to you for review. Tasks that send messages or change files on their own can wait until you trust the workflow.</p>
+
+<h2>File agents: Claude Code, Codex, and Antigravity</h2>
+<p>In a chat, you upload a file and the model answers in the window. A file agent works in the folder itself. It can read every file there, create and edit files, run what it builds, look at the result, and fix problems. Claude Code (Anthropic), Codex (OpenAI), and Antigravity (Google) are three versions of this idea. They began as tools for programmers, and the same ability is useful to anyone whose project is a folder of documents.</p>
+<p>Very little technical background is required to start. You describe what you want in plain language, the agent proposes the steps, and you approve them.</p>
+
+<h3>An example: lecture notes to a teaching website</h3>
+<div class="draft"><p><span class="draft-label">Illustrative</span>The prompts below are reconstructed to show the pattern. The author's own prompts and screenshots will replace them.</p></div>
+<p>I had a folder on my laptop with my eye emergencies teaching material: Word documents, slides, and images, all public teaching content with no patient information. I opened the folder with a file agent and asked for a website.</p>
+<div class="exchange"><div class="who"><span>First request</span><button class="copy-btn" type="button">Copy</button></div><div class="body"><pre>This folder holds my lecture material on eye emergencies. Read all of it. Then propose a structure for a teaching website for residents: one page per topic, a consistent layout, and a short quiz at the end of each page. Show me the plan before you build anything.</pre></div></div>
+<p>The agent read the files, proposed a set of pages, and built them after I adjusted the plan. From there the work followed the loop in <a href="../core/project-workflow.html">Running larger projects</a>: one topic at a time, with my review before each page was accepted. Because the agent can see every file, a change to a shared element such as the navigation carries through all the pages in one request.</p>
+<div class="exchange"><div class="who"><span>A later request</span><button class="copy-btn" type="button">Copy</button></div><div class="body"><pre>Compare the chemical burn page with my original Word notes. List anything in the notes that is missing from the page, and anything on the page that the notes do not support.</pre></div></div>
+
+<h3>Where GitHub fits</h3>
+<p>GitHub is a service for storing a project's files with their full history. For a teaching site it does three jobs:</p>
+<ul>
+  <li><strong>Storage.</strong> The project lives online as well as on your laptop.</li>
+  <li><strong>Versions.</strong> Every change is recorded, so you can see what changed and return to an earlier state.</li>
+  <li><strong>Publishing.</strong> GitHub Pages can serve the folder as a public website at no cost.</li>
+</ul>
+<p>The agent handles the mechanics. You can ask it to "save this version to GitHub with a note about what changed" and it will. This site is built and published the same way.</p>
+
+<div class="stop"><p><strong>The data rules apply to folders.</strong> A file agent on a personal account can read everything in the folder you open. Point it only at folders of public material. A public GitHub repository is visible to anyone, so check a folder for patient information, learner evaluations, and internal documents before it goes there.</p></div>
 
 <h2>See it in practice</h2>
 <ul class="cards">
-  <li><a href="../examples/pubmed-scout.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="kicker">Example</span><span class="title">PubMed scout</span><span class="desc">Weekly literature surveillance delivered to your inbox.</span></a></li>
-  <li><a href="../examples/newsletter-digest.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg><span class="kicker">Example</span><span class="title">Newsletter digest</span><span class="desc">Many newsletters into one twice-weekly summary.</span></a></li>
-  <li><a href="../examples/meeting-summary.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><span class="kicker">Example</span><span class="title">Meeting summary</span><span class="desc">The instructions that became a skill.</span></a></li>
+  <li><a href="../examples/pubmed-scout.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span class="kicker">Scheduled task</span><span class="title">PubMed scout</span><span class="desc">Weekly literature surveillance delivered to your inbox.</span></a></li>
+  <li><a href="../examples/journal-digest.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg><span class="kicker">Scheduled task</span><span class="title">Journal email digest</span><span class="desc">Journal and society emails condensed into one twice-weekly summary.</span></a></li>
+  <li><a href="../examples/meeting-summary.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><span class="kicker">Skill</span><span class="title">Meeting summary</span><span class="desc">The instructions that became a skill.</span></a></li>
 </ul>
-<nav class="pager" aria-label="Page"><a class="prev" href="../core/models.html"><span class="dir">Previous</span><span>Models and usage</span></a></nav>
-<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.6<span class="disclaimer">A personal educational resource. It is not official policy of KU Medical Center or The University of Kansas Health System. Where this guide and official guidance differ, follow the official guidance.</span></footer>
+<nav class="pager" aria-label="Page"><a class="prev" href="../core/connectors.html"><span class="dir">Previous</span><span>Connectors</span></a></nav>
+<footer class="site">Practical AI Workflows &middot; Created by Jonathan Dangers, MD &middot; Draft v1.7, work in progress<span class="disclaimer">A personal educational resource. It is not official policy of KU Medical Center or The University of Kansas Health System. Where this guide and official guidance differ, follow the official guidance.</span></footer>
 </article>
 </main>
 </div>
