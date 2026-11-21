@@ -20,6 +20,7 @@ so existing links (including the Resident AI Elective site) keep working.
 The Resident AI Elective repo imports this file and assets/site.css at
 build time. Keep ICONS, icon(), and the shared CSS classes intact.
 """
+import hashlib
 import re
 from pathlib import Path
 
@@ -229,6 +230,17 @@ REDIRECT = """<!doctype html>
 """
 
 
+def versioned(html: str) -> str:
+    """Add ?v=<content hash> to local asset links, so browsers fetch a changed
+    stylesheet, script, or photo instead of reusing a cached copy."""
+    def add(m):
+        f = ROOT / "assets" / m.group(2)
+        if not f.exists():
+            return m.group(0)
+        return f"{m.group(1)}assets/{m.group(2)}?v={hashlib.md5(f.read_bytes()).hexdigest()[:8]}\""
+    return re.sub(r'((?:href|src)="(?:\.\./)*)assets/([\w.-]+)"', add, html)
+
+
 def analytics_tag() -> str:
     if not CF_ANALYTICS_TOKEN:
         return ""
@@ -263,7 +275,7 @@ def build():
         )
         out = ROOT / path
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(html, encoding="utf-8")
+        out.write_text(versioned(html), encoding="utf-8")
         print("built", path)
     for old, new in REDIRECTS.items():
         target = "../" * old.count("/") + new

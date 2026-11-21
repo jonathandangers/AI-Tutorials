@@ -623,3 +623,10 @@ footer.site .disclaimer { display: block; margin-top: 0.4rem; max-width: 46rem; 
 .home-hero + .page > .cards { margin-top: 1.5rem; gap: 1rem; }
 html:has(.home-hero) { scroll-behavior: smooth; }
 @media (max-width: 60rem) { .home-hero { min-height: calc(100svh - 4rem); position: relative; } }
+
+/* ---------- home on a wide screen: a wider column and three cards across ---------- */
+@media (min-width: 88rem) {
+  .home-words, .home-hero + .page > * { max-width: 64rem; }
+  .home-hero + .page > .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .home-hero + .page > h2 + p { max-width: 46rem; margin-left: max(0px, calc((100% - 64rem) / 2)); }
+}
