@@ -300,12 +300,6 @@ details > .inner { padding: 0.25rem 0.9rem 0.9rem; }
 .pager .next { text-align: right; margin-left: auto; }
 footer.site { margin-top: 3rem; font-size: var(--step--1); color: var(--muted); font-family: var(--font-display); }
 
-/* ---------- home ---------- */
-.bring { margin-top: 2rem; background: var(--nav-bg); color: var(--nav-fg); border-radius: 4px; padding: 1.25rem 1.4rem 1.4rem; border-bottom: 5px solid var(--tan); }
-.bring h2 { margin-top: 0; color: var(--nav-fg); }
-.bring ol { margin-top: 0.75rem; }
-.bring li::marker { color: var(--tan); }
-.bring .small { color: var(--nav-muted); margin-top: 0.9rem; }
 
 /* ---------- phone ---------- */
 @media (max-width: 60rem) {
@@ -459,17 +453,8 @@ footer.site { margin-top: 3rem; font-size: var(--step--1); color: var(--muted); 
 .path-d { font-size: 0.95rem; color: var(--muted); line-height: 1.45; }
 .path-go { margin-top: 0.35rem; font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; color: var(--peri-ink); }
 .path:hover .path-go { color: var(--copper); }
-.bring { scroll-margin-top: 1rem; }
-.bring .sides { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 1.75rem; margin-top: 0.9rem; }
-.bring .sides > div { min-width: 0; }
-.bring h3 { margin-top: 0; color: var(--nav-label); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--font-mono); font-weight: 500; }
-.bring ul { margin-top: 0.5rem; }
-.bring li::marker { color: var(--tan); }
-.bring .next { margin-top: 1.1rem; padding-top: 0.9rem; border-top: 1px solid var(--nav-hover); color: var(--nav-fg); }
-.bring a { color: var(--nav-fg); text-decoration-color: var(--nav-label); text-decoration-thickness: 2px; }
-.bring a:hover { color: var(--nav-label); }
 @media (max-width: 40rem) {
-  .paths, .bring .sides { grid-template-columns: minmax(0, 1fr); }
+  .paths { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* ---- Animated loop figure (Running larger projects). Script: assets/workflow-loop.js ---- */
@@ -618,8 +603,9 @@ footer.site .disclaimer { display: block; margin-top: 0.4rem; max-width: 46rem; 
 }
 .home-hero + .page > * { max-width: 46rem; margin-left: auto; margin-right: auto; }
 .home-hero + .page > h2 { margin-top: 6rem; }
+.home-hero + .page > h2[id] { scroll-margin-top: 5rem; }
+#value { scroll-margin-top: 5rem; }
 .home-hero + .page > .paths { margin-top: 0; scroll-margin-top: 4rem; }
-.home-hero + .page > .bring { margin-top: 6rem; }
 .home-hero + .page > .cards { margin-top: 1.5rem; gap: 1rem; }
 html:has(.home-hero) { scroll-behavior: smooth; }
 @media (max-width: 60rem) { .home-hero { min-height: calc(100svh - 4rem); position: relative; } }
