@@ -178,7 +178,7 @@ TEMPLATE = """<!doctype html>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
 <link rel="stylesheet" href="{pre}assets/site.css">
 </head>
-<body>
+<body class="guide">
 <div class="shell">
 <aside class="sidenav">
   <div class="navbar">

@@ -616,3 +616,30 @@ html:has(.home-hero) { scroll-behavior: smooth; }
   .home-hero + .page > .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .home-hero + .page > h2 + p { max-width: 46rem; margin-left: max(0px, calc((100% - 64rem) / 2)); }
 }
+
+/* ---------- module pages: room between sections, to match the home page ----------
+   Scoped to this site (body.guide), so the Resident AI Elective keeps its own spacing. */
+.guide .page-head + .page { padding-top: 1.5rem; }
+.guide .page-head + .page > h2 { margin-top: 5rem; }
+.guide .page-head + .page > h3 { margin-top: 2.75rem; }
+.guide .page-head + .page > .pocket { margin-top: 2.5rem; }
+.guide .page-head + .page > .pocket + p { margin-top: 2.5rem; }
+.guide .page-head + .page > .band { margin-top: 5rem; padding: 2.25rem 2rem 2.5rem; }
+.guide .page-head + .page > .band + :not(h2) { margin-top: 2.5rem; }
+.guide .page-head + .page > h2 + p,
+.guide .page-head + .page > h3 + p,
+.guide .band > h2 + p { margin-top: 1.1rem; }
+.guide .page-head + .page > :is(.table-wrap, .compare, .checklist, .rules-wrap, .exchange, .case, .glance6, .cards, .roles, .steps, .chips),
+.guide .band > :is(.table-wrap, .compare, .checklist, .exchange) { margin-top: 1.9rem; }
+.guide .page-head + .page > :is(.dg, .wf2d) { margin-top: 2.5rem; }
+.guide .page-head + .page > :is(.note, .draft, .stop) { margin-top: 1.9rem; }
+.guide .page-head + .page > :is(.table-wrap, .compare, .checklist, .rules-wrap, .exchange, .dg, .wf2d, .glance6, .roles) + :is(p, ul, ol) { margin-top: 1.75rem; }
+.guide .band h3 { margin-top: 2.5rem; }
+.guide .roles { gap: 2rem 1rem; }
+.guide .steps > li:has(> h3) + li { margin-top: 2.5rem; }
+.guide .steps .exchange { margin-top: 1.25rem; }
+.guide .pager { margin-top: 6rem; }
+@media (max-width: 40rem) {
+  .guide .page-head + .page > h2, .guide .page-head + .page > .band { margin-top: 4rem; }
+  .guide .page-head + .page > .band { padding: 1.5rem 1.1rem 1.75rem; margin-inline: -4px; }
+}
